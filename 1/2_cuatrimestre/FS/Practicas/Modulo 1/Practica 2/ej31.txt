@@ -1,0 +1,5 @@
+total 0
+-rw-rwxr-- 1 manbolq manbolq 0 mar  9 16:19 ejercicio1.txt
+-rw-rwxr-- 1 manbolq manbolq 0 mar  9 16:19 ejercicio2.txt
+-rw-rwxr-- 1 manbolq manbolq 0 mar  9 16:19 ejercicio3.txt
+-rw--wx--x 1 manbolq manbolq 0 mar  9 16:25 fichero.txt

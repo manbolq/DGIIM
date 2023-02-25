@@ -1,0 +1,110 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\usepackage{vmargin}
+
+\setpapersize{A4}
+\setmargins{2.5cm}       % margen izquierdo
+{1.5cm}                        % margen superior
+{16.5cm}                      % anchura del texto
+{23.42cm}                    % altura del texto
+{10pt}                           % altura de los encabezados
+{1cm}                           % espacio entre el texto y los encabezados
+{0pt}                             % altura del pie de página
+{2cm}                           % espacio entre el texto y el pie de página
+\begin{document}
+	\title{EVALUACIÓN 3}
+	\author{Manuel Vicente Bolaños Quesada}
+	\date{}
+	\maketitle
+	
+	
+	\begin{flushleft}
+		\textbf{\underline{Problema 1}}
+	\end{flushleft}
+	
+	a) Veamos primero que $\{x_n\}$ es estrictamente creciente. \newline
+	
+	Sea $A = \{ n \in \mathbb{N} : x_{n+1} > x_n\}$, y veamos que este conjunto es inductivo. Está claro que $A \subseteq \mathbb{N}$. Veamos que $1 \in A$:
+	
+	$x_2 = f(x_1) = f(a) > a = x_1$. \newline
+	
+	Supongamos ahora que $n \in A$, es decir $x_{n+1} > x_n$, y demostremos que $n+1 \in A$: \\
+	$x_{n+2} = f(x_{n+1}) > f(x_n) = x_{n+1}$, donde hemos usado que $f$ es estrictamente creciente.
+	
+	Por lo tanto, $A$ es un conjunto inductivo, y $A = \mathbb{N}$. \newline
+	
+	Es fácil ver que la sucesión está acotada, ya que para todo natural $n > 1, x_n = f(x_{n-1})$ y se cumple que $a < f(x_{n-1}) \leq b \implies a < x_n \leq b$. Como $x_1 = a$, tenemos que $a \leq x_n \leq b ~\forall n \in \mathbb{N}$\newline
+	
+	Como la sucesión es estrictamente creciente y está acotada, converge a un número $\beta \in ]a, b]$ \newline
+	
+	b) $C = \{f(x): x \in [a, b], x < \beta\}$, y como $\beta \leq b, ~ C = \{f(x): x \in [a, \beta[ ~ \}$.
+	
+	Como $f$ es estrictamente creciente, y $\{x_n\} \rightarrow \beta$, para todo $\varepsilon > 0$, existe un natural $m$ tal que $ \beta - \varepsilon < x_m < \beta$, por lo que $ \beta - \varepsilon < f(x_{m-1}) < \beta$, de donde $\beta \in Mayor(C)$. Supongamos que hay un $\alpha < \beta$, tal que $\alpha \in Mayor(C)$, entonces, por lo dicho anteriormente, existe un natural $m$ tal que $\alpha < f(x_m) < \beta$, y por lo tanto $\alpha$ es menor que un elemento de $C$, lo que es una contradicción, y por lo tanto, $\beta = sup(C)$. \newline
+	
+	Sea $x$ un real tal que $\beta > x  \geq a$. Como $f$ es estrictamente creciente, tenemos que $f(\beta) > f(x)$, por lo que $f(\beta) \in Mayor(C)$. Usando que $\beta$ es el mínimo mayorante de $C$, tenemos que $f(\beta) \geq \beta$, tal y como queríamos demostrar. \newline
+	
+	c) Sabemos que $f(\beta) \geq \beta$. Supongamos que $f(\beta) > \beta$. Como la imagen de $f$ es un intervalo, existe un real $\alpha$ tal que $f(\beta) > f(\alpha) > \beta$. De la primera desigualdad, y usando que $f$ es estrictamente creciente, obtenemos que $\beta > \alpha$. Como $\alpha \in [a, \beta[$, deducimos que $f(\alpha) \in C$. Como $\beta$ es el supremo de $C$, tenemos que $f(\alpha) < \beta$. En conclusión, tenemos que  $f(\beta) > f(\alpha) > \beta > f(\alpha)$, que es una contradicción, y por lo tanto, la hipótesis era incorrecta. Así pues, $\beta = f(\beta)$. \newline
+	
+	\begin{flushleft}
+		\textbf{\underline{Problema 2}}
+	\end{flushleft}	
+
+	a) Consideremos la función $f: \mathbb{R}^+ \rightarrow \mathbb{R}$ definida por $f(x) = \dfrac{4x + a}{x+4}$. Sean $x, y$ números reales tales que $0 < x < y$. Entonces:
+	
+	\begin{equation*}
+		\begin{split}
+			f(y)-f(x) = \dfrac{4y+a}{y+4} - \dfrac{4x+a}{x+4} & = \dfrac{4xy+ax+16y+4a-4xy-16x-ay-4a}{(x+4)(y+4)} \\
+			& = \dfrac{a(x-y)+16(y-x)}{(x+4)(y+4)} \\
+			& = \dfrac{(y-x)(16-a)}{(x+4)(y+4)} > 0,
+		\end{split}
+	\end{equation*}
+	
+	de donde $f(x) <f(y)$, y la función es creciente. \newline
+	
+	Veamos, en primer lugar, que la sucesión $\{x_n\}$ es estrictamente creciente. Para ello, consideremos el conjunto $A = \{n \in \mathbb{N} : x_n < x_{n+1}\} \subseteq \mathbb{N}$, y veamos que es un conjunto inductivo. Para ello, vamos a ver que $1 \in A$.
+	
+	$x_1 = 2 = \dfrac{8+4}{6} < \dfrac{8+a}{6} = \dfrac{4 x_1 + a}{x_1 + 4} = x_2$, por lo que, efectivamente, $1 \in A$.
+	
+	Supongamos ahora que $n \in A$, es decir, $x_n < x_{n+1}$ y demostremos que $n+1 \in A$.
+	
+	Como $x_n < x_{n+1}$, usando que $f$ es creciente, tenemos que $f(x_n) < f(x_{n+1}) \implies x_{n+1} < x_{n+2}$. Por lo tanto, el conjunto $A$ es inductivo, y $A = \mathbb{N}$. \newline
+	
+	Veamos ahora que la sucesión está mayorada. Tenemos que $x_n + 4 >0$ para todo natural $n$, por lo que
+	$x_{n+1} = \dfrac{4x_n +a}{x_n + 4} < \dfrac{4x_n +16}{x_n + 4} = 4$, para todo natural $n$, y por lo tanto la sucesión está mayorada.
+	
+	Como $\{x_n\}$ está mayorada y es creciente, es convergente. Su límite, $l$, será la solución de la ecuación $l = \dfrac{4l+a}{l+4} \implies l^2 + 4l = 4l + a \implies l = \sqrt{a}$. Por lo tanto, $\{x_n\} \rightarrow \sqrt{a}$ \newline
+	
+	b) Probemos primero que $0 < \sqrt{a} - x_{n+1} < \dfrac{1}{3} (\sqrt{a}-x_n)$.
+	
+	La desigualdad de la izquierda es trivial, ya que la sucesión $\{x_n\}$ converge a $\sqrt{a}$, y por lo tanto, \\ $x_n < \sqrt{a} \implies 0 < \sqrt{a}-x_n$.
+	
+	Demostremos ahora que $\sqrt{a} - x_{n+1} < \dfrac{1}{3} (\sqrt{a}-x_n) \Leftrightarrow \dfrac{\sqrt{a} - x_{n+1}}{\sqrt{a}-x_n} < \dfrac{1}{3}$ (podemos dividir por $\sqrt{a}-x_n$, ya que es mayor estricto que 0).
+	
+	Sabemos que $4 < a \implies 2 < \sqrt{a} \implies -\sqrt{a} < -2$, y que $2 < x_n$. Entonces,
+	
+	\begin{equation*}
+		\begin{split}
+			\dfrac{\sqrt{a} - x_{n+1}}{\sqrt{a}-x_n} 
+			& = \dfrac{\sqrt{a} - \dfrac{4x_n +a}{x_n + 4}}{\sqrt{a}-x_n} \\
+			& = \dfrac{x_n \sqrt{a} + 4 \sqrt{a} - 4x_n - a}{(\sqrt{a}-x_n)(x_n + 4)} \\
+			& = \dfrac{x_n(\sqrt{a}-4) + \sqrt{a}(4-\sqrt{a})}{(\sqrt{a}-x_n)(x_n + 4)} \\
+			& = \dfrac{(\sqrt{a} -4)(x_n - \sqrt{a})}{(\sqrt{a}-x_n)(x_n + 4)} \\
+			& = \dfrac{4 - \sqrt{a}}{x_n+ 4} < \dfrac{4 - 2}{2+4} = \dfrac{2}{6} = \dfrac{1}{3},
+		\end{split}
+	\end{equation*}
+	
+	tal y como queríamos demostrar. \newline
+	
+	Tenemos entonces que $\sqrt{a} - x_{n+1} < \dfrac{1}{3} (\sqrt{a}-x_n)$. Escribiendo la desigualdad para $n = 1, 2, \dots, n$, usando que $x_i < \sqrt{a} \implies \sqrt{a} - x_i > 0$, y multiplicándolas todas ellas, obtenemos que:
+	$$ 0 < \prod_{i = 2}^{n+1} (\sqrt{a} - x_i) < \left( \dfrac{1}{3} \right) ^ n ~ \prod_{i = 1}^{n}(\sqrt{a}-x_i)$$
+	$$\Leftrightarrow 0 < \sqrt{a} - x_{n+1} < \dfrac{1}{3^n} (\sqrt{a} - x_1) = \dfrac{1}{3^n}(\sqrt{a} -2),$$
+	que es lo que se pedía demostrar.
+	
+	
+\end{document}

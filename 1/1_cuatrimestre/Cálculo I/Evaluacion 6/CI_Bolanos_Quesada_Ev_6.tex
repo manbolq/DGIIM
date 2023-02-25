@@ -1,0 +1,73 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{vmargin}
+
+\setpapersize{A4}
+\setmargins{2.5cm}       % margen izquierdo
+{1.5cm}                        % margen superior
+{16.5cm}                      % anchura del texto
+{23.42cm}                    % altura del texto
+{10pt}                           % altura de los encabezados
+{1cm}                           % espacio entre el texto y los encabezados
+{0pt}                             % altura del pie de página
+{2cm}                           % espacio entre el texto y el pie de página
+\begin{document}
+	\title{EVALUACIÓN 6}
+	\author{Manuel Vicente Bolaños Quesada}
+	\date{}
+	\maketitle
+	
+	
+	\begin{flushleft}
+		\textbf{\underline{Problema 1}}
+	\end{flushleft}
+	
+	\begin{enumerate}[label = \alph*)]
+		\item Es claro que $Z$ está acotado. Sean entonces $\inf (Z) = \alpha$, $\sup (Z) = \beta$. Es evidente que $c \leq \alpha \leq \beta \leq d$ Entonces, lo que queremos probar es que $f(\alpha) = f(\beta) = 0$.
+		
+		Para ello, como $\alpha$ es el ínfimo de $Z$, existe una sucesión $\{x_n\}$ que converge a $\alpha$, con $x_n \in Z$ para todo $n \in \mathbb{N}$, es decir, $\lim \{x_n\} = \alpha$. De la continuidad de $f$, obtenemos que $\lim \{f(x_n)\} = f(\alpha)$, pero $f(x_n) = 0$ para todo $n \in \mathbb{N}$, por ser elementos de $Z$. De aquí, deducimos que $f(\alpha) = 0$, y por lo tanto, $\alpha \in Z$.
+		
+		La demostración de que $f(\beta) = 0$ es análoga. Por ser $\beta$ el supremo de $Z$, existe una sucesión de puntos del conjunto, $\{y_n\}$, con $y_n \in Z$ para todo $n \in \mathbb{N}$, con límite $\beta$, es decir, $\lim \{y_n\} = \beta$. Como $f$ es continua, tenemos que $\lim\{f(y_n)\} = f(\beta)$, pero como $f(y_n) = 0$ para todo $n \in \mathbb{N}$ por ser elementos de $Z$, tenemos que $f(\beta) = 0$, de donde $\beta \in Z$.
+		
+		\item Definamos la función $f_1 : [a, c] \rightarrow \mathbb{R}$ definida por $f_1(x) = f(x)$ para todo $x \in [a, c]$. Como $f_1(c) > 0$, y $f_1 (a) < 0$, por el Teorema de Bolzano, sabemos que hay un $r \in [a, c]$ tal que $f_1(r) = 0$. Consideramos el conjunto $Z_1 = \{x \in [a, c] : f_1(x) = 0\} \neq \emptyset$. Pongamos $u = \max (Z_1)$ (sabemos que existe por lo visto en el apartado anterior). Además, si $x \in ]u, c]$, $f_1(x) > 0$, ya que si $f_1(x) \leq 0$, por el teorema de Bolzano habría otro punto, $\lambda > u$ tal que $f_1(\lambda) = 0$, lo que es contradictorio.
+		
+		Definimos, análogamente, la función $f_2 : [c, b] \rightarrow \mathbb{R}$ definida por $f_2(x) = f(x)$ para todo $x \in [c, b]$. Como $f_2(c) > 0$, y $f_2(b) < 0$, por el Teorema de Bolzano, sabemos que hay un $s \in [c, b]$ tal que $f_2(s) = 0$. Consideramos el conjunto $Z_2 = \{x \in [c, b] : f_2(x) = 0\} \neq \emptyset$. Pongamos $v = \min (Z_2)$ (sabemos que existe por lo visto en el apartado anterior). Análogamente al razonamiento anterior, observamos que si $x \in [c, v[$ entonces $f_2(x) > 0$.
+		
+		Entonces, $a < u < c < v < b$, $f(u) = f(v) = 0$ y $f(x) > 0$ para todo $x \in ]u, v[$, tal y como se pedía demostrar. \newline 
+	\end{enumerate}
+
+	\begin{flushleft}
+		\textbf{\underline{Problema 2}}
+	\end{flushleft}
+	
+	Sea $\alpha = \sup (A)$. Entonces, se tiene que para todo $a \in A$, $a \leq \alpha$. Como $f$ es creciente, $f(a) \leq f(\alpha)$. Esto nos dice que $f(\alpha)$ es un mayorante de $f(A)$.
+	
+	Si $\alpha \in A$, entonces $f(\alpha) \in f(A)$, y como $f(\alpha)$ es un mayorante de $f(A)$, sería $f(\alpha) = \sup (f(A))$. Supongamos entonces, a partir de ahora, que $\alpha \notin A$. \newline
+	
+	\textbf{Primera forma. }Dado un $\varepsilon > 0$, como $f$ es continua, existe un $\delta > 0$, tal que para todo $x \in A$ que verifique que $|x - \alpha| < \delta$, se tiene que $|f(x) - f(\alpha)| < \varepsilon$. Como $\alpha$ es el supremo de $A$, tenemos que el conjunto $C = ]\alpha - \delta, \alpha[ \cap A$ no es vacío. Sea entonces $s \in C$. Entonces, $|f(s) - f(\alpha)| < \varepsilon$; en particular, $f(\alpha) - \varepsilon < f(s)$. Como $f(s) \in f(A)$, esto nos dice que $f(\alpha) - \varepsilon$ no es un mayorante de $f(A)$. De aquí, se deduce que $f(\alpha) = \sup(f(A))$. \newline
+	
+	\textbf{Segunda forma. }Como $\alpha = \sup (A)$, existe una sucesión $\{x_n\}$ con $x_n \in A$ para todo $n \in \mathbb{N}$, tal que $\lim \{x_n\} = \alpha$. Al ser $f$ continua, deducimos que $\lim \{f(x_n)\} = f(\alpha)$. Así pues, si $\rho$ es un real tal que $\rho < f(\alpha)$, entonces, existe un $n_0 \in \mathbb{N}$ tal que si $n \geq n_0$, entonces $f(x_n) > \rho$. Por lo tanto, deducimos que $f(\alpha)$ es el mínimo mayorante de $f(A)$, equivalentemente, $f(\alpha) = \sup (f(A))$. 
+	
+	\newpage 
+	Manuel Vicente Bolaños Quesada
+	
+	\begin{flushleft}
+		\textbf{\underline{Problema 3}}
+	\end{flushleft}
+	
+	Veamos que $g$ es creciente en $[a, b]$. Para ello tomemos $x, y \in [a, b]$ tales que $x < y$. Es claro que $\max[a, x] \leq \max[a, y]$, o lo que es lo mismo, $g(x) < g(y)$.
+	
+	Como hemos visto que $g$ es creciente, para probar que es continua, es suficiente demostrar que su imagen es un intervalo, es decir, que $g([a, b])$ es un intervalo. Vamos a demostrar que $g([a, b]) = [f(a), M]$, donde $M = \max f([a, b])$.
+	
+	Está claro que $\inf(g([a, b])) = \max f([a, a]) = f(a) = g(a)$ y que $\sup(g([a, b])) = \max f([a, b]) =  M = g(b)$. Sea ahora $u \in ]f(a), M[$. Definimos $t_u = \sup \{x \in [a, b] : f(s) \leq u $ para todo $s \in [a, x]\}$. Entonces, $f(t_u) = u$ y también $g(t_u) = u$ (ya que si $ a \leq v < u$, entonces $f(v) \leq f(u)$). De aquí, obtenemos que $u \in g([a, b])$.
+	
+	Por lo tanto, $g([a, b]) = [f(a), M]$.
+	
+\end{document}

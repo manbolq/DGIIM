@@ -1,0 +1,2 @@
+ 18  77 806 ejercicio1.txt
+wc: ejercicio1.txt: No existe el archivo o el directorio

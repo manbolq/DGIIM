@@ -1,0 +1,193 @@
+\documentclass[]{article}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage{fancyhdr}
+\usepackage[a4paper]{geometry}
+\geometry{top=2.5cm, bottom=2cm, left=2.5cm, right=2.25cm}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+
+\title{Relación de ejercicios Tema 1}
+\author{Pedro Haimar Castillo García \\ Clara Bolívar Peláez \\ Lorena Cáceres Arias \\ Marta Benítez Hernández \\ Manuel Vicente Bolaños Quesada}
+\date{}
+%opening
+
+
+\begin{document}
+	\maketitle
+	
+	\begin{enumerate}[{Ejercicio} 1.]
+		\item El número de hijos de las familias de una determinada barriada de una ciudad es una variable estadística de la que se conocen los siguientes datos:
+		
+		\begin{minipage}[t]{.45\linewidth}
+			\raggedleft
+			\vspace*{0pt}
+			\begin{center}
+			\begin{tabular}{| c | c | c | c |}
+				\hline
+				$x_i$ & $n_i$ & $N_i$ & $f_i$ \\
+				\hline
+				$0$ & $80$ & & $0.16$ \\
+				$1$ & $110$ & &  \\
+				$2$ &  & $320$ &  \\
+				$3$ &  & & $0.18$ \\
+				$4$ & $40$ & &  \\
+				$5$ &  & &  \\
+				$6$ & $20$ & &  \\
+				\hline
+			\end{tabular}
+			\end{center}
+		\end{minipage}%
+		\begin{minipage}[t]{.45\linewidth}
+			\vspace*{1 cm}
+			\raggedright
+			$n_i$: frecuencias absolutas \\
+			$N_i$: frecuencias absolutas acumuladas \\
+			$f_i$: frecuencias relativas
+		\end{minipage}
+	
+		 \begin{enumerate}[a)]
+		 	\item Completar la tabla de frecuencias.
+		 	
+		 	\begin{center}
+		 		\begin{tabular}{| c | c | c | c |}
+		 			\hline
+		 			$x_i$ & $n_i$ & $N_i$ & $f_i$ \\
+		 			\hline
+		 			$0$ & $80$ & $\mathbf{80}$ & $0.16$ \\
+		 			$1$ & $110$ & $\mathbf{190}$ & $\mathbf{0.22}$ \\
+		 			$2$ & $\mathbf{130}$ & $320$ & $\mathbf{0.26}$ \\
+		 			$3$ & $\mathbf{90}$ & $\mathbf{410}$ & $0.18$ \\
+		 			$4$ & $40$ & $\mathbf{450}$ & $\mathbf{0.08}$ \\
+		 			$5$ & $\mathbf{30}$ & $\mathbf{480}$ & $\mathbf{0.06}$ \\
+		 			$6$ & $20$ & $\mathbf{500}$ & $\mathbf{0.04}$ \\
+		 			\hline
+		 		\end{tabular}
+		 	\end{center}
+	 		
+	 		\item Representar la distribución mediante un diagrama de barras y la curva de distribución.
+	 		
+	 		\begin{minipage}[t]{.45\linewidth}
+	 			\raggedleft
+	 			\vspace*{0pt}
+	 			\begin{center}
+	 				\includegraphics[scale = 0.15]{prueba}
+	 			\end{center}
+	 		\end{minipage}%
+	 		\begin{minipage}[t]{.45\linewidth}
+	 			\vspace*{0pt}
+	 			\raggedleft
+	 			\begin{center}
+	 				\includegraphics[scale = 0.15]{prueba}
+	 			\end{center}
+	 		\end{minipage}
+ 		
+ 			\item Promediar los valores de la variable mediante diferentes medidas. Interpretarlas.
+ 			
+ 			\begin{itemize}
+ 				\item Media aritmética. $$\overline{x} = \dfrac{0 \cdot 80 + 1 \cdot 110 + 2 \cdot 130 + 3 \cdot 90 + 4 \cdot 40 + 5 \cdot 30 + 6 \cdot 20}{500} = 2.14 ~\text{hijos}$$
+ 				\item Moda (valor que más se repite): $Mo = 2$ hijos.
+ 				\item Mediana: $2$ hijos.
+ 				\item Cuartiles:
+ 					\begin{itemize}
+ 						\item $Q_1 = 1$ hijo.
+ 						\item $Q_2 = 2$ hijos.
+ 						\item $Q_3 = 5$ hijos.
+ 					\end{itemize}
+ 			\end{itemize}
+		 \end{enumerate}
+		\item La puntuación obtenida por 50 personas que se presentaron a una prueba de selección, sumadas las puntuaciones de los distintos tests, fueron: $$174, 185,166,176,145,166,191,175,158,156,156,187,162,172,197,181,151,161,$$$$183,172,162,147,178,176,141,170,171,158,184,173,169,162,172,181,$$$$187,177,164,171,193,183,173,179,188,179,167,178,180,168,148,173.$$
+		
+		\begin{enumerate}[a)]
+			\item Agrupar los datos en intervalos de amplitud 5 desde 140 a 200 y dar la tabla de frecuencias.
+			\item Representar la distribución mediante un histograma, poligonal de frecuencias y curva de distribución.
+		\end{enumerate}
+	
+		\item La distribución de la renta familiar en el año 2003 por comunidades autónomas se recoge en la siguiente tabla: 
+		
+		\begin{minipage}[t]{.7\linewidth}
+			\raggedleft
+			\vspace*{0pt}
+			\begin{center}
+				\begin{tabular}{| r | c | c | c | c | c | c | c |}
+					\hline
+					$I_i$ & $n_i$ & $N_i$ & $f_i$ & $F_i$ & $c_i$ & $a_i$ & $h_i$ \\
+					\hline
+					$(8300, 9300]$ & $2$ &     & & & & & \\
+					$ ,9300]$      &     & $5$ & & & & &  \\
+							       &     &     & & & & &  \\
+								   &     &     & & $10/18$ & & $1100$&  \\
+								   &     &     & $2/18$ & & $1200$ & &  \\
+								   & $4$ &     & & & & & $0.005/18$ \\
+								   &     &$18$ & & & & &  $0.002/18$ \\
+					\hline
+				\end{tabular}
+			\end{center}
+		\end{minipage}%
+		\begin{minipage}[t]{.5\linewidth}
+			\vspace*{8pt}
+			\raggedright
+			$n_i$: frecuencias absolutas \\
+			$N_i$: frec. absolutas acumuladas \\
+			$f_i$: frecuencias relativas \\
+			$F_i$: frec. relativas acumuladas \\
+			$c_i$: marcas de clase \\
+			$a_i$: amplitudes \\
+			$h_i$: densidades de frecuencia
+		\end{minipage}
+		\begin{enumerate}[a)]
+			\item Completar la tabla.
+				\begin{center}
+					\begin{tabular}{| r | c | c | c | c | c | c | c |}
+						\hline
+						$I_i$ & $n_i$ & $N_i$ & $f_i$ & $F_i$ & $c_i$ & $a_i$ & $h_i$ \\
+						\hline
+						$(8300, 9300]$ & $2$ & $\mathbf{2}$ & $\mathbf{2/18}$ &$\mathbf{2/18}$ & $\mathbf{8800}$ & $\mathbf{1000}$ & $\mathbf{0.002/18}$\\
+						$\mathbf{(9300} ,10200]$ & $\mathbf{3}$ & $5$ & $\mathbf{3/18}$ &$\mathbf{5/18}$ & $\mathbf{9750}$&$\mathbf{900}$ & $\mathbf{0.005/18}$ \\
+						$\mathbf{(10200, 11300]}$& $\mathbf{5}$ &$\mathbf{10}$ & $\mathbf{5/18}$ & $10/18$& $\mathbf{10750}$& $1100$& $\mathbf{0.00\overline{45}/18}$ \\
+						$\mathbf{(11300, 12700]}$& $\mathbf{2}$&$\mathbf{12}$& $2/18$ & $\mathbf{12/18}$ & $1200$ & $\mathbf{1400}$& $\mathbf{0.0014/18}$ \\
+						$\mathbf{(13100, 14100]}$& $4$ & $\mathbf{16}$ &$\mathbf{4/18}$ & $\mathbf{16/18}$& $\mathbf{12900}$& $\mathbf{800}$& $0.005/18$ \\
+						$\mathbf{(10200, 11300]}$& $\mathbf{2}$ &$18$ & $\mathbf{2/18}$& $\mathbf{18/18}$& $\mathbf{13600}$&$\mathbf{1000}$ &  $0.002/18$ \\
+						\hline
+					\end{tabular}
+				\end{center}
+			\item Representar la distribución mediante un histograma, poligonal de frecuencias y curva de distribución.
+			\item ¿Cuántas comunidades presentan una renta menor o igual que 12700 euros? ¿Y cuántas superior a 11300 euros?
+		\end{enumerate}
+	
+		\item En una determinada empresa se realiza un estudio sobre la calidad de su producción. la distribución siguiente informa sobre el número de piezas defectuosas encontradas en 100 cajas examinadas con 50 unidades cada una de ellas:
+		
+		\begin{center}
+			\begin{tabular}{| c | c | c | c | c | c | c | c | c | c | c | c | c |}
+				\hline
+				Nº piezas defectuosas & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+				\hline
+				Nº cajas & 6 & 9 & 10 & 11 & 14 & 16 & 16 & 9 & 4 & 3 & 2 \\
+				\hline
+			\end{tabular}
+			\begin{enumerate} [a)]
+				\item Calcular el número medio de piezas defectuosas por caja.
+				
+				$$ \overline{x} = \dfrac{0 \cdot 6 + 1 \cdot 9 + 2 \cdot 10 + 3 \cdot 11 + 4 \cdot 14 + 5 \cdot 16 + 6 \cdot 16 + 7 \cdot 9 + 8 \cdot 4 + 9 \cdot 3 + 10 \cdot 2}{100} = 4.36 $$
+				
+				$\overline{x} = 4.36$ piezas defectuosas.
+				
+				\item ¿Cuántas piezas defectuosas se encuentran más frecuentemente en las cajas examinadas? \newline
+				
+				5 y 6 piezas defectuosas (distribución bimodal).
+				
+				\item ¿Cuál es el número mediano de piezas defectuosas por caja? \newline
+				
+				$Me = \dfrac{4+5}{2} = 4.5$ piezas defectuosas.
+			\end{enumerate}
+		\end{center}
+		
+		
+	\end{enumerate}
+	
+\end{document}

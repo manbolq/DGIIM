@@ -1,0 +1,110 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\usepackage{vmargin}
+
+\setpapersize{A4}
+\setmargins{2.5cm}       % margen izquierdo
+{1.5cm}                        % margen superior
+{16.5cm}                      % anchura del texto
+{23.42cm}                    % altura del texto
+{10pt}                           % altura de los encabezados
+{1cm}                           % espacio entre el texto y los encabezados
+{0pt}                             % altura del pie de página
+{2cm}                           % espacio entre el texto y el pie de página
+\begin{document}
+	\title{EVALUACIÓN 1}
+	\author{Manuel Vicente Bolaños Quesada}
+	\date{}
+	\maketitle
+	\begin{flushleft}
+		\textbf{\underline{Problema 1}}
+	\end{flushleft}
+
+	Sean $A$ y $BC$ conjuntos no vacíos y mayorados de números reales positivos. Prueba que el conjunto $$C = \{ab-c^2 : a \in A, b\in B, c\in B\}$$ está mayorado y minorado y calcula su supremo y su ínfimo. \\ \\
+	
+	Como $A$ y $B$ están mayorados, tiene sentido considerar sus supremos. Así pues, $\alpha = sup(A), \beta = sup(B)$. Además, como los conjuntos están formados por números reales positivos, también están minorados y, por lo tanto, tiene sentido considerar sus ínfimos. Así pues, $\alpha ' = inf(A), \beta '=inf(B)$. \newline
+	
+	Tenemos que $a \leq \alpha ~ \forall a \in A, b \leq \beta ~ \forall b \in B$. Como $a, b, \alpha, \beta > 0$, podemos multiplicar por cualquiera de ellos sin alterar el sentido de la desigualdad. \newline
+	
+	$\left.\begin{array}{lcc}
+		a \leq \alpha ~ \forall a \in A\\
+		\\ b \leq \beta ~ \forall b \in B \\
+	\end{array}\right\rbrace ab \leq \alpha \beta ~ \forall a \in A, \forall b \in B$. \newline
+
+	Además, $\beta ' \leq c ~ \forall c \in B \implies \beta'^2 \leq \beta ' c \leq c^2 ~ \forall c \in B \implies -c^2 \leq -\beta'^2$. Por lo tanto, $ab-c^2 \leq \alpha\beta-\beta'^2$, por lo que $\alpha\beta-\beta'^2 \in Mayor(C)$, y $C$ está mayorado. Entonces, cabe considerar su supremo, $\gamma = sup(C)$. \newline
+	
+	Como $\gamma$ es el mínimo mayorante, tenemos que $\gamma \leq \alpha\beta-\beta'^2$. \newline
+	
+	Por otro lado, tenemos que $\gamma \geq ab-c^2 ~ \forall a \in A, ~ \forall b, c \in B \implies \gamma + c^2 \geq ab$. Como $ b > 0$, podemos dividir por $b$. \newline
+	
+	$\dfrac{\gamma + c^2}{b} \geq a$, luego $\dfrac{\gamma+c^2}{b} \in Mayor(A)$. Usando que $\alpha$ es el mínimo mayorante de $A$, tenemos que $\dfrac{\gamma+c^2}{b} \geq \alpha$. Como $\alpha > 0$, podemos dividir por $\alpha$ y multiplicar por $b$. Por lo tanto, $\dfrac{\gamma+c^2}{\alpha} \geq b$, de donde $\dfrac{\gamma+c^2}{\alpha} \in Mayor(B)$. Usando que $\beta$ es el mínimo mayorante de $B$, tenemos que $\dfrac{\gamma+c^2}{\alpha} \geq \beta \implies \gamma + c^2 \geq \alpha\beta \implies c^2 \geq \alpha\beta-\gamma \implies c \geq \sqrt{\alpha\beta-\gamma} ~ \forall c \in B$, lo que nos dice que $\sqrt{\alpha \beta-\gamma} \in Minor(B)$. Como $\beta'$ es el mayor minorante de $B$, tenemos que $\sqrt{\alpha \beta-\gamma} \leq \beta' \implies \alpha\beta-\gamma \leq \beta'^2 \implies \gamma \geq \alpha\beta-\beta'^2$. Por lo tanto, llegamos a una doble desigualdad, para concluir que $\gamma = \alpha\beta-\beta'^2$. \newline
+	
+	Demostremos ahora que $C$ está minorado y calculemos su ínfimo. \\
+	
+	Tenemos que $\alpha' \leq a ~ \forall a \in A, \beta' \leq b ~ \forall b \in B$. Como $a, b, \alpha', \beta' \geq 0$, podemos multiplicar por cualquiera de ellos sin alterar el sentido de la desigualdad. \newline
+	
+	$\left.\begin{array}{lcc}
+		\alpha' \leq a ~ \forall a \in A\\
+		\\ \beta' \leq b ~ \forall b \in B \\
+	\end{array}\right\rbrace \alpha'\beta' \leq ab ~ \forall a \in A, \forall b \in B$. \newline
+	
+	Además, $\beta \geq c ~ \forall c \in B \implies \beta^2 \geq \beta c \geq c^2 ~ \forall c \in B \implies -c^2 \geq -\beta^2$. Por lo tanto, $ab-c^2 \geq \alpha'\beta'-\beta^2$, por lo que $\alpha'\beta'-\beta^2 \in Minor(C)$, y $C$ está minorado. Entonces, cabe considerar su ínfimo, $\gamma' = inf(C)$. \newline
+	
+	Como $\gamma'$ es el máximo minorante, tenemos que 
+	\begin{equation}
+		\gamma' \geq \alpha'\beta'-\beta^2.
+	\end{equation}
+	
+	Por otro lado, tenemos que $\gamma' \leq ab-c^2 ~ \forall a \in A, ~ \forall b, c \in B \implies \gamma' + c^2 \leq ab$. Como $b > 0$, podemos dividir por $b$. \newline	
+	
+	$\dfrac{\gamma' + c^2}{b} \leq a$, luego $\dfrac{\gamma'+c^2}{b} \in Minor(A)$. Usando que $\alpha'$ es el máximo minorante de $A$, tenemos que \begin{equation}
+		\dfrac{\gamma'+c^2}{b} \leq \alpha'.
+	\end{equation} Distinguimos ahora dos casos: \newline
+	
+	\underline{Caso 1: $\alpha' = 0$} \newline
+	
+	La desigualdad (1) queda como $\gamma' \geq -\beta^2$. La desigualdad (2) queda como $\dfrac{\gamma'+c^2}{b} \leq 0$. Como $b > 0$, tenemos que $\gamma' + c^2 \leq 0$, de donde $c \leq \sqrt{-\gamma'} ~ \forall c \in B$, por lo que $\sqrt{-\gamma'} \in Mayor(B)$. Usando que $\beta$ es el menor mayorante de $B$, obtenemos: $\sqrt{-\gamma'} \geq \beta \implies \beta^2 \leq -\gamma' \implies \gamma' \leq -\beta^2$. Así, obtenemos que $\gamma' = -\beta^2$. \\
+	
+	\underline{Caso 2: $\alpha' > 0$} \newline
+	
+	Retormando (2), como $\alpha' > 0$, podemos dividir por $\alpha'$ y multiplicar por $b$.
+	
+	$\dfrac{\gamma'+c^2}{\alpha'} \leq b \implies \dfrac{\gamma'+c^2}{\alpha'} \in Minor(B)$. Usando que $\beta'$ es el mayor minorante de $B$, tenemos que $\dfrac{\gamma'+c^2}{\alpha'} \leq \beta' \implies \gamma'+c^2 \leq \alpha'\beta' \implies c^2 \leq \alpha'\beta'-\gamma' \implies c \leq \sqrt{\alpha'\beta'-\gamma'} ~ \forall c \in B$, de donde $\sqrt{\alpha'\beta'-\gamma'} \in Mayor(B)$. Por lo tanto, usando que $\beta$ es el menor mayorante de $B$, obtenemos que $\sqrt{\alpha'\beta'-\gamma'} \geq \beta \implies \alpha'\beta'-\gamma' \geq \beta^2 \implies \gamma' \leq \alpha'\beta'-\beta^2$. \newline
+	
+	Finalmente, concluimos que $\gamma' = \alpha'\beta'-\beta^2$. \\ \\
+	
+	\begin{flushleft}
+		\textbf{\underline{Problema 2}}
+	\end{flushleft}	
+
+	Sean $A$ y $B$ conjuntos no vacíos de números reales tales que $B \subset \mathbb{R^+}$ y $A$ está mayorado. Sea $\alpha = sup(A)$ y $\beta = inf(B)$. Supongamos que $\alpha < \beta^2$. Definamos: 
+	$$C=\{\dfrac{1}{b^2-a} : b \in B, a \in A\}$$
+	Prueba que $sup(C)=\dfrac{1}{\beta^2-\alpha}$. ¿Qué puedes decir del ínfimo de $C$? \\ \\
+	
+	Se dan las siguientes desigualdades:
+	
+	$\left.\begin{array}{lcc}
+		a \leq \alpha ~ \forall a \in A\\
+		\\ \beta \leq b ~ \forall b \in B \\
+	\end{array}\right\rbrace$. Como $b, \beta \geq 0$, podemos multiplicar por cualquiera de ellos sin alterar el sentido de la desigualdad. 
+$	\left.\begin{array}{lcc}
+		-\alpha \leq -a ~ \forall a \in A\\
+		\\ \beta^2 \leq b\beta \leq b^2 ~ \forall b \in B \\
+	\end{array}\right\rbrace$. Sumando estas dos desigualdades obtenemos: $b^2-a \geq \beta^2-\alpha$. Podemos pasar a inversos, ya que los dos miembros son positivos ($b^2-a \geq \beta^2-\alpha > 0)$, por hipótesis.
+
+	$\dfrac{1}{\beta^2-\alpha} \geq \dfrac{1}{b^2-a} ~ \forall a \in A, \forall b \in B$.
+	
+	Esto nos dice que $\dfrac{1}{\beta^2-\alpha} \in Mayor(C)$, por lo tanto, $C$ está mayorado y tiene sentido considerar su supremo. Sea $\gamma = sup(C)$. Como $\gamma$ es el menor mayorante de $C$, tenemos que $\dfrac{1}{\beta^2-\alpha} \geq \gamma$. \\
+	
+	Además, tenemos que $\gamma \geq \dfrac{1}{b^2-a} ~ \forall a \in A, \forall b \in B$. Como $\gamma > 0$ y $\dfrac{1}{b^2-a} > 0$, podemos pasar a inversos. $b^2-a \geq \dfrac{1}{\gamma} \implies a \leq b^2- \dfrac{1}{\gamma} ~ \forall a \in A, \forall b \in B$. Por lo tanto, $b^2- \dfrac{1}{\gamma} \in Mayor(A)$. Utilizando que $\alpha$ es el menor mayorante de $A$, tenemos que $b^2 - \dfrac{1}{\gamma} \geq \alpha \implies b^2 \geq \alpha + \dfrac{1}{\gamma} \implies b \geq \sqrt{\alpha + \dfrac{1}{\gamma}} ~ \forall b \in B$. De esto último obtenemos que $\sqrt{\alpha + \dfrac{1}{\gamma}} \in Minor(B)$. Como $\beta$ es el mayor minorante de $B$, deducimos que $\sqrt{\alpha + \dfrac{1}{\gamma}} \leq \beta \implies \alpha + \dfrac{1}{\gamma} \leq \beta^2 \implies \dfrac{1}{\gamma} \leq \beta^2 - \alpha$. Como ambos miembros son positivos, podemos pasar a inversos. $\gamma \geq \dfrac{1}{\beta^2-\alpha}$. \\
+	
+	Así, obtenemos una doble desigualdad, para concluir que $\gamma = \dfrac{1}{\beta^2-\alpha}$. \\
+	
+	Razonamos que el ínfimo del conjunto $C$ es $0$, pues, al no estar el conjunto $B$ mayorado, podemos coger un elemento $b$ de $B$ tan grande como queramos. Del mismo modo, al no estar el conjunto $A$ minorado, podemos coger un elemento $a$ de $A$ tan pequeño como queramos. De esta manera, $ b^2-a \rightarrow +\infty \implies \dfrac{1}{b^2-a} \rightarrow 0$.
+\end{document}

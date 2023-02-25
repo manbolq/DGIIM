@@ -1,0 +1,74 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\usepackage{vmargin}
+
+\setpapersize{A4}
+\setmargins{2.5cm}       % margen izquierdo
+{1.5cm}                        % margen superior
+{16.5cm}                      % anchura del texto
+{23.42cm}                    % altura del texto
+{10pt}                           % altura de los encabezados
+{1cm}                           % espacio entre el texto y los encabezados
+{0pt}                             % altura del pie de página
+{2cm}                           % espacio entre el texto y el pie de página
+\begin{document}
+	\title{EJERCICIOS 19 Y 20}
+	\author{Manuel Vicente Bolaños Quesada}
+	\date{}
+	\maketitle
+	
+	\begin{flushleft}
+		\textbf{\underline{Problema 19}}
+	\end{flushleft}
+
+	Utilicemos a partir de ahora la notación $\{x\}$ para referirnos a la parte decimal del real $x$. Es decir, $\{x\} = x - E(x)$ \newline
+	
+	\underline{Lema:} Dado un $k \in \mathbb{N}, \exists m \in \mathbb{N}$ tal que $\{m \alpha\} < \dfrac{1}{k}$
+	
+	\underline{Demostración:}
+	
+	Dividamos el intervalo $[0,1]$ en $k$ partes iguales. Por el principio del palomar, existen $a, b \in \mathbb{N}$, distintos tales que $\{a \alpha\}$ y $ \{b \alpha\}$ pertenecen a un mismo intervalo $k$-ésimo.\newline
+	
+	 Eso es lo mismo que decir que $\{a \alpha\}, \{b \alpha\} \in \left[ \dfrac{n-1}{k}, \dfrac{n}{k}\right]$, para algún $n \in \mathbb{N}, 1 \leq n \leq k$. \newline
+	 
+	 Sin pérdida de generalidad, podemos decir que $b > a$, y, está claro que 
+	 $$ \{(b-a) \alpha\} \in \left] 0, \dfrac{1}{k} \right[$$
+	 
+	Notemos que, al ser $\alpha$ un número irracional, el intervalo es abierto por la izquierda, ya que $b - a \neq 0$ y $ \alpha \neq 0$, al ser irracional. Además, es abierto por la derecha por la irracionalidad de $\alpha$. 
+	
+	Así pues, hemos demostrado que existe un natural, $m$, tal que $\{m \alpha \} < \dfrac{1}{k}$, para cualquier $k$ natural dado. \newline \newline
+	
+	
+	Demostremos ahora el problema. Sea $x \in [0,1]$ un número real, y $\epsilon > 0$, otro real.
+	
+	Por la propiedad arquimediana de los números naturales, sabemos que existe un natural $k$ tal que $\dfrac{1}{k} < \epsilon$. 
+	
+	Está claro que $x \in \left [ \dfrac{n_x - 1}{k}, \dfrac{n_x}{k} \right ]$, para algún $n_x \in \mathbb{N}, 1 \leq n_x \leq k$.
+	
+	Usando el lema, sea $j \in \mathbb{N}$ un natural tal que $\{j \alpha\} < \dfrac{1}{k} < \epsilon$, lo que implica que $\{j \alpha \} \in \left ] 0, \dfrac{1}{k} \right [$.
+	
+	Sea $a_m = \{mj \alpha\}$. Para todo $i \in \mathbb{N}, i \geq 2$, tenemos que $a_i-a_{i-1} = \{j \alpha\}$, es decir, un incremento en el subíndice $i$ implica un incremento de $\{ij \alpha\}$ una cantidad constante menor que $\dfrac{1}{k}$, por lo tanto, existe un $p \in \mathbb{N}$ tal que $a_p \in \left [ \dfrac{n_x - 1}{k}, \dfrac{n_x}{k} \right ]$, lo que implica que $$ \left | \{pj\alpha\} - x \right | < \epsilon,$$ y por lo tanto el conjunto $ \{ \{n\alpha\} : n \in \mathbb{N} \}$ es denso en $[0,1]$. \newline
+	
+	
+	\begin{flushleft}
+		\textbf{\underline{Problema 20}}
+	\end{flushleft}
+
+	\underline{Solución 1}
+	
+	Vamos a usar un algoritmo, para ir "deshaciéndonos" de coches, y quedarnos finalmente con el coche que de la vuelta entera al circuito. Para ello, eliminamos un coche cuya cantidad de gasolina no es suficiente para alcanzar el siguiente coche por sí solo, y su gasolina la añadimos al coche de atrás. Podemos hacer esto, porque para que se alcance ese coche, necesariamente han tenido que pasar antes por el coche que tiene atrás. Repitiendo este proceso, nos quedaremos con un solo coche al final, que será el que podrá dar la vuelta entera al circuito. \newline
+	
+	
+	\underline{Solución 2} (no estoy tan seguro de esta solución)
+	
+	Supongamos que el coche $A$ es el que más puede avanzar, recogiendo la gasolina de los coches que encuentra a su paso. Supongamos, en busca de una contradicción, que este coche no completa la vuelta entera al circuito. Sea $\{c_1, c_2,..., c_m\}$ el conjunto de los $m$ coches por los que el coche $A$ no ha pasado, donde $c_i$ denota la cantidad de gasolina del coche $i$. 
+	
+	Así pues, la "suma" de estos coches, debe ser suficiente para alcanzar el coche $A$, y por lo tanto, hay un coche que avanza más que el coche $A$, contradiciendo la hipótesis. 
+	
+\end{document}

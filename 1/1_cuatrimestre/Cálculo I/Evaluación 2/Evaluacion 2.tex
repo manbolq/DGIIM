@@ -1,0 +1,116 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\usepackage{vmargin}
+
+\setpapersize{A4}
+\setmargins{2.5cm}       % margen izquierdo
+{1.5cm}                        % margen superior
+{16.5cm}                      % anchura del texto
+{23.42cm}                    % altura del texto
+{10pt}                           % altura de los encabezados
+{1cm}                           % espacio entre el texto y los encabezados
+{0pt}                             % altura del pie de página
+{2cm}                           % espacio entre el texto y el pie de página
+\begin{document}
+	\title{EVALUACIÓN 2}
+	\author{Manuel Vicente Bolaños Quesada}
+	\date{}
+	\maketitle
+	
+	
+	\begin{flushleft}
+		\textbf{\underline{Problema 1}}
+	\end{flushleft}
+
+	Sea $A = \left\lbrace n \in \mathbb{N} : \dfrac{2 \cdot 4 \cdot 6 \cdot \cdot \cdot (2n)}{5 \cdot 7 \cdot 9 \cdot \cdot \cdot (2n + 3)} < \dfrac{\sqrt{6}}{\sqrt{(n+1)(n+2)(n+3)}}\right\rbrace $ \newline
+	
+	Evidentemente, $A \subseteq \mathbb{N}$. Veamos ahora que $1 \in A$. Tenemos que 
+	$$ \dfrac{2}{5} = \dfrac{2 \cdot 1}{2 \cdot 1 + 3} < \dfrac{\sqrt{6}}{\sqrt{2 \cdot 3 \cdot 4}} = \dfrac{1}{2}, $$ por lo que $1 \in A$, como queríamos ver. \newline
+	
+	Supongamos ahora que $n \in A$, y veamos que $n+1 \in A$.
+	
+	\begin{equation*}
+		\begin{split}
+			\dfrac{2 \cdot 4 \cdot 6 \cdot \cdot \cdot (2n)[2(n+1)]}{5 \cdot 7 \cdot 9 \cdot \cdot \cdot (2n + 3)(2n+5)}
+			& < \dfrac{\sqrt{6}}{\sqrt{(n+1)(n+2)(n+3)}} \cdot \dfrac{2(n+1)}{2n+5} \\
+			& = \dfrac{\sqrt{6} \sqrt{n+1} }{\sqrt{(n+1)(n+2)(n+3)} \sqrt{n+4}} \cdot \dfrac{2 \sqrt{n+1} \sqrt{n+4}}{2n+5} \\
+			& = \dfrac{\sqrt{6}}{\sqrt{(n+2)(n+3)(n+4)}} \cdot \dfrac{2 \sqrt{(n+1)(n+4)}}{2n+5} \\
+			& \leq \dfrac{\sqrt{6}}{\sqrt{(n+2)(n+3)(n+4)}} \cdot \dfrac{2n+5}{2n+5} \\
+			& = \dfrac{\sqrt{6}}{\sqrt{(n+2)(n+3)(n+4)}},
+		\end{split}		
+	\end{equation*}
+	
+	tal y como queríamos demostrar. En la última desigualdad hemos usado la desigualdad entre la media geométrica y aritmética de esta manera:
+	$$\dfrac{(n+1) + (n+4)}{2} \geq \sqrt{(n+1)(n+4)}$$
+	
+	Podemos dividir por $\sqrt{n+4}$ y por $\sqrt{n+1}$ ya que $\sqrt{n+4} > \sqrt{n+1} \geq \sqrt{2} > 0$. Así, pues, $\mathbb{N} \subseteq A \implies A = \mathbb{N}$, por lo que la desigualdad del enunciado se verifica para todos los naturales.
+	
+	\begin{flushleft}
+		\textbf{\underline{Problema 2}}
+	\end{flushleft}
+	
+	Como $A$ está acotado, tiene supremo. Sea $\alpha = sup(A)$. Demostremos que $B$ no es vacío, demostrando que $\alpha$ es un casi-mayorante. Tenemos que $\left\lbrace x \in A : \alpha < x \right\rbrace  = \emptyset$, ya que $\alpha$ es el supremo de $A$. Como $\emptyset$ es finito, $\alpha \in B$. Es más, $Mayor(A) \subseteq B$, ya que si $\delta \in Mayor(A) \implies \left\lbrace x \in A : \delta < x \right\rbrace  = \emptyset$, que es finito. \newline
+	
+	Sea $r \in Minor(A)$. Entonces, $\left\lbrace x \in A : r < x \right\rbrace$, o bien es la totalidad de $A$, o bien es igual a $A \backslash \{inf(A)\}$. En cualquiera de los dos casos, el conjunto es infinito, por lo que ningún minorante de $A$ pertenece a $B$. Por lo tanto, los minorantes de $A$, también son minorantes de $B$, y queda demostrado que $B$ está minorado. \newpage
+	
+	\begin{flushleft}
+		Manuel Vicente Bolaños Quesada	\newline 
+	\end{flushleft}	
+	
+
+	
+	Como $B$ está minorado, tiene sentido considerar su ínfimo. Sea $\beta = inf(B)$. Entonces, $\forall b \in B, \beta \leq b$, y, en particular, $\beta \leq \alpha$ (ya demostramos que $\alpha \in B$), como queríamos probar. \newline
+	
+	\underline{Lema:} Sean $r \in B, s \in \mathbb{R}$ tales que $s > r$, entonces, $s \in B$.
+	
+	\underline{Demostración:} Como $r \in B$, tenemos que $\left\lbrace x \in A : r < x \right\rbrace$ es un conjunto finito. Además, como $s > r$, tenemos que $$\#\left\lbrace x \in A : r < x \right\rbrace \geq \#\left\lbrace x \in A : s < x \right\rbrace ,$$ por lo que el conjunto $\left\lbrace x \in A : s < x \right\rbrace$ también es infinito, y por tanto $s \in B$. Como consecuencia, $] \beta, + \infty [ ~ \subseteq B$. \newline
+	\newline
+	
+	Demostremos ahora que si $\beta < \alpha$, entonces $A$ tiene máximo. Supongamos, en busca de una contradicción, que $A$ no tiene máximo. Entonces, podemos encontrar números pertenecientes a $A$ tan cercanos a $\alpha$ como queramos. \newline
+	
+	Sea $\varepsilon > 0$ tal que $\beta < \alpha - \varepsilon < \alpha$. Tenemos que $\alpha - \varepsilon \in ~ ]\beta, +\infty[$ , lo que implica, por el lema, que $\alpha - \varepsilon \in B$, pero entonces $\{x \in A : \alpha - \varepsilon < x\}$ es finito. Sin embargo, entre $\alpha - \varepsilon$ y $\alpha$ hay infinitos números reales. Así pues, hemos llegado a una contradicción, y la hipótesis inicial es falsa. Por lo tanto $A$ tiene máximo.
+	
+	\begin{flushleft}
+		\textbf{\underline{Problema 3}}
+	\end{flushleft}
+	
+	i) Como $f$ es creciente, tenemos que 
+	$$inf\{f(t): \alpha < t \leq b\} \geq f(\alpha)$$
+	$$sup\{f(s):a \leq s < \alpha\} \leq f(\alpha) \implies -sup\{f(s):a \leq s < \alpha\} \geq -f(\alpha)$$
+	Sumando las dos desigualdades anteriores, obtenemos que $$\omega(f, \alpha) \geq f(\alpha) - f(\alpha) = 0,$$ como queríamos demostrar.
+	
+	Sea $\varepsilon \geq 0$ tal que $\alpha \leq \alpha + \varepsilon < v \leq b$. Entonces, utilizando que $f$ es creciente
+	$$inf\{f(t): \alpha < t \leq b\} \leq f(\alpha + \varepsilon) \leq f(v)$$
+	
+	Similarmente, sea $\varepsilon ' \geq 0$ tal que $a \geq u > \alpha - \varepsilon ' \geq \alpha$. Entonces, usando que $f$ es creciente obtenemos que
+	$$sup\{f(s):a \leq s < \alpha\} \geq f(\alpha - \varepsilon ') \geq f(u) \implies -sup\{f(s):a \leq s < \alpha\} \leq -f(u)$$
+	
+	Sumando las dos últimas desigualdades obtenemos que $$ \omega(f, \alpha) \leq f(v) - f(u),$$ que es lo que se pedía demostrar. \newline
+	
+	ii)Consideramos los puntos $ a = x_0 < \alpha_1 < x_1 < \alpha_2 < x_2 < \alpha_3 < \cdot \cdot \cdot < x_{p-1} < \alpha_p < x_p = b$
+	
+	Usando el resultado del apartado i) tenemos que
+	$$\omega(f, \alpha_i) \leq f(x_i) - f(x_{i-1}), \forall i \in \mathbb{N}, 1 \leq i \leq p$$
+	Entonces, tenemos que $$\sum_{i=1}^{p} \omega(f, \alpha_i) \leq \sum_{i = 1}^{p}f(x_i) - \sum_{i = 0}^{p-1}f(x_i) = f(x_p)-f(x_0) = f(b)-f(a),$$ como queríamos demostrar. \newpage
+	
+	\begin{flushleft}
+		Manuel Vicente Bolaños Quesada	\newline 
+	\end{flushleft}	
+
+	iii) Supongamos, en busca de una contradicción, que el conjunto $S_n$ es infinito para cada $n \in \mathbb{N}$. Sea $m \in \mathbb{N}$. Si sumamos $m$ elementos del conjunto $S_n$, a saber: $\omega(f, \alpha_1), \omega(f, \alpha_2), ... , \omega(f, \alpha_m)$, tendremos que
+	$$\sum_{i = 1}^{m} \omega(f, \alpha_i) \geq m \cdot \dfrac{1}{n}$$
+	Sin embargo, por el apartado ii), sabemos que $$f(b)-f(a) \geq \sum_{i = 1}^{m} \omega(f, \alpha_i),$$ de donde $$f(b)-f(a) \geq \dfrac{m}{n}.$$
+	
+	Ahora bien, como el conjunto $S_n$ es infinito, y por la propiedad arquimediana de los número naturales, podemos elegir un $m$, tal que $\dfrac{m}{n} > f(b)-f(a)$, lo que es una contradicción, y por lo tanto, la hipótesis inicial es falsa. En conclusión, $S_n$ es finito para cada $n \in \mathbb{N}$. \newline
+	
+	iv) Sea el conjunto $T_n = \left\lbrace  \alpha \in ]a,b[ : \omega(f,\alpha) > \dfrac{1}{n}\right\rbrace$, para cada $n \in \mathbb{N}$.
+	
+	Está claro que $\# T_n \leq \#S_n$, por lo que $T_n$ es finito para cada $n$ natural. Además, $$S = \bigcup_{n \in \mathbb{N}} T_n,$$ ya que podemos aproximar $0$ con $\dfrac{1}{n}$, haciendo $n$ cada vez mayor.
+	Sabemos que $\mathbb{N}$ es numerable. Para cada $n \in \mathbb{N}$, tenemos que $T_n$ es un conjunto numerable no vacío (es finito). Entonces, el conjunto $$\bigcup_{n \in \mathbb{N}}T_n$$ también es numerable, o lo que es lo mismo, $S$ es numerable.
+\end{document}

@@ -1,0 +1,103 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{vmargin}
+
+\setpapersize{A4}
+\setmargins{2.5cm}       % margen izquierdo
+{1.5cm}                        % margen superior
+{16.5cm}                      % anchura del texto
+{23.42cm}                    % altura del texto
+{10pt}                           % altura de los encabezados
+{1cm}                           % espacio entre el texto y los encabezados
+{0pt}                             % altura del pie de página
+{2cm}                           % espacio entre el texto y el pie de página
+\begin{document}
+	\title{EVALUACIÓN 4}
+	\author{Manuel Vicente Bolaños Quesada}
+	\date{}
+	\maketitle
+	
+	
+	\begin{flushleft}
+		\textbf{\underline{Problema 1}}
+	\end{flushleft}
+	
+	i) Como $A$ es finito, podemos asegurar que existe un natural $n_0$ tal que $n_0 > n$ para todo $n \in A$. Como $n_0 \notin A$, sabemos que $A_{n_0}$ no tiene máximo, y que $x_n < \beta_{n_0}$, para cada $n \geq n_0$.
+	
+	Entonces, $\forall n \in \mathbb{N}$, tal que $n \geq n_0$, existe un natural $k$ tal que $k > n$ y $x_n < x_k < \beta_{n_0}$. Consideremos entonces la función $\varphi : \mathbb{N} \rightarrow \mathbb{N}$ definida por $$ \varphi(1) = n_0$$ $$ \varphi(n+1) = min\{p \in \mathbb{N} : \varphi(n) < p, x_{\varphi(n)} < x_p\}$$
+	Así pues, la sucesión parcial $x_{\varphi(n)}$ es estrictamente creciente.
+	
+	ii) Sea $B = \{p \in \mathbb{N}: x_p \geq x_n$, para cada $n \geq p\}$. Veamos que este conjunto es infinito. Supongamos, en busca de una contradicción, que $B$ es finito. Entonces, existe un $m_0$ tal que para todo $n \geq m_0$, $n \notin B$. Entonces, existe otro natural $k$ tal que $ x_{m_0} < x_k$. Entonces, definimos una función similar a la del apartado anterior, y concluimos que existe una sucesión parcial estrictamente creciente. Como la sucesión original está acotada, deducimos que esta sucesión parcial es convergente. Sea $x$ su valor de adherencia. Entonces, para cada natural $n \geq m_0$, existe un natural $k$ tal que $x > x_k > x_n$, de donde $ n \notin A$, lo que implicaría que $A$ está mayorado, pero eso es una contradicción.
+	
+	Como $B$ es infinito, sabemos que existe una biyección, $\sigma: \mathbb{N} \rightarrow B$ estrictamente creciente. Entonces, la sucesión parcial $\{x_{\sigma(n)}\}$ es decreciente, ya que si tomamos $p, q \in B$, tales que $p > q$, tenemos que $x_q \geq x_p$.
+	
+	 
+	
+
+	
+	\begin{flushleft}
+		\textbf{\underline{Problema 2}}
+	\end{flushleft}	
+	
+	i)$\Rightarrow )$ Sean $A_n = \{ a_p : p \geq n\}$, $\alpha_n = inf(A_n)$. Entonces, $\alpha = \lim\{\alpha_n\}$. Aplicando la definición de límite, para todo $\varepsilon > 0$ sabemos que existe un natural $n_0$ tal que para cada $n \geq n_0$ se cumple que $\alpha - \varepsilon < \alpha_n < \alpha + \varepsilon$. 
+	
+	Entonces, si $n \geq n_0$, tenemos que $x_n \in A_n$, y como $\alpha_n$ es el ínfimo de ese conjunto, $ \alpha - \varepsilon < \alpha_n \leq x_n$. Por lo tanto, el conjunto $\{n \in \mathbb{N}: x_n < \alpha - \varepsilon\} \subseteq \{1, 2, \ldots, n_0 - 1\}$, y por lo tanto es finito. 
+	
+	
+	Supongamos ahora que el conjunto $B = \{n \in \mathbb{N}: x_n < \alpha + \varepsilon\}$ es finito. Sea entonces $c = max(B)$. Luego $n > c \implies n \notin B \implies x_n \geq \alpha + \varepsilon$, lo que quiere decir que $\alpha + \varepsilon$ es un minorante de $A_n$, lo que implica que $\alpha + \varepsilon \leq \alpha_n$. Sea ahora $m_0 = max\{n_0, c + 1\}$. Entonces, $\alpha + \varepsilon > \alpha_{m_0} \geq \alpha + \varepsilon$, lo que es una contradicción y por lo tanto, $B$ es infinito.
+	
+	$\Leftarrow )$ Tenemos que $A_n \cap \{x_n : x_n < \alpha + \varepsilon\} \neq \emptyset$, ya que el conjunto $\{n \in \mathbb{N}: x_n < \alpha + \varepsilon\}$ es infinito, por hipótesis. Esto implica que $\alpha + \varepsilon$ no es un minorante de $A_n$, y por lo tanto, $\alpha_n < \alpha + \varepsilon$, para todo natural $n$. Luego $\lim\{\alpha_n\} \leq \alpha + \varepsilon$.
+	
+	Por otra parte, como el conjunto $\{n \in \mathbb{N}: x_n < \alpha - \varepsilon\}$ es finito, existe un $n_0$ tal que para cada natural $n \geq n_0$, se tiene que $x_n \geq \alpha - \varepsilon$. Así pues, para todo $n \geq n_0$, $\alpha - \varepsilon$ es un minorante de $A_n$. Es decir, $\alpha_n \geq \alpha - \varepsilon$. Luego $\lim\{\alpha_n\} \geq \alpha - \varepsilon$.
+	
+	Juntando las dos desigualdades obtenidas, tenemos que $ \alpha - \varepsilon \leq \lim\{\alpha_n\} \leq \alpha + \varepsilon,$ y por lo tanto, $\lim\{\alpha_n\} = \alpha$, como se pedía demostrar. 
+	
+
+	ii) La demostración es análoga a la anterior:
+	
+	$\Rightarrow )$ Sean $A_n = \{ a_p : p \geq n\}$, $\beta_n = sup(A_n)$. Entonces, $\beta = lim\{\beta_n\}$. Aplicando la definición de límite, para todo $\varepsilon > 0$ sabemos que existe un natural $n_0$ tal que para cada $n \geq n_0$ se cumple que, $\beta - \varepsilon < \beta_n < \beta + \varepsilon$. 
+	
+	Entonces, si $n \geq n_0$, tenemos que $x_n \in A_n$, y como $\beta_n$ es el supremo de ese conjunto, $x_n \leq \beta_n < \beta + \varepsilon$. Por lo tanto, el conjunto $\{n \in \mathbb{N}: x_n > \beta + \varepsilon\} \subseteq \{1, 2, \ldots, n_0 - 1\}$, y por lo tanto es finito. 
+	
+	\newpage
+	
+	Manuel Vicente Bolaños Quesada \newline
+	
+	Supongamos ahora que el conjunto $B = \{n \in \mathbb{N}: x_n > \beta - \varepsilon\}$ es finito. Sea entonces $c = max(B)$. Luego $n > c \implies n \notin B \implies x_n \leq \beta - \varepsilon$, lo que quiere decir que $\beta - \varepsilon$ es un mayorante de $A_n$, lo que implica que $\beta - \varepsilon \geq \beta_n$. Sea ahora $m_0 = max\{n_0, c + 1\}$. Entonces, $\beta - \varepsilon \geq \beta_{m_0} > \beta - \varepsilon$, lo que es una contradicción y por lo tanto, $B$ es infinito.
+	
+	$\Leftarrow )$ Tenemos que $A_n \cap \{x_n : x_n > \beta - \varepsilon\} \neq \emptyset$, ya que el conjunto $\{n \in \mathbb{N}: x_n > \beta- \varepsilon\}$ es infinito, por hipótesis. Esto implica que $\beta - \varepsilon$ no es un mayorante de $A_n$, y por lo tanto, $\beta_n > \beta - \varepsilon$, para todo natural $n$. Luego $\lim\{\beta_n\} \geq \beta - \varepsilon$.
+	
+	Por otra parte, como el conjunto $\{n \in \mathbb{N}: x_n > \beta + \varepsilon\}$ es finito, existe un $n_0$ tal que para cada natural $n \geq n_0$, se tiene que $x_n \leq \beta + \varepsilon$. Así pues, para todo $n \geq n_0$, $\beta + \varepsilon$ es un mayorante de $A_n$. Es decir, $\beta_n \leq \beta + \varepsilon$. Luego $\lim\{\beta_n\} \leq \beta + \varepsilon$.
+	
+	Juntando las dos desigualdades obtenidas, tenemos que $ \beta - \varepsilon \leq \lim\{\beta_n\} \leq \beta + \varepsilon,$ y por lo tanto, $\lim\{\beta_n\} = \beta$, como queríamos demostrar. \newline
+	
+	
+
+	
+
+	
+	\begin{flushleft}
+		\textbf{\underline{Problema 3}}
+	\end{flushleft}	
+
+	i) Utilizando el criterio de equivalencia logarítmica, $\{x_n\} \rightarrow e ^L \Leftrightarrow \{n \log\dfrac{n^2+1}{n^2+n+1}\} \rightarrow L$.
+	
+	$n \log\dfrac{n^2+1}{n^2+n+1} = n \log \left( 1 + \dfrac{-n}{n^2+n+1} \right) \thicksim n \dfrac{-n}{n^2+n+1} \rightarrow -1$. 
+	
+	Por lo tanto, $\{x_n\} \rightarrow e ^{-1} = \dfrac{1}{e}$
+	
+	ii) Sean $a_n = \dfrac{1}{2 \log 2} + \dfrac{1}{3\log 3} + \cdots + \dfrac{1}{n \log n}$ y $b_n = \log (\log (n))$. Está claro que $b_n$ es una sucesión estrictamente creciente y positivamente divergente. Por lo tanto, podemos aplicar el criterio de Stolz:
+	$$\underset{n\to \infty }{\mathop{\lim }}\,{{y}_{n}}=\underset{n\to \infty }{\mathop{\lim }}\,\dfrac{\dfrac{1}{2\log 2}+\dfrac{1}{3\log 3}+\cdots +\dfrac{1}{n\log n}}{\log (\log (n+1))}=\underset{n\to \infty }{\mathop{\lim }}\dfrac{a_n-a_{n-1}}{b_n-b_{n-1}} = \underset{n\to \infty }{\mathop{\lim }}\,\frac{\dfrac{1}{n\log n}}{\log (\log (n+1))-\log(\log(n))}$$.
+	
+	Por otro lado, tenemos que $\log (\log (n+1))-\log(\log(n)) = \log \left( \dfrac{\log(n+1)}{\log n} \right) = \log \left( 1 + \dfrac{\log(n+1)}{\log n} - 1 \right) = \log \left( 1 + \dfrac{\log(n+1) - \log n}{\log n} \right) = \log \left( 1 + \dfrac{\log \left(1 + \dfrac{1}{n}\right)}{\log n} \right) \thicksim \dfrac{\log \left(1 + \dfrac{1}{n}\right)}{\log n} \thicksim \dfrac{1}{n \log n}$. \newline
+	
+	Por lo tanto, $$\lim_{n \rightarrow \infty} \dfrac{\dfrac{1}{n\log n}}{\log (\log (n+1))-\log(\log(n))} = \lim_{n \rightarrow \infty}\dfrac{\dfrac{1}{n\log n}}{\dfrac{1}{n\log n}} = 1.$$
+	
+	Así pues, $\{y_n\} \rightarrow 1$.
+\end{document}

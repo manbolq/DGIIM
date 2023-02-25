@@ -1,0 +1,249 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{vmargin}
+\usepackage{parskip}
+\usepackage[document]{ragged2e}
+\usepackage{ragged2e}
+\usepackage{enumitem}
+\setpapersize{A4}
+\setmargins{2.5cm}       % margen izquierdo
+{1.5cm}                        % margen superior
+{16.5cm}                      % anchura del texto
+{23.42cm}                    % altura del texto
+{10pt}                           % altura de los encabezados
+{1cm}                           % espacio entre el texto y los encabezados
+{0pt}                             % altura del pie de página
+{2cm}                           % espacio entre el texto y el pie de página
+
+
+\begin{document}
+	\center{\huge{Cuestiones teóricas}}
+	\vspace{1 cm}
+	
+	\justify
+	
+	\begin{enumerate}
+		\item Toda función $f: A \rightarrow \mathbb{R}$, inyectiva en $A$ y cuya imagen es un intervalo, es continua.
+		
+		\textbf{Falso. }Consideremos la función $f : [0, 1[ \rightarrow ]0, 1]$ definida por:
+		\begin{equation*}
+			f(x)= \left\{ \begin{array}{lcc}
+				1 &   \text{si}  & x = 0 \\
+				x & \text{si} & 0 < x < 1 
+			\end{array}
+			\right.
+		\end{equation*}
+		Claramente satisface las hipótesis, pero no es continua en $x = 0$. \newline
+		
+		\item Toda función definida en un intervalo cuya imagen es un intervalo es continua.
+		
+		\textbf{Falso. }Consideremos la función $f : [0, 1[ \rightarrow \mathbb{R}$ definida por:
+		\begin{equation*}
+			f(x)= \left\{ \begin{array}{lcc}
+				1 &   \text{si}  & x = 0 \\
+				x &  \text{si} & 0 < x < 1
+			\end{array}
+			\right.
+		\end{equation*}
+		Claramente satisface las hipótesis, pero no es continua en $x = 0$. \newline
+		
+		\item Toda función polinómica no constante o se anula en algún punto o alcanza un máximo o un mínimo absolutos en $\mathbb{R}$.
+		
+		\textbf{Verdadero. }Sabemos, por un resultado de teoría, que toda función polinómica de grado par cuyo coeficiente líder es positivo alcanza un mínimo absoluto en $\mathbb{R}$, y si el coeficiente líder es negativo, alcanza un mínimo absoluto.
+		
+		Si la función polinómica es de grado impar, también sabemos, por un resultado de teoría, que toda función de grado impar se anula en algún punto. \newline
+		
+		\item Si $f$ es una función estrictamente monótona y definida en un intervalo, entonces su función inversa $f^{-1}$ es continua.	
+		
+		\textbf{Verdadero. }
+		
+		Lema: Una función monótona cuya imagen es un intervalo es continua.
+		
+		Sea $f: I \rightarrow \mathbb{R}$ una función estrictamente monótona definida en un intervalo $I$. Como $f$ es inyectiva en $I$, su inversa, $f^{-1}$, está definida en el conjunto imagen $J = f(I)$ y, claramente, $f^{-1}(J) = I$. Como la inversa de una función estrictamente monótona $f$ es también estrictamente monótona e $I$ es, por hipótesis, un intervalo, el lema aplicado a $f^{-1}$, nos dice que $f^{-1}$ es continua en $J$. \newline
+		
+		\item Si $f: I \rightarrow \mathbb{R}$ es una función inyectiva, $I$ es un intervalo y $J = f(I)$ es un intervalo entonces su función inversa $f^{-1}$ es continua en $J$.
+		
+		\textbf{Falso. }Consideremos la función $f : [0, 1[ \rightarrow \mathbb{R}$ definida por:
+		\begin{equation*}
+			f(x)= \left\{ \begin{array}{lcc}
+				1 &   \text{si}  & x = 0 \\
+				x &  \text{si} & 0 < x < 1
+			\end{array}
+			\right.
+		\end{equation*}
+		Claramente satisface las hipótesis. Su inversa, $f^{-1}$ viene dada por:
+		\begin{equation*}
+			f^{-1}(x)= \left\{ \begin{array}{lcc}
+				x &   \text{si}  & 0 < x < 1 \\
+				0 &  \text{si} & x = 1
+			\end{array}
+			\right.
+		\end{equation*}
+		que es claramente discontinua en $x = 1$. \newline
+		
+		\item Si $f : A \rightarrow \mathbb{R}$ es una función inyectiva, $f(A)$ es un intervalo, y $f^{-1}$ es continua, entonces $f$ es continua.
+		
+		\textbf{Verdadero. }La función $f^{-1}$, que está definida en el intervalo $f(A)$, es continua e inyectiva, luego estrictamente monótona. Como $f$ está definida en un intervalo, se deduce que $f$ también es monótona. Como toda función monótona cuya imagen es un intervalo es continua, deducimos que $f$ es continua. \newline
+		
+		\item Toda función continua en un intervalo alcanza en algún punto de dicho intervalo un valor mínimo.
+		
+		\textbf{Falso. }Consideremos la función $f : ]0, 1[ \rightarrow \mathbb{R}$, definida por $f(x) = x$. Tenemos entonces que $f$ satisface las hipótesis, pero no alcanza un mínimo en $]0, 1[$. \newline
+		
+		\item Si $f : \mathbb{R} \rightarrow \mathbb{R}$ es continua y verifica que $f(\mathbb{R}) \subset \mathbb{Q}$ entonces $f$ es constante.
+		
+		\textbf{Verdadero. }Sea $f: \mathbb{R} \rightarrow \mathbb{R}$ continua. Por el Teorema del valor intermedio, por ser $\mathbb{R}$ un intervalo, $f(\mathbb{R})$ también lo es. Es decir, si $x, y \in f(\mathbb{R})$, tales que $ x \leq y$, entonces, si $z \in ]x, y[$, necesariamente $z \in f(\mathbb{R})$. Esto implica que $z \in \mathbb{Q}$, y, por lo tanto, entre $x$ e $y$ no hay números irracionales. Esto es, $x = y$, y por lo tanto, $f$ es constante. \newline
+		
+		\item Si $f$ es continua en $a$ y $g$ es discontinua en $a$ entonces $f + g$ puede ser continua o discontinua en $a$.
+		
+		\textbf{Falso. }Por una proposición, si la suma de dos funciones es continua y una de ella es continua, entonces la otra debe ser continua. Si $f + g$ fuera continua en $a$, al ser $f$ continua, $g$ debe de serlo también, contradiciendo la hipótesis. \newline
+		
+		\item Si $f, g : \mathbb{R} \rightarrow \mathbb{R}$ son funciones continuas tales que $f(x) = g(x)$ para todo $x \in \mathbb{Q}$, entonces $f(x) = g(x)$ para todo $x \in \mathbb{R}$.
+		
+		\textbf{Verdadero. }Como $\mathbb{Q}$ es denso en $\mathbb{R}$, dado $y \in \mathbb{R}$, existe una sucesión de números racionales $\{x_n\}$, con $x_n \in \mathbb{Q}$ para todo $n \in \mathbb{N}$, tal que $\lim\{x_n\} = y$. Por la continuidad de $f$ y de $g$ debe ser $\lim\{f(x_n)\} = f(y)$, y $\lim \{g(x_n)\} = g(y)$, pero como, por la hipótesis hecha tenemos que $f(x_n) = g(x_n)$ por ser $x_n$ un racional para cada $n \in \mathbb{N}$, deducimos que $f(y) = \lim\{f(x_n)\} = \lim \{g(x_n)\} = g(y)$. Esto es, $f(y) = g(y)$ para todo $y \in \mathbb{R}$. \newline
+		
+		\item Si $f : [0, 1] \rightarrow \mathbb{R}$ es continua y $f(x) > 0$ para todo $x \in [0, 1]$, entonces existe $\alpha > 0$ tal que $f(x) > \alpha$ para todo $x \in [0, 1]$.
+		
+		\textbf{Verdadero. }Por el teorema de Weierstras de valores mínimos y máximos, sabemos que una función continua en un intervalo cerrado y acotado, alcanza un mínimo  (absoluto), es decir, hay algún $x_0 \in [0, 1]$ tal que $f(x_0) \leq f(x)$ para todo $x \in [0, 1]$. Y como es $f(x) > 0$ para todo $x \in [0, 1]$, debe ser $f(x_0) > 0$. Tomando $\alpha = f(x_0) / 2$ tenemos que $f(x) > \alpha$ para todo $x \in [0, 1]$. \newline
+		
+		\item Si $\{x_n\}$ es una sucesión estrictamente creciente tal que $\{x_{n+1} - x_n\} \rightarrow 0$, entonces $\{x_n\}$ es convergente.
+		
+		\textbf{Falso. }Consideremos la sucesión $\{x_n\}$, con $x_n = \sqrt{n}$. Entonces, 
+		$$x_{n+1} - x_n = \sqrt{n+1} - \sqrt{n} = \dfrac{(\sqrt{n+1} - \sqrt{n})(\sqrt{n+1} + \sqrt{n})}{\sqrt{n+1} + \sqrt{n}} = \dfrac{1}{\sqrt{n+1} + \sqrt{n}} \rightarrow 0.$$
+		Pero $\{\sqrt{n}\} \rightarrow + \infty$. \newline
+		
+		\newpage
+		
+		\item Si la serie $\displaystyle \sum_{n \geq 1} |a_{n+1} - a_n|$ es convergente entonces $\{a_n\}$ es convergente.
+		
+		\textbf{Verdadero. } Si $\displaystyle \sum_{n \geq 1} |a_{n+1} - a_n|$ converge, la serie
+		$\displaystyle \sum_{n \geq 1} (a_{n+1} - a_n)$ también. \\
+		Tenemos que $\displaystyle \sum_{n = 1}^m (a_{n+1} - a_n) = a_{m+1} - a_1$. Como la serie converge, $\{a_{m+1}\}$ debe converger también, y, por lo tanto, $\{a_n\}$ converge. \newline
+		
+		\item Una sucesión de números reales está acotada si, y solo si, admite una sucesión parcial convergente.
+		
+		\textbf{Falso. }Consideremos la sucesión $\{x_n\}$ donde $x_{2n} = 1$, y $x_{2n+1} = n$. tenemos que $\{x_n\}$ admite una sucesión parcial convergente, pero no está acotada. \newline
+		
+		\item Si $\displaystyle \sum_{n \geq 1} x_n$ es una serie convergente de números reales positivos, entonces la sucesión $\{x_n\}$ es decreciente.
+		
+		\textbf{Verdadero. }Si $\{x_n\}$ fuera creciente, al ser $x_n > 0$ para todo $n \in \mathbb{N}$, $\{x_n\}$ no converge a $0$, y por lo tanto, $\displaystyle \sum_{n \geq 1} x_n$ no puede ser convergente. \newline
+		
+		\item Sea $f: A \rightarrow \mathbb{R}$ una función real de variable real. Si $f$ es continua en $A$ y no está mayorada ni minorada, entonces $f(A) = \mathbb{R}$.
+		
+		\textbf{Falso. }Consideremos la función $f : \displaystyle \bigcup_{n \in \mathbb{Z}} [2n, 2n+1[ \rightarrow \mathbb{R}$ definida por $f(x) = E(x)$, donde $E(x)$ denota la parte entera de $x$. Con la definición de continuidad, se ve que $f$ es continua en su dominio. Además, está claro que no está mayorada ni minorada. No obstante, su imagen es un subconjunto estricto de $\mathbb{R}$. \newline
+		
+		\item Una sucesión no acotada no puede tener una sucesión parcial convergente.
+		
+		\textbf{Falso. }Consideremos la sucesión $\{x_n\}$, donde $x_{2n} = 1$ y $x_{2n+1} = n$. Entonces, $\{x_n\}$ no está acotada, claramente, pero $\{x_{2n}\}$ es convergente. \newline
+		
+		\item Si una sucesión monótona $\{x_n\}$ tiene una sucesión parcial convergente entonces $\{x_n\}$ es convergente.
+				
+		\textbf{Verdadero. }Supongamos que $\{x_n\}$ es creciente y sea $\{x_{\varphi(n)}\}$ una sucesión parcial convergente. Entonces, la sucesión $\{x_{\varphi(n)}\}$ debe estar mayorada, es decir, existe un $M > 0$ tal que $x_{\varphi(n)} \leq M$ para todo $n \in \mathbb{N}$. Pero sabemos que para todo $n \in \mathbb{N}$ es $n \leq \varphi(n)$, por lo que $x_n \leq x_{\varphi(n)} \leq M$, lo que prueba que $\{x_n\}$ está mayorada y, por tanto, es convergente.
+		
+		Se razona análogamente si suponemos que $\{x_n\}$ es decreciente. \newline
+		
+		\item Una sucesión que no tiene ninguna sucesión parcial convergente tampoco tiene ninguna sucesión parcial acotada.
+		
+		\textbf{Verdadero. }Sea $\{x_n\}$ una sucesión que tiene ninguna sucesión parcial convergente. Supongamos que tiene una sucesión parcial acotada. Entonces, por el teorema de Bolzano-Weirstrass, dicha sucesión parcial tiene una parcial convergente, que también sería parcial de $\{x_n\}$, lo que es una contradicción. \newline
+		
+		\item Toda sucesión estrictamente creciente verifica la condición de Cauchy.
+		
+		\textbf{Falso. }Tomemos la sucesión $\{n\}$. Claramente es estrictamente creciente, pero no satisface la condición de Cauchy. \newline
+		
+		\item Si $\{x_n\}$ es una sucesión acotada de números reales, entonces $\{x_n\}$ tiene la siguiente propiedad: para cada $\delta > 0$, pueden encontrarse $m, n \in \mathbb{N}$, con $m \neq n$, tales que $|x_n - x_m| < \delta$.
+		
+		\textbf{Verdadero.} Por el teorema de Bolzano-Weierstrass, toda sucesión acotada tiene alguna sucesión parcial, $\{x_{\varphi(n)}\}$, convergente. Por tanto, la sucesión $\{x_{\varphi(n)}\}$ debe verificar la condición de Cauchy, es decir, dado $\delta > 0$, existe $n_0 \in \mathbb{N}$ tal que para todos $p, q \geq n_0$ es $|x_{\varphi(p)} - x_{\varphi(q)}| < \delta$. Poniendo $m  = \varphi(n_0)$ y $n = \varphi(n_0 + 1)$, tenemos que $m \neq n$ (porque $\varphi$ es estrictamente creciente) y $|x_n - x_m| < \delta$. \newline
+		
+		\item Si un conjunto no vacío de números reales no tiene supremo tampoco tiene máximo.
+		
+		\textbf{Falso. }Si un conjunto tiene máximo, entonces ese es el supremo. \newline
+		
+		\item Hay un conjunto $A \subseteq \mathbb{R}$ que no es vacío y cuyo conjunto de minorantes es un intervalo de del tipo $]- \infty, a [$.
+		
+		\textbf{Falso. }Por el principio del ínfimo, para todo conjunto de números reales no vacío y minorado, se verifica que el conjunto de sus minorantes tiene máximo. Claramente, $]- \infty, a [$ no tiene máximo. \newline
+		
+		\item Hay una función $f : [0, 1] \rightarrow \mathbb{R}$ que es continua y verifica que $f([0, 1]) = [2, 3[$.
+		
+		\textbf{Falso. }Por el teorema de Weirstrass, $f$ debe alcanzar en $[0, 1]$ un máximo absoluto, pero como la imagen es un intervalo, el máximo absoluto debe ser el supremo del intervalo, es decir, $3$. Sin embargo, $3 \notin [2, 3[$, por lo que no lo puede alcanzar.\newline
+		
+		\item Si $f$ y $g$ son discontinuas en $a$ entonces $fg$ es discontinua en $a$.
+		
+		\textbf{Falso. }Consideremos las funciones $f: \mathbb{R} \rightarrow \mathbb{R}$ y $g : \mathbb{R} \rightarrow \mathbb{R}$ definidas por:
+		\begin{equation*}
+			f(x) = g(x) = \left\{ \begin{array}{lcc}
+				1 &   \text{si}  & x < 0 \\
+				-1 &  \text{si} & x \geq 0
+			\end{array}
+			\right.
+		\end{equation*}
+		Claramente, $f$ y $g$ son discontinuas en $x = 0$, pero $fg$ es la función constantemente $1$, continua en $\mathbb{R}$. \newline
+				
+		\item Una función $f$ es continua en $a$ si, y solo si, $|f|$ es continua en $a$.
+		
+		\textbf{Falso. }Consideremos la función $f: \mathbb{R} \rightarrow \mathbb{R}$ definida por:
+		\begin{equation*}
+			f(x) = \left\{ \begin{array}{lcc}
+				1 &   \text{si}  & x < 0 \\
+				-1 &  \text{si} & x \geq 0
+			\end{array}
+			\right.
+		\end{equation*}
+		Entonces $|f|$ es la función constantemente $1$, continua en todo $\mathbb{R}$, pero $f$ no es continua en $x = 0$. \newline
+		
+		\item Si una función $f$ está definida en un intervalo $[a, b]$, y toma todos los valores comprendidos entre $f(a)$ y $f(b)$, entonces es continua en $[a, b]$.
+		
+		\textbf{Falso. }Consideremos la función $f : [0, 1] \rightarrow \mathbb{R}$ definida por:
+		\begin{equation*}
+			f(x) = \left\{ \begin{array}{lcc}
+				1 &   \text{si}  & x = 0 \\
+				x &  \text{si} & 0 < x < 1 \\
+				0 & \text{si} & x = 1
+			\end{array}
+			\right.
+		\end{equation*}
+		que claramente satisface las hipótesis, pero no es continua en $x = 0$, y $x = 1$. \newline
+		
+		\newpage
+		
+		\item Una sucesión no está mayorada si, y solo si, tiene alguna sucesión parcial positivamente divergente.
+		
+		\textbf{Verdadero. }Sea $\{x_n\}$ una sucesión no mayorada. Definimos la aplicación $\varphi : \mathbb{N} \rightarrow \mathbb{N}$ por
+		$$ \varphi(1) = 1$$ $$\varphi(n+1) = \min\{p \in \mathbb{N} : x_{\varphi(n)} < x_p, \; x_p > \varphi(n)\}$$
+		Entonces, $\{x_{\varphi(n)}\}$ es una sucesión parcial divergente. 
+		
+		Recíprocamente, sea $\{x_n\}$ una sucesión y $\{x_{\sigma(n)}\} \rightarrow + \infty$ una sucesión parcial de $\{x_n\}$. Para cada $n \in \mathbb{N}$ debe existir $k \in \mathbb{N}$ tal que $x_{\sigma(k)} > n$. Por lo tanto, $\{x_n\}$ no está mayorada. \newline
+		
+		\item Toda serie mayorada es convergente.
+		
+		\textbf{Falso. }Basta considerar la serie $\displaystyle \sum_{n \geq 1} (-1)^n$, que claramente está mayorada, pero no converge.
+		
+		\item Si un conjunto de números reales no tiene máximo entonces tiene supremo.
+		
+		\textbf{Falso. }$\mathbb{R}$ no tiene máximo ni supremo. \newline
+		
+		\item Existe una sucesión acotada de números reales $\{x_n\}$ que verifica que $|x_n - x_m| \geq 10 ^{-10}$ siempre que $n \neq m$.
+		
+		\textbf{Falso. }Sea $\{x_n\}$ una sucesión acotada. Por el teorema de Bolzano-Weierstrass, tiene una parcial $\{x_{\sigma(n)}\}$ con $\lim\{x_{\sigma(n)}\} = x$, para algún $x \in \mathbb{R}$, por lo que cumple la condición de Cauchy. Entonces, Dado un $\varepsilon > 0$, hay un natural $n_0$ tal que si $n \geq n_0$, entonces $|x_{\sigma(n)} - x_{\sigma(n_0)}| < \varepsilon$. En concreto, si $\varepsilon = 10^{-10}$, llegamos a una contradicción con el enunciado, y por lo tanto es falso. \newline
+				
+		\item Toda serie convergente es una sucesión acotada.
+		
+		\textbf{Verdadero. }Podemos ver una serie como una sucesión. Pero sabemos que si una sucesión converge, entonces está acotada. \newline
+		
+		\item Sea $A$ un conjunto de números reales no vacío y mayorado y $\beta = \sup A$. Dado $\varepsilon > 0$ existe algún $a \in A$ tal que $\beta - \varepsilon < a < \beta$.
+		
+		\textbf{Falso. }Consideremos el conjunto $A = \{0, 2\}$, entonces, $\sup(A) = 2$. Dado $\varepsilon = 1$, no existe ningún $a \in A$ tal que $2 - 1 < a < 2$. \newline
+		
+		\item Toda sucesión tiene una sucesión parcial convergente o una sucesión parcial divergente.
+		
+		\textbf{Verdadero. }Sabemos que toda sucesión tiene una sucesión parcial monótona. Dicha parcial será convergente o divergente. \newline
+		
+		\item Si $x_n \leq y_n$ para todo $n \in \mathbb{N}$ y $\displaystyle \sum_{n \geq 1} y_n$ es convergente, entonces $\displaystyle \sum_{n \geq 1}x_n$ también es convergente.
+		
+		\textbf{Falso. }Consideremos $x_n = -n$, e $y_n = 0$. Es claro que $x_n \leq y_n$ para todo $n \in \mathbb{N}$ y que $\displaystyle \sum_{n \geq 1} y_n$ es convergente. Sin embargo, $\displaystyle \sum_{n \geq 1}x_n$ no converge, claramente.
+	\end{enumerate}
+\end{document}

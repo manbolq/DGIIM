@@ -1,0 +1,1181 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{vmargin}
+\usepackage{parskip}
+\usepackage[document]{ragged2e}
+\usepackage{ragged2e}
+\usepackage{enumitem}
+\setpapersize{A4}
+\setmargins{2.5cm}       % margen izquierdo
+{1.5cm}                        % margen superior
+{16.5cm}                      % anchura del texto
+{23.42cm}                    % altura del texto
+{10pt}                           % altura de los encabezados
+{1cm}                           % espacio entre el texto y los encabezados
+{0pt}                             % altura del pie de página
+{2cm}                           % espacio entre el texto y el pie de página
+
+
+
+\begin{document}
+	\justify 
+	
+	\section{Axioma del continuo. Principios del supremo y del ínfimo. Principio de buena ordenación de $\mathbb{N}$. Densidad de $\mathbb{Q}$ y de $\mathbb{R} \backslash \mathbb{Q}$ en $ \mathbb{R}$}
+	
+		\subsection{Definición.}
+		
+		Sea $E$ un conjunto no vacío de números reales. 
+		\begin{enumerate}[label=\roman*)]
+			\item Un número $v \in \mathbb{R}$ se dice que es un mayorante o cota superior de $E$ si $x \leq v$ para todo $x \in E$.
+			\item Un número $u \in \mathbb{R}$ se dice que es un minorante o cota inferior de $E$ si $u \leq x$ para todo $x \in E$.
+			\item Si hay algún elemento de $E$ que también sea mayorante de $E$, dicho elemento es necesariamente único, se llama máximo de $E$ y lo representaremos por $\max(E)$.
+			\item Si hay algún elemento de $E$ que también sea minorante de $E$, dicho elemento es necesariamente único, se llama mínimo de $E$ y lo representaremos por $\min(E)$.
+			\item Un conjunto de números reales que tiene algún mayorante se dice que está mayorado o acotado
+			superiormente.
+			\item  Un conjunto de números reales que tiene algún minorante se dice que está minorado o acotado
+			inferiormente.
+			\item Un conjunto de números reales que está mayorado y minorado se dice que está acotado.
+		\end{enumerate}
+		
+		\subsection{Teorema (Principio del supremo).} 
+
+		Para todo conjunto de números reales no vacío y mayorado se verifica que el conjunto de sus mayorantes tiene mínimo.
+		
+		\textbf{Demostración.} Sea $A$ un conjunto de números reales no vacío y mayorado. Sea $B$ el conjunto de todos los mayorantes de $A$. Por hipótesis, $B$ es no vacío. Para todo $a \in A$ y $b \in B$ se verifica que $a \leq b$. En virtud del axioma del continuo, existe $z \in \mathbb{R}$ verificando que $a \leq z \leq b$ para todo $a \in A$ y	todo $b \in B$. La desigualdad $a \leq z$ para todo $a \in A$ nos dice que $z$ es un mayorante de $A$, por lo que	$z \in B$. La desigualdad $z \leq b$ para todo $b \in B$, nos dice ahora que $z$ es el mínimo de $B$.
+		
+		\subsection{Teorema (Principio del ínfimo).}
+		
+		Para todo conjunto de números reales no vacío y minorado se verifica que el conjunto de sus minorantes tiene máximo 
+		
+		\textbf{Demostración.} Análoga a la anterior.	
+		
+		\subsection{Definición.}
+		
+		Sea $E$ un conjunto de números reales no vacío.
+		\begin{enumerate}[label=\roman*)]
+			\item Si $E$ está mayorado se define el supremo o extremo superior de $E$, como el mínimo mayorante
+			de $E$ y lo representaremos por $\sup(E)$.
+			\item Si $E$ está minorado se define el ínfimo o extremo inferior de $E$ como el máximo minorante de $E$ y lo representaremos por $\inf(E)$.
+		\end{enumerate}
+	
+		\subsection{Proposición.}
+		
+		\begin{enumerate}[label=\alph*)]
+			\item Todo conjunto de números enteros no vacío y mayorado tiene máximo.
+			\item Todo conjunto de números enteros no vacío y minorado tiene mínimo
+		\end{enumerate}
+	
+		\textbf{Demostración.} Sea $E \subseteq \mathbb{R}$ no vacío y mayorado. En virtud del principio del supremo hay un número $\beta \in \mathbb{R}$ que es el mínimo mayorante de $E$. Puesto que $\beta-1 < \beta$, debe haber algún $z \in E$ tal que $\beta - 1 < z$ y, claro está, $z \leq \beta$. Supongamos que los elementos de $E$ son números enteros, $E \subseteq \mathbb{Z}$, y probemos que, en tal caso, debe ser $z = \beta$. Si fuera $z < \beta$ tendría que haber algún $w \in E$ tal que $z < w \leq \beta$ pero entonces el número $w - z$ es un entero positivo tal que $w - z < 1$, lo cual es contradictorio. En consecuencia, $z = \beta \in E$, y $\beta$ es el máximo de $E$.
+		
+		La demostración es análoga para el apartado a).
+		
+		\subsection{Proposición (Principio de buena ordenación de $\mathbb{N}$).}
+		
+		Todo conjunto no vacío de números naturales tiene mínimo (consecuencia de 1. 5. b) ).
+		
+		\subsection{Proposición (Propiedad arquimediana).}
+		
+		Dado cualquier número real se verifica que hay números naturales mayores que él. (Como $\mathbb{N}$ no tiene má- \\ximo, es consecuencia de 1. 5. a) ).
+		
+		\subsection{Proposición.}
+		Dados $k \in \mathbb{N},~k \geq 2$ y $n \in \mathbb{N}$, se verifica que $\sqrt[k]{n}$ o bien es un número natural o bien es irracional.
+		
+		\subsection{Definición.}
+		
+		Un conjunto $A$ de número reales se dice que es denso en un intervalo $I$, si entre dos números reales cualesquiera de $I$ siempre hay algún número real que está en $A$. En particular, $A$ es denso en $\mathbb{R}$ si en todo intervalo abierto no vacío hay puntos de $A$.
+		
+		\subsection{Proposición.}
+		
+		Los conjuntos $\mathbb{Q}$ y $ \mathbb{R} \backslash \mathbb{Q}$ son densos en $\mathbb{R}$.
+	\newpage
+	\section{El conjunto de los números racionales es numerable. Principio de los intervalos encajados. $\mathbb{R}$ no es numerable.}
+	
+	\subsection{Proposición.}
+	
+	Sea $\varphi : \mathbb{N} \rightarrow \mathbb{R}$ una aplicación tal que $\varphi(n) < \varphi(n+1)$ para todo $n \in \mathbb{N}$. Se verifica entonces que $\varphi$ es estrictamente creciente, es decir, si $n, m$ son números naturales tales que $n < m$, entonces $\varphi(n) < \varphi(m)$. En particular, $\varphi$ es inyectiva.
+	
+	Si además se supone que $\varphi$ toma valores en $\mathbb{N}$, esto es, $\varphi(\mathbb{N}) \subseteq \mathbb{N}$, entonces:
+	
+	\begin{enumerate}[label=\roman*)]
+		\item $\varphi(n) \geq n$ para todo $n \in \mathbb{N}$.
+		\item Si $\varphi(\mathbb{N}) = \mathbb{N}$, $\varphi$ es la identidad, es decir, $\varphi(n) = n$ para todo $n \in \mathbb{N}$.
+	\end{enumerate}
+	
+	\subsection{Proposición.}
+	
+	Sea $A$ un conjunto infinito de números naturales. Entonces existe una única biyección creciente de $\mathbb{N}$ sobre $A$.
+	
+	\textbf{Demostración.} Por ser $A$ infinito, no puede estar contenido en ningún segmento $S(p)$, esto es, el conjunto $\{x \in A : p < x\}$ no es vacío cualquiera sea $p \in \mathbb{N}$. Haciendo uso del principio de buena ordenación podemos definir $f : \mathbb{N} \rightarrow A$ por: 
+	$$f(1) = \min(A))$$ $$f(n+1) = \min\{x \in A : f(n) < x\} ~ \text{para todo} ~ n \in \mathbb{N} $$
+	Con ello es claro que $f(n) < f(n+1)$ para todo $n \in \mathbb{N}$. Del lema anterior se sigue que $f$ es creciente e inyectiva. Probaremos que $f(\mathbb{N}) = A$. Puesto que, por su definición, es $f(\mathbb{N}) \subseteq A$, bastará probar que dicha inclusión no puede ser estricta. Pongamos $C = A \backslash f(\mathbb{N})$. Si $C \neq \emptyset$, sea $p = \min(C)$, esto es, $p$ es el primer elemento de $A$ que no está en $f(\mathbb{N})$. Es claro que $p > \min(A)$. Sea $q = max\{x \in A : x < p\}$. Tenemos que $p > q$ y $q \in A$, pero $q \notin C$, por lo que $q \in f(\mathbb{N})$. Sea $k \in \mathbb{N}$ tal que $q = f(k)$. Entonces, como $f(k) < p$, se tiene, por ser $f(k+1) = min\{x \in A: f(k) < x\}$, que $f(k+1) \leq p$. Como también es $f(k+1) > f(k) = q$ y $f(k+1) \in A$, debe ser $f(k+1) \geq p$. Resulta así que $f(k+1) = p$, lo cual es contradictorio. En consecuencia, $C$ tiene que ser vacío, es decir, $f(\mathbb{N}) = A$. \newline
+	
+	Para probar la unicidad de $f$ supongamos que $g$ es una biyección creciente de $\mathbb{N}$ sobre $A$. Notando $g^{-1}$ la aplicación inversa de $g$, es inmediato comprobar que la aplicación $\varphi = f \circ g^{-1}$ es una biyección creciente de $\mathbb{N}$ sobre $\mathbb{N}$ y, por la proposición anterior, debe ser la identidad, $f(g^{-1}(n)) = n$ para todo $n \in \mathbb{N}$, por lo que $f(k) = g(k)$ para todo $k \in \mathbb{N}$.
+	
+	\subsection{Definición.}
+	Un conjunto $A$ se llama numerable si es vacío o si existe alguna aplicación inyectiva de $A$ en $\mathbb{N}$.
+	
+	\subsection{Proposición.}
+	un conjunto es numerable si, y solo si, es finito o equipotente a $\mathbb{N}$.
+	
+	\textbf{Demostración.} Claramente todo conjunto finito es numerable. Sea $A$ un conjunto infinito numerable y sea $\varphi: A \rightarrow \mathbb{N}$ una aplicación inyectiva. Tenemos entonces que $A \thicksim \varphi(A)$ por lo que, al ser $A$ infinito, se sigue que $\varphi(A)$ es también infinito y por el teorema anterior $\varphi(A) \thicksim \mathbb{N}$ con lo que también $ A \thicksim \mathbb{N}$.
+	
+	\subsection{Proposición.}
+	
+	Un conjunto no vacío $A$ es numerable si, y solo si, hay una aplicación sobreyectiva de $\mathbb{N}$ sobre $A$.
+	
+	\textbf{Demostración.} Sea $f : \mathbb{N} \rightarrow A$ una aplicación sobreyectiva. Para cada elemento $a \in A$ el conjunto $\{n \in \mathbb{N} : f(n) = a\}$ no es vacío por lo que podemos definir, haciendo uso del principio de buena ordenación, una aplicación $g: A \rightarrow \mathbb{N}$ por: $$g(a) = min\{n \mathbb{N} : f(n) = a\} ~ \text{para todo} ~ a \in A$$
+	
+	La afirmación recíproca es consecuencia de la proposición anterior.
+	
+	\subsection{Proposición.}
+	$\mathbb{N} \times \mathbb{N}$ y $\mathbb{Z} \times \mathbb{N}$ son equipotentes a $\mathbb{N}$.
+	
+	\textbf{Demostración.} Sea $\varphi: \mathbb{N} \rightarrow \mathbb{N}$ la aplicación dada por $\varphi(n) = (p, q)$ donde $(p, q) \in \mathbb{N} \times \mathbb{N}$ verifica que $n = 2^{p-1}(2q-1)$. Es decir, $p-1$ es la mayor potencia de $2$ que divida a $n$ ($ p = 1$ si $n$ es impar). Es claro que la aplicación así definida es una biyección de $\mathbb{N}$ sobre $\mathbb{N} \times \mathbb{N}$.
+	
+	Es fácil probar que la aplicación $\sigma: \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{Z} \times \mathbb{N}$ dada por:
+	$$\sigma((p, q)) = \left\{ \begin{array}{lcc}
+		(p/2, q), &   \text{si}~p~\text{es par} \\
+		\\ ((-p+1)/2, q), &  \text{si}~p~\text{es par}
+	\end{array}
+	\right.$$
+	es una biyección. Por lo tanto, la aplicación $\sigma \circ \varphi : \mathbb{N} \rightarrow \mathbb{Z} \times \mathbb{N}$ es una biyección.
+	
+	\subsection{Proposición.}
+	El conjunto de los números racionales es numerable.
+	
+	\textbf{Demostración.} Es consecuencia de las dos proposiciones anteriores y de que la aplicación $f: \mathbb{Z} \times \mathbb{N} \rightarrow \mathbb{Q}$ dada por $f(p, q) = p/q$ es sobreyectiva.
+	
+	Por ser $\mathbb{Q}$ numerable infinito sabemos que $\mathbb{Q} \thicksim \mathbb{N}$, es decir, existen biyecciones de $\mathbb{N}$ sobre $\mathbb{Q}$. 
+	
+	\subsection{Proposición (Principio de los intervalos encajados).}
+	
+	Para cada número natural $n$ sea $I_n = \left[a_n, b_n\right]$ un intervalo cerrado no vacío y supongamos que para todo $n \in \mathbb{N}$ es $I_{n+1} \subseteq I_n$. Se verifica entonces que:
+	
+	\begin{enumerate}[label=\roman*)]
+		\item $\alpha = \sup\{a_n : n \in \mathbb{N}\} \leq \beta = \inf\{b_n : n \in \mathbb{N}\}$
+		\item $\displaystyle\bigcap_{n \in \mathbb{N}}I_n = \left[\alpha, \beta\right]$
+		
+		En particular, el conjunto $\displaystyle \bigcap_{n \in \mathbb{N}}I_n$ no es vacío.
+	\end{enumerate}
+
+	\textbf{Demostración.} Las hipótesis $\emptyset \neq I_{n+1} \subseteq I_n$, implican que $a_n \leq a_{n+1} \leq b_{n+1} \leq b_n$, para todo $n \in \mathbb{N}$. Razonando como en la primera de 2.1, deducimos que las aplicaciones $n \mapsto a_n$ y $n \mapsto -b_n$, son crecientes, esto es, $a_n \leq a_m, b_m \leq b_n$ siempre que $n < m$. Ahora, dados $p, q \in \mathbb{N}$ y poniendo $k = \max\{p, q\}$, tenemos que $a_p \leq a_k \leq b_k \leq b_q$. Hemos obtenido así que cualesquiera sean los números naturales $p, q$ es $a_p \leq b_q$. Luego todo elemento de $B = \{b_n : n \in \mathbb{N}\}$ es mayorante de $A = \{a_n:n \in \mathbb{N}\}$ y por tanto $ \alpha = \sup(A) \leq b_n$ para todo $n \in \mathbb{N}$. Lo cual, a su vez, nos dice que $\alpha$ es un minorante de $B$ y por tanto concluimos que $\alpha \leq \beta = \inf(B)$. Hemos probado \textit{i)}. La afirmación \textit{ii)} es consecuencia de que $x \in \displaystyle \bigcap_{n \in \mathbb{N}}I_n$ equivale a que $a_n \leq x \leq b_n$ para todo $n \in \mathbb{N}$, lo que equivale a que $\alpha \leq x \leq \beta$, es decir, $x \in [\alpha, \beta]$.
+	
+	\subsection{Proposición}
+	
+	Dados dos números reales $ a < b$ se verifica que el intervalo $[a, b]$ no es numerable.
+	
+	\textbf{Demostración. }Si $[a, b]$ fuera numerable tendría que ser, en virtud de lo dicho anteriormente, equipotente a $\mathbb{N}$. Veamos que esto no puede ocurrir. Supongamos que $\varphi:\mathbb{N} \rightarrow [a, b]$ es una biyección de $\mathbb{N}$ sobre $[a, b]$. En particular, $\varphi$ es sobreyectiva por lo que deberá ser $[a, b] = \{\varphi(n) : n \in \mathbb{N}\}$. Obtendremos una contradicción probando que tiene que existir algún elemento $z \in [a, b]$ tal que $z \notin \{\varphi(n): n \in \mathbb{N}\}$. Para ello se procede de la siguiente forma. Dividimos el intervalo $[a, b]$ en tres intervalos cerrados de igual longitud:
+	$$\left[a, a + \dfrac{b-a}{3}\right], \quad \left[a + \dfrac{b-a}{3}, b - \dfrac{b-a}{3}\right], \quad \left[b - \dfrac{b-a}{3}, b\right]$$
+	y llamamos $I_1$ al primero de ellos (es decir el que esté más a la izquierda) que no contenga a $\varphi(1)$. Dividamos ahora el intervalo $I_1$ en tres intervalos cerrados de igual longitud y llamemos $I_2$ al primero de ellos que no contiene a $\varphi(2)$. Este proceso puede "continuarse indefinidamente" pues, supuesto que $n \in \mathbb{N}, n \geq 2$, y que tenemos intervalos cerrados de longitud positiva $I_k$, $1 \leq k \leq n$, tales que $I_{k+1} \subseteq I_k$ para $1 \leq k \leq n-1, $y $\varphi(k) \notin I_k $ para $1 \leq k \leq n$, dividimos el intervalo $I_n$ en tres intervalos cerrados de igual longitud y llamamos $I_{n+1}$ al primero de ellos que no contiene a $\varphi(n+1)$. De esta forma para cada $n \in \mathbb{N}$ tenemos un intervalo cerrado $I_n$ no vacío verificándose que $I_{n++1} \subseteq I_n$ y $ \varphi(n) \notin I_n$ para todo $n \in \mathbb{N}$. El principio de los intervalos encajados nos dice que hay algún número real $z$ que está en todos los $I_n$. Por tanto, cualquiera sea $n \in \mathbb{N}$, por ser $z \in I_n$, y $\varphi(n) \notin I_n$, se tiene necesariamente que $z \neq \varphi(n)$, esto es, $z \notin \{\varphi(n) : n \in \mathbb{N}\}$ pero evidentemente $z \in [a, b]$.
+	
+	\subsection{Proposición}
+	
+	$\mathbb{R}$ y $\mathbb{R} \backslash \mathbb{Q}$ son conjuntos no numerables.
+	
+	\textbf{Demostración. }Evidentemente todo subconjunto de un conjunto numerable también es numerable. Como acabamos de ver que hay subconjuntos de $\mathbb{R}$ que no son numerables deducimos que $\mathbb{R}$ no es numerable. Puesto que $\mathbb{R} = \mathbb{Q} \cup (\mathbb{R} \backslash\mathbb{Q})$ y sabemos y sabemos que $\mathbb{Q}$ es numerable y $\mathbb{R}$ no lo es, deducimos que $\mathbb{R} \backslash \mathbb{Q}$ no es numerable.
+	
+	\newpage
+	
+	\section{Sucesiones convergentes. Sucesiones monótonas.}
+	
+	\subsection{Definición.}
+	Sea $A$ un conjunto no vacío. Una sucesión de elementos de $A$ es una aplicación del conjunto $\mathbb{N}$ de los números naturales en $A$. En particular, una sucesión de números reales es una aplicación del conjunto $\mathbb{N}$ de los números naturales en el conjunto $\mathbb{R}$ de los números reales.
+	
+	\subsection{Definición.}
+	Se dice que una sucesión $\{x_n\}$ converge a un número real $x$ si, dado cualquier número real $\varepsilon > 0$, existe un número natural $m_{\varepsilon}$ tal que si $n \geq m_{\varepsilon}$ es un número natural se cumple que $| x_n - x | < \varepsilon$.
+	
+	\subsection{Proposición.}
+	Una sucesión convergente tiene un único límite.
+	
+	\textbf{Demostración.} Sea $\{x_n\} \rightarrow x$ e $y \neq x$. Tomemos $\varepsilon > 0$ tal que $]x- \varepsilon, x+\varepsilon[ \; \cap \; ]y-\varepsilon, y+\varepsilon[ \; = \emptyset$. Puesto que $\{x_n\} \rightarrow x$ el conjunto $A_\varepsilon = \{n \in \mathbb{N}:|x-x_n| \geq \varepsilon\}$ es infinito. Puesto que si $|x-x_n| < \varepsilon$ entonces $|y - x_n| \geq \varepsilon$, tenemos que $B_\varepsilon = \{n \in \mathbb{N}: |y - x_n| \geq \varepsilon\} \supset \mathbb{N} \backslash A_\varepsilon$ y, por tanto, $B_\varepsilon$ es infinito, lo que prueba que $\{x_n\}$ no converge a $y$.
+	
+	\subsection{Proposición.}
+	
+	Supongamos que $lim\{x_n\} = x, lim\{y_n\} = y$, y que el conjunto de números naturales $A = \{n \in \mathbb{N}: x_n \leq y_n\}$ es infinito. Entonces se verifica que $x \leq y$.
+	
+	\textbf{Demostración.} Sea $\varepsilon > 0$. Bastará probar que $x < y + \varepsilon$. Por hipótesis existen $m_1, m_2$ tales que 
+	
+	\begin{equation}
+		x- \dfrac{\varepsilon}{2} < x_p < x + \dfrac{\varepsilon}{2} \quad \text{y} \quad y - \dfrac{\varepsilon}{2} < y_q < y + \dfrac{\varepsilon}{2}
+	\end{equation}
+	para todo $p \geq m_1$ y todo $q \geq m_2$. Puesto que el conjunto $A$ del enunciado es un conjunto infinito de números naturales podemos asegurar que hay algún $m \in A$ tal que $m \geq max\{m_1, m_2\}$. Por tanto, las desigualdades (1) se cumplen parra $p = q = m$, además, como $m \in A$ se tiene que $x_m \leq y_m$. Deducimos que $x - \dfrac{\varepsilon}{2} < x_m \leq y_m < y + \dfrac{\varepsilon}{2}$.
+	
+	\subsection{Proposición (Principio de las sucesiones encajadas).}
+	Supongamos que $\{x_n\}, \{y_n\}, \{z_n\}$ son sucesiones tales que $lim\{x_n\} = lim\{z_n\} = \alpha$ y existe un número natural $m_0$ tal que para todo $n \geq m_0$ se verifica que $x_n \leq y_n \leq z_n$, entonces la sucesión $\{y_n\}$ es convergente y $lim\{y_n\} = \alpha$.
+	
+	\textbf{Demostración.} Sea $\varepsilon > 0$. Por hipótesis existen $m_1, m_2$ tales que 
+	\begin{equation}
+		\alpha - \varepsilon < x_p < \alpha + \varepsilon \quad \text{y} \quad \alpha - \varepsilon < z_q < \alpha+ \varepsilon
+	\end{equation}
+	para todo $p \geq m_1$ y todo $q \geq m_2$. Sea $m_3 = max\{m_0, m_1, m_2\}$. Para todo $n \geq m_3$, las desigualdades (2) se cumplen para $p = q = n$, además, como $n \geq m_0$, se tiene que $x_n \leq y_n \leq z_n$. Deducimos que, para todo $n \geq m_3$, se verficia que $$ \alpha - \varepsilon < x_n \leq y_n \leq z_n < \alpha + \varepsilon$$
+	y, por tanto, $\alpha - \varepsilon < y_n < \alpha + \varepsilon$, es decir, $lim\{y_n\} = \alpha$.
+	
+	\subsection{Corolario.}
+	Sean $\{x_n\}$ e $\{y_n\}$ sucesiones cuyos términos son iguales a partir de uno en adelante, es decir, hay un número natural $m_0$ tal que para todo $n \geq m_0$ es $x_n = y_n$. Entonces, $\{x_n\}$ converge si, y solo si, $\{y_n\}$ converge, en cuyo caso las dos sucesiones tienen igual límite.
+	
+	\subsection{Definición.} Una sucesión $\{x_n\}$ se dice que es: 
+		\begin{itemize}
+			\item \textbf{Mayorada o  acotada superiormente} si su conjunto imagen está mayorado, es decir, si hay un número $\mu \in \mathbb{R}$ tal que $x_n \leq \mu$ para todo $n \in \mathbb{N}$.
+			\item \textbf{Minorada o acotada inferiormente} si su conjunto imagen está minorado, es decir, si hay un número $\lambda \in \mathbb{R}$ tal que $\lambda \leq x_n$ para todo $n \in \mathbb{N}$.
+			\item \textbf{Acotada} si su conjunto imagen está acotado, equivalentemente, si hay un número $M \in \mathbb{R} ^+$ tal que $|x_n| \leq M$ para todo $n \in \mathbb{N}$.
+			\item \textbf{Creciente} si $x_n \leq x_{n+1}$ para todo $n \in \mathbb{N}$.
+			\item \textbf{Estrictamente creciente} si $x_n < x_{n+1}$ para todo $n \in \mathbb{N}$.
+			\item \textbf{Decreciente} si $x_n \geq x_{n+1}$ para todo $n \in \mathbb{N}$.
+			\item \textbf{Estrictamente decreciente} si $x_n > x_{n+1}$ para todo $n \in \mathbb{N}$.
+			\item \textbf{Monótona} si es creciente o decreciente.
+			\item \textbf{Estrictamente monótona} si es estrictamente creciente o decreciente.
+		\end{itemize}
+	
+	\subsection{Proposición.}
+	Toda sucesión convergente está acotada.
+	
+	\textbf{Demostración.} Supongamos que $lim\{x_n\} = x$. Todos los términos de $\{x_n\}$ a partir de uno en adelante estarán en el intervalo $] x-1, x+1[$, es decir, hay un número $m \in \mathbb{N}$ tal que para todo $n \geq m$ se verifica que $|x_n - x | < 1$, lo que implica que $$ |x_n| \leq |x_n - x| + |x| < 1 + |x| ~ \text{para todo} ~ n \geq m.$$
+	Tomando $m = max\{1 + |x|, |x_1|, \dots , |x_m|\}$, máximo cuya existencia está garantizada por ser un conjunto finito, tenemos que $|x_n| \leq M$ para todo $n \in \mathbb{N}$.
+	
+	\subsection{Teorema.} Toda sucesión monótona y acotada es convergente. Más concretamente, si una sucesión $\{x_n\}$ es:
+	\begin{enumerate}[label=\roman*)]
+		\item creciente y mayorada, entonces $lim\{x_n\} = \beta$ donde $\beta = \sup\{x_n: n \in \mathbb{N}\}$. Además se verifica que $x_n < \beta$ para todo $n \in \mathbb{N}$, o bien que todos los términos a partir de uno en adelante son iguales a $\beta$. 
+		\item decreciente y minorada, entonces $lim\{x_n\} = \alpha$ donde $\alpha = \inf\{x_n: n \in \mathbb{N}\}$. Además se verifica que $\alpha < x_n$ para todo $n \in \mathbb{N}$, o bien que todos los términos a partir de uno en adelante son iguales a $\alpha$.
+	\end{enumerate}
+	\textbf{Demostración.} como $\{x_n\}$ está mayorada, sabemos, por el principio del supremo, que existe un número real $\beta = \sup\{x_n: n \in \mathbb{N}\}$. Dado $\varepsilon > 0$, como $\beta - \varepsilon < \beta$, tiene que haber algún término $x_m$ de la sucesión tal que $\beta - \varepsilon < x_m$. Puesto que la sucesión es creciente para todo $n \geq m$ se verificará que $x_m \leq x_n$, y, por tanto, $\beta - \varepsilon < x_n$. En consecuencia, $\beta - \varepsilon < x_n < \beta + \varepsilon$ para todo $n \geq m$. Hemos probado así que $lim\{x_n\} = \beta$. Finalmente, si hay algún término igual a $\beta, x_{m_0} = \beta$, entonces, para todo $n \geq m_0$, tenemos que $\beta = x_{m_0} \leq x_n \leq \beta$, por lo que $x_n = \beta$.
+	
+	La demostración de ii) es análoga.
+	
+	\newpage
+	
+	\section{Las funciones logaritmo y exponencial.}
+	
+	\subsection{Proposición (desigualdad básica)}
+	
+	Cualesquiera sean los números reales positivos distintos $a, b$ y para todo número natural $n$ se verficia que $$ ab^n < \left(\dfrac{a+nb}{n+1} \right) ^{n+1}$$
+	
+	\textbf{Demostración.} En la desigualdad de las medias $$ \sqrt[n+1]{a_1a_2\cdots a_{n+1}} < \dfrac{a_1 + a_2 + \cdot + a_{n+1}}{n+1}$$
+	donde $a_i > 0$ para todo $ 1 < i < n+1$, y no todos ellos son iguales. Hagamos $a_1 = a, a_2 = a_3 = \cdots = a_{n+1} = b$, con lo que obtenemos $$ \sqrt[n1]{ab^n} < \dfrac{a+nb}{n+1}$$ desigualdad que es equivalente a la del enunciado.
+
+	\subsection{Proposición}
+	
+	Para todo número real positivo $x \neq 1$ se verifica que la sucesión $\{n(\sqrt[n]{x} -1)\}$ es estrictamente decreciente y convergente.
+	
+	\textbf{Demostración.} Basta hacer en la desigualdad básica $a = 1, b = \sqrt[n]{x}$, para obtener que $\sqrt[n+1]{x} < \dfrac{n\sqrt[n]{x} + 1}{n+1}$, es decir, $(n+1)\sqrt[n+1]{x} < n\sqrt[n]{x} + 1$. Sumando ahora $-n-1$ en ambos lados resulta $(n+1) (\sqrt[n+1]{x} - 1) < n (\sqrt[n]{x} - 1)$, lo que prueba que la sucesión es estrictamente decreciente. Si $x > 1$ dicha sucesión converge por ser decreciente y estar minorada por cero. Si $0 < x < 1$ podemos escribir $n(\sqrt[n]{x} -1) =  -n(\sqrt[n]{1/x} - 1)\sqrt[n]{x}$, y como $lim\{\sqrt[n]{x} = 1\}$, y $1 / x > 1$, deducimos, por lo ya visto, que también hay convergencia en este caso.
+	
+	\subsection{Definición}
+	La función logaritmo natural, también llamada logaritmo neperiano o, simplemente, logaritmo, es la función $\log : \mathbb{R} ^+ \rightarrow \mathbb{R}$ definida para todo $x > 0$ por $$\log(x) = \displaystyle \lim_{n \rightarrow \infty}\{n(\sqrt[n]{x}-1)\}.$$
+	
+	\subsection{Proposición}
+	Para todo $x > 0, x \neq 1$, y para todo $n \in \mathbb{N}$ se verifica que: $$\log(x) = \inf\{n(\sqrt[n]{x}-1) : n \in \mathbb{N}\} < n(\sqrt[n]{x}-1)$$
+	
+	\subsection{Teorema}
+	
+	Cualesquiera sean los números positivos $x, y$ se verifica que 
+	$$\log(xy) = \log(x) + \log(y); ~ \log\left(\dfrac{x}{y}\right) = \log(x) - \log(y).$$ Además, la función logaritmo es estrictamente creciente en $\mathbb{R} ^+$.
+	
+	\textbf{Demostración. }Tomando límites en la igualdad $$n (\sqrt[n]{xy} - 1) = n(\sqrt[n]{x}-1)\sqrt[n]{y} + n(\sqrt[n]{y}-1)$$ y teniendo en cuenta que $\lim\{\sqrt[n]{y}\} = 1$, obtenemos $\log(xy) = log(x) + log(y)$. Como, evidentemente $\log(1) = 0$, haciendo en esta igualdad $x = 1/y$ deducimos que $\log (1/y) = -\log(y)$. Lo que a su vez, implica que $$ \log \left(\dfrac{x}{y}\right) = \log\left(x\dfrac{1}{y}\right) = \log(x) - \log(y)$$.
+	
+	La desigualdad de la proposición 4.4 implica que $\log(t) < 0$ para todo $t \in \; ]0, 1[$. Si $x, y$ son números positivos tales que $x < y$, entonces $0 < x/y < 1$, por lo que $\log(x) - \log(y) = \log(x/y) < 0$, es decir, $\log(x) < \log(y)$, lo que prueba que la función logaritmo es estrictamente creciente.
+	
+	\subsection{Lema}
+	
+	Sea $lim\{x_n\} = x$ cumpliéndose que $0 < x_n < x$ para todo $n \in \mathbb{N}$. Entonces se verifica que $lim\{n(\sqrt[n]{x_n} - 1)\} = \log(x)$. \newline
+	\vspace{1 cm}
+	
+	\textbf{\Large{El número $e$}}
+	
+	Dado $n \in \mathbb{N}$, haciendo en la desigualdad básica $a = 1, b = 1 + \dfrac{1}{n}$, obtenemos que $$ \left(1 + \dfrac{1}{n} \right) ^n < \left( 1 + <\dfrac{1}{n+1}\right) ^{n+1}$$ 
+	Sustituyendo en desigualdad básica ahora $n$ por $n+1, a = 1, b = n/(n+1)$ y pasando a inversos obtenemos que $$ \left(1 + \dfrac{1}{n+1}\right) ^ {n+2} < \left(1 + \dfrac{1}{n}\right) ^ {n+1}$$
+	Hemos probado así que la sucesión $x_n = \left(1 + \dfrac{1}{n} \right) ^n$ es estrictamente creciente e $y_n = \left(1 + \dfrac{1}{n}\right) ^ {n+1}$ es estrictamente decreciente. Además, como $a_1 \leq x_n < y_n \leq y_1$ para todo $n \in \mathbb{N}$, resulta que ambas sucesiones son acotada y, al ser monótonas, son convergentes. Como $y_n = x_n\left(1 + \dfrac{1}{n}\right)$ se sigue que $\lim\{x_n\} = \lim\{y_n\}$. El valor común de este límite es un número real que se representa por la letra "e". Así, $e \in \mathbb{R}$ es el número real definido por $$ e = \lim\left(1 + \dfrac{1}{n}\right) ^n = \sup\left\{\left(1 + \dfrac{1}{n}\right) ^n: n \in \mathbb{N}\right\}$$
+	y también $$ e = \lim\left(1 + \dfrac{1}{n}\right) ^{n+1} = \inf\left\{\left(1 + \dfrac{1}{n}\right) ^{n+1}: n \in \mathbb{N}\right\}$$
+	En particular, para todos $n, m \in \mathbb{N}$ se verifica que $$ \left(1 + \dfrac{1}{n}\right) ^ n < e < \left( 1 + \dfrac{1}{m}\right) ^{m+1}$$ Haciendo $n = 1$, $m = 6$, obtenemos una primera aproximación de $e$; $2 < e < 3$.
+	
+	\subsection{Proposición}
+	Dado un número real $x \neq 0$ se verifica que $$\left(1 + \dfrac{x}{n}\right) ^n < \left(1 + \dfrac{x}{n+1}\right)^{n+1}$$ para todo número natural $n > -$. Además, la sucesión $\left\{ \left(1 + \dfrac{x}{n}\right) ^n\right\}$ es convergente y su límite es un número real positivo.
+	
+	\textbf{Demostración. }Para $n \in \mathbb{N}$ tal que $n > -x$ se tiene que $1 + \dfrac{x}{n} > 0$. Haciendo en la desigualdad básica $a = 1, b = 1 + \dfrac{x}{n}$, obotenemos que $\left(1 + \dfrac{x}{n}\right) ^n < \left(1 + \dfrac{x}{n+1}\right)^{n+1}$. Hemos probado así que la sucesión $\left\{ \left(1 + \dfrac{x}{n}\right) ^n\right\}$ es eventualmente estrictamente creciente y, por lo tanto, para probar que converge es suficiente probar que está acotada. Par ello sea $p \in \mathbb{N}$ tal que $p \geq |x|$. Se tiene que $$\left|\left(1 + \dfrac{x}{n}\right) ^n\right| = \left|1 + \dfrac{x}{n}\right|^n \leq \left(1 + \dfrac{|x|}{n}\right) ^n \leq \left(1 + \dfrac{p}{n}\right) ^n.$$ Sabemos, por lo ya visto, que $\left\{ \left(1 + \dfrac{p}{n}\right) ^n\right\}$ es creciente, por lo que $$\left(1 + \dfrac{p}{n}\right) ^n \leq \left(1 + \dfrac{p}{np} \right) ^ {np} = \left[\left(1 + \dfrac{1}{n}\right) ^n \right] ^p < e^p.$$
+	Deducimos así que $\left|\left(1 + \dfrac{x}{n}\right) ^n\right| < e^p$ para todo $n \in \mathbb{N}$, lo que prueba que la sucesión $\left\{ \left(1 + \dfrac{x}{n}\right) ^n\right\}$ está acotada. Finalmente, deducimos que $$\lim_{n \rightarrow \infty} \left\{ \left(1 + \dfrac{x}{n}\right) ^n\right\} = \sup\left\{ \left(1 + \dfrac{x}{p+n}\right) ^{p+n}: n \in \mathbb{N}\right\}$$ y, por tanto, $0 < \displaystyle \lim_{n \rightarrow \infty} \left\{ \left(1 + \dfrac{x}{n}\right) ^n\right\}$.
+	
+	\subsection{Definición}
+	La función exponencial es la función $\exp: \mathbb{R} \rightarrow \mathbb{R} ^+$ definida para todo $ x \in \mathbb{R}$ por: $$ \exp(x) = \lim_{n \rightarrow \infty}\left\{ \left(1 + \dfrac{x}{n}\right) ^n\right\}$$
+	Observa que $\exp(1) = e$, y que $\exp(0) = 1$.
+	
+	\subsection{Teorema}
+	La función logaritmo es una biyección de $\mathbb{R} ^+ $ sobre $\mathbb{R}$ cuya inversa es la función exponencial.
+	
+	\textbf{Demostración.} Dado $t \in \mathbb{R}$, fijemos $p \in \mathbb{N}, p > -t$, y definamos $$ x_n = \dfrac{1}{2}\exp(t) \; \text{para} \; 1 \leq n \leq p, x_n = \left(1 + \dfrac{t}{n}\right) ^n \; \text{para} \; n \geq p + 1.$$
+	Tenemos que $\lim\{x_n\} = \exp(t)$ y además $ 0 < x_n < \exp(t)$. Aplicamos ahora el lema anterior a dicha sucesión $\{x_n\}$ para obtener que $$\lim\{n(\sqrt[n]{x_n} - 1)\} = \log(\exp(t)).$$ Por otra parte, para todo $n \geq p + 1$ se tiene que $$ n (\sqrt[n]{x_n} - 1) = n \left( \sqrt[n]{\left(1 + \dfrac{t}{n}\right) ^n} - 1\right) = n \left(1 + \dfrac{t}{n} - 1\right) = t,$$ luego, por la unicidad del límite, ha de ser $t = \log(\exp(t))$. hemos probado así que la función logaritmo es sobreyectiva y, como ya sabíamos, también es inyectiva. Queda así probado que dicha función es una biyección de $\mathbb{R} ^+ $ sobre $\mathbb{R}$. La igualdad $\log(\exp(t)) = t$ para todo $t \in \mathbb{R}$, nos dice ahora que la función exponencial es la biyección inversa de la función logaritmo.
+	
+	\subsection{Corolario}
+	
+	La función exponencial es estrictamente creciente en $\mathbb{R}$ y se verifica que $$\exp(x+y) = \exp(x) \exp(y), \quad \exp(x-y) = \dfrac{\exp(x)}{\exp(y)}$$ cualesquiera sean los números reales $x$ e $y$.
+	
+	\textbf{Demostración. }Teniendo en cuenta que $x = \log(\exp(x))$, $y = \log(\exp(y))$ y que el logaritmo es estrictamente creciente, se deduce que si $x < y$ entonces ha de ser necesariamente $\exp(x) < \exp(y)$. De otra parte, como $$ \log(\exp(x+y)) = x + y = \log(\exp(x)) + \log(\exp(y)) = \log(\exp(x)\exp(y))$$ se sigue que $\exp(x+y) = \exp(x)\exp(y)$. Haciendo en esta igualdad $x = -y$ obtenemos $\exp(-y) = \dfrac{1}{\exp(y)}$, por lo que $\exp(x-y) = \exp(x)\exp(-y) = \dfrac{\exp(x)}{\exp(y)}$.
+	
+	\newpage
+	
+	\section{Potencias reales. Sucesiones de exponenciales y logaritmos}
+	
+	\textbf{\Large{Potencias reales}}
+	
+	Dados $x > 0, p \in \mathbb{Z}$ y $q \in \mathbb{N}$, entonces $x^{p/q} = \sqrt[q]{x^p}$. Notemos primero que $(\sqrt[q]{x})^p = \sqrt[q]{x^p}$ pues $$
+	\big((\sqrt[q]{x})^p\big)^q = (\sqrt[q]{x})^{pq} = \big((\sqrt[q]{x})^q\big)^p = x^p$$
+	Naturalmente, debemos probar que si $p/q = m/n$ donde $m \in \mathbb{Z}$ y $n \in \mathbb{N}$, entonces $x^{p/q} = x^{m/n}$. En efecto, puesto que $pn = qm$ tenemos que 
+	$$\big((\sqrt[q]{x})^p\big)^{qn} = \big((\sqrt[q]{x})^q\big)^{pn} = x^{pn} = x^{qm} = \big((\sqrt[n]{x})^n\big)^{qm} = \big((\sqrt[n]{x})^m\big)^{qn}$$ 
+	es decir, $\left(x^{p/q}\right) ^{qn} = \left(x^{m/n}\right) ^{qn}$, lo que implica que $x^{p/q} = x^{m/n}$. En consecuencia, si $r$ es un número racional podemos definir, sin ambigüedad alguna, la potencia $x^r$ por $x^r = x^{p/q}$, donde $p \in \mathbb{Z}$ y $q \in \mathbb{N}$ son tales que $r = p/q$.
+	
+	\subsection{Proposición}
+	Para todo número racional $r \in \mathbb{Q}$ y todo número real $y$ se verifica que $\exp(ry) = \big(\exp(y)\big)^r$. En particular, $\exp(r) = e^r$. Además, para todo $x \in \mathbb{R}$ se verifica que $$\exp(x) = \sup\{e^r:r \in \mathbb{Q}: r < x\}.$$
+	
+	\textbf{Demostración. }Utilizando la propiedad de la exponencial $\exp(x+y) = \exp(x)\exp(y)$, se prueba
+	fácilmente por inducción que para todo $n \in \mathbb{N}$ y todo $y \in \mathbb{R}$ se verifica que $\exp(ny) = \big(\exp(y)\big)^n$. Si ahora $n$ es un entero negativo tenemos que:
+	$$\exp(ny) = \exp(-n(-y)) = \big(\exp(-y)\big)^{-n} = \left(\dfrac{1}{\exp(y)}\right) ^{-n} = \exp(y)^n.$$
+	Concluimos que $\exp(ny) = \big(\exp(y)\big)^n$ para todo $n \in \mathbb{Z}$ y todo $y \in \mathbb{R}$. Deducimos ahora que $\left(\exp\left(\dfrac{1}{m}y\right)\right)^m = \exp(y)$ para todo $m \in \mathbb{N}$, esto es, $\exp\left(\dfrac{y}{m}\right) = \sqrt[m]{\exp(y)}$. Luego, $\exp\left(\dfrac{n}{m}y\right) = \left(\exp\left(\dfrac{y}{m}\right)\right)^n = \left(\sqrt[m]{\exp(y)}\right)^n$, de donde se sigue la primer afirmación del enunciado. En particular, $\exp(r) = \big(\exp(1)\big)^r = e^r$ para todo $r \in \mathbb{Q}$.
+	
+	Dado $x \in \mathbb{R}$, sea $C = \{e^r:r \in \mathbb{Q}, r < x\}$. Claramente,  $\exp(x)$ es un mayorante de $C$ por lo que $\alpha = \sup(C) \leq \exp(x)$. Si fuera $\alpha < \exp(x)$, entonces $\log(\alpha) < x$ y, por la densidad de $\mathbb{Q}$ en $\mathbb{R}$, hay algún $r \in \mathbb{Q}$ tal que $\log(\alpha) < r < x$. Pero entonces se tiene que $\alpha < \exp(r) = e^r$, lo que es contradictorio pues $e^r \in C$. Luego $\alpha = \exp(x)$.
+
+	\subsection{Definición}
+	Dados dos números reales $x >0 $ e $y \in \mathbb{R}$, se define la potencia $x^y$ de base $x$ y exponente $y$ como el número real dado por $$x^y = \exp(y\log(x)).$$
+	Definimos también $0 ^x = 0$ para todo $x > 0$ y $0^0 = 1$.
+	
+	\subsection{Proposición (Leyes de los exponente)}
+	Cualesquiera sean $a >0, b>0$ y para todos $x, y$ en $\mathbb{R}$, se verifica que
+	$$ a^{x+y} = a^xa^y; \quad (a^x)^y = a^{xy}; \quad (ab) ^x = a^xb^x.$$
+	
+	\subsection{Definición}
+	Dado un número positivo $a >0$ la función $\exp_a: \mathbb{R} \rightarrow \mathbb{R}^+$, definida para todo $x \in \mathbb{R}$ por $\exp_a(x) = a^x$, se llama función exponencial de base $a$.
+	
+	Dado un número positivo $a > 0$ y $a \neq 1$, la función $\log_a : \mathbb{R}^+ \rightarrow \mathbb{R}$, definida para todo $x \in \mathbb{R}^+$ por $\log_a(x) = \dfrac{\log(x)}{\log(a)}$, se llama función logaritmo de base $a$.
+	
+	Dado un número real $b$ la función de $\mathbb{R}^+$ en $\mathbb{R}$, definida para todo $x>0$ por $x \mapsto x ^b$, se llama función potencia de exponente $b$.
+	
+	\subsection{Proposición}
+	\begin{enumerate}[label=\roman*]
+		\item $\dfrac{x}{1+x} \leq \log(1+x) \leq x$ para todo $x > -1$, y la desigualdad es estricta si $x \neq 0$.
+		\item $\left|\dfrac{\log(1+x)}{x}-1 \right| < \dfrac{|x|}{1+x}$ para todo $x > -1, x \neq 0$.
+		\item $x \leq e^x - 1 \leq xe^x$ para todo número real $x$, y la desigualdad es estricta si $x \neq 0$.
+		\item $\left|\dfrac{e^x-1}{x} - 1\right| < |e^x-1|$ para todo $x \neq 0$.
+	\end{enumerate}
+
+	\textbf{Demostración.} 
+	\begin{enumerate}[label=\roman*]
+		\item Sabemos que $\log(t) < n(t^{1/n}-1)$ para todo $t > 0, t \neq 1$ y todo $n \in \mathbb{N}$. En particular, para $n = 1, \log(t) < t -1$ para todo $t > 0, t \neq 1$. Sustituyendo $t$ por $1+x$ obtenemos $\log(1+x) < x$ para todo $x > -1, x \neq 0$. Para estos valores de $x$ se tiene que el número $z = \dfrac{1}{1+x}-1$ también verifica que $z > -1, z \neq 0$, luego, por lo ya visto, se tendrá que $\log(1+z) < z$, es decir, $\dfrac{x}{1+x}< \log(1+x)$.
+		\item Se deduce fácilmente de \textit{i)} dividiendo ambos lados de la desigualdad por $x$ y tratando por separado el caso en que $x > 0$ y el caso en que $x < 0$.
+		\item Si $x \neq 0$, el número $z = e^x-1$ verifica que $z > -1$, y $z \neq 0$, por consiguiente, $\dfrac{z}{1+z} < \log(1+z) < z$, es decir, $\dfrac{e^x-1}{e^x} < x < e^x-1$, y de aquí se sigue de forma inmediata la desigualdad del enunciado.
+		\item Se deduce fácilmente de \textit{iii)} diviendo ambos lados de la desigualdad por $x$ y tratando por separado el caso en que $x > 0$ y el caso en que $x < 0$.
+	\end{enumerate}
+
+	\vspace{0.3 cm}
+	
+	\textbf{\Large{Sucesiones de exponenciales y logaritmos}}
+	
+	\subsection{Proposición}
+	
+	\begin{enumerate}[label=\roman*]
+		\item Una sucesión $\{x_n\}$ converge a $x \in \mathbb{R}$ si, y solo si, la sucesión $\{e^{x_n}\}$ converge a $e^x$.
+		\item Una sucesión de números positivos $\{y_n\}$ converge a un número positivo $y > 0$ si, y solo si, la sucesión $\{\log(y_n)\}$ converge a $\log(y)$.
+	\end{enumerate}
+	
+	\textbf{Demostración.} Teniendo en cuenta que la función exponencial es creciente, se deduce inmediatamente que si $\{x_n\}$ está acotada entonces también $\{e^{x_n}\}$ está acotada. Esta observación, junto con la desigualdad $$x_n \leq e^{x_n} - 1 \leq x_n e^{x_n}$$
+	probada anteriormente, y el principio de las sucesiones encajadas, nos permiten deducir que $\lim\{x_n\} = 0$ entonces $\lim\{e^{x_n}\} = 1$. Si ahora suponemos que $\lim\{x_n\} = x$, se tiene que $\lim\{x_n-x\} = 0$ y, por lo ya visto, $\lim\{e^{x_n-x}\} = 1$, de donde, por ser $e^\{x_n\} = e^{x_n-x}e^x$, se sigue que $\lim\{e^{x_n}\} = e^x$. Hemos probado una parte de la afirmación \textit{i)} del enunciado.
+	
+	Supongamos ahora que $\{y_n\}$ es una sucesión de números positivos con $\lim\{y_n\} = 1$. Pongamos $z_n = y_n - 1$. Claramente $z_n > -1$, por lo que, según hemos probado en la proposición anterior, se verifica la desigualdad $$ \dfrac{z_n}{1+z_n} \leq \log(1+z_n) = \log(y_n) \leq z_n.$$
+	Teniendo ahora en cuenta que $\lim\{z_n\} = 0$ deducimos, por el principio de las sucesiones encajadas, que $\lim\{\log(y_n)\} = 0$. Si ahora suponemos que $\lim\{y_n\} = y$ siendo $y > 0$, entonces $\lim\left\{\dfrac{y_n}{y}\right\} = 1$ y, por lo ya visto, será $\lim\left\{\log(\dfrac{y_n}{y})\right\} = \lim\{\log(y_n) - \log(y)\} = 0$, es decir, $\lim\{\log(y_n)\} = \log(y)$. Hemos probado una parte de la afirmación \textit{ii)} del enunciado.
+	
+	Las afirmaciones recíprocas se deducen de las ya probadas:
+	
+	\qquad Si $\{e^{x_n}\}$ converge a $e^x$, entonces haciendo $y_n = e^{x_n}$ e $y = e^x$, se verificará, por lo ya visto, que $\{x_n\} = \{\log(y_n)\}$ converge a $x = \log(y)$.
+	
+	\qquad Si $\{\log(y_n)\}$ converge a $\log(y)$, haciendo $x_n = \log(y_n)$ y $x = \log(y)$, se verificará, por lo ya visto, que $\{y_n\} = \{e^{x_n}\}$ converge a $y = \exp(x)$.	
+	
+	\subsection{Teorema}
+	
+	\begin{enumerate}[label=\roman*]
+		\item Para toda sucesión $\{x_n\}$ tal que $-1 < x_n \neq 0$ para todo $n \in \mathbb{N}$ y $\lim\{x_n\} = 0$, se verifica que $$\lim_{n \rightarrow \infty}\dfrac{\log(1+x_n)}{x_n} = 1, \qquad \lim_{n \rightarrow \infty}(1+x_n)^{1/x_n} = e$$
+		\item Para toda sucesión $\{x_n\}$ tal que $\lim\{x_n\} = 0$ y $x_n \neq 0$ para todo $n \in \mathbb{N}$ se verifica que $$\lim_{n \rightarrow \infty}\dfrac{e^{x_n}-1}{x_n} = 1.$$
+	\end{enumerate}
+
+	\textbf{Demostración. }
+	\begin{enumerate}[label=\roman*]
+		\item En virtud de la desigualdad \textit{ii)} probada en el punto 5. 5, para todo $n \in \mathbb{N}$ se verifica que 
+		$$\left|\dfrac{\log(1+x_n)}{x_n}-1 \right| < \dfrac{|x_n|}{1+x_n}$$
+		de donde se sigue inmediatamente que $\displaystyle\lim_{n \rightarrow \infty}\dfrac{\log(1+x_n)}{x_n} = 1$. Deducimos ahora que $$\lim_{n \rightarrow \infty}(1+x_n) ^{1/x_n} = \lim_{n \rightarrow \infty}\exp\left(\dfrac{\log(1+x_n)}{x_n}\right) = \exp(1) = e.$$
+		\item Puesto que $\lim\{e^{x_n}\} = 1$ y, en virtud de la desigualdad \textit{iv)} probada en el punto 5.5, para todo $n \in \mathbb{N}$ se verifica que 
+		$$\left|\dfrac{e^{x_n}-1}{x_n} - 1\right| < |e^{x_n}-1|,$$
+		deducmos que $\displaystyle\lim_{n \rightarrow \infty}\dfrac{e^{x_n}-1}{x_n} = 1$.
+	\end{enumerate}
+	
+	\subsection{Corolario}
+	
+	\begin{enumerate}[label=\roman*]
+		\item Para toda sucesión $\{x_n\}$ tal que $ 0 < x_n \neq 1$ para todo $n \in \mathbb{N}$ y $\lim\{x_n\} = 1$, se verifica que $$\lim_{n \rightarrow \infty}\dfrac{\log(x_n)}{x_n-1} = 1.$$
+		\item Para toda sucesión $\{x_n\}$ tal que $x_n \notin [-1, 0]$ para todo $n \in \mathbb{N}$ y $\lim\left\{\dfrac{1}{x_n}\right\} = 0$, se verifica que 
+		$$ \lim_{n \rightarrow \infty}\left(1 + \dfrac{1}{x_n}\right) ^x_n = e.$$
+	\end{enumerate}
+
+	\textbf{Demostración. }Poniendo, según sea el caso \textit{i)} o el \textbf{ii)}, $z_n = x_n-1$ o $z_n = \dfrac{1}{x_n}$, tenemos que en cada caso, la sucesión $\{z_n\}$ verifica las hipótesis del punto \textit{i)} del teorema anterior, por lo que 
+	$$\lim_{n \rightarrow \infty}\dfrac{\log(1+z_n)}{z_n} = 1, \qquad \lim_{n \rightarrow \infty}(1+z_n)^{1/z_n} = e,$$
+	equivalentemente
+	$$\lim_{n \rightarrow \infty}\dfrac{\log(x_n)}{x_n -1} = 1, \qquad \lim_{n \rightarrow \infty}\left(1+\dfrac{1}{x_n}\right)^{x_n} = e$$
+	
+	\newpage
+	\section{Sucesiones parciales. Valores de adherencia. Teorema de \\ \quad \; Bolzano – Weierstrass.}
+	
+	Sea $\{x_n\}$ una sucesión de números reales. Dada una aplicación $\sigma : \mathbb{N} \rightarrow \mathbb{N}$ estrictamente creciente, la sucesión que a cada número natural $n$ hace corresponder el número real $x_{\sigma(n)}$ se representa por $\{x_{\sigma(n)}\}$ y se dice que es una sucesión parcial de $\{x_n\}$. Nótese que $\{x_{\sigma(n)}\}$ no es otra cosa que la composición de las aplicaciones $\{x_n\}$ y $\sigma$, esto es, $\{x_{\sigma(n)}\} = \{x_n\} \circ \sigma$.
+	
+	Se dice que un número real $z$ es un valor de adherencia de una sucesión $\{x_n\}$ si hay alguna sucesión parcial de $\{x_n\}$ que converge a $z$.
+	
+	\subsection{Proposición}
+	Si $\{y_n\}$ es una sucesión parcial de $\{x_n\}$ y $\{z_n\}$ es una sucesión parcial de $\{y_n\}$, entonces $\{z_n\}$ es una sucesión parcial de $\{x_n\}$. En particular, un valor de adherencia de una sucesión parcial de $\{x_n\}$ también es un valor de adherencia de $\{x_n\}$.
+	
+	\textbf{Demostración. }Pongamos $y_n = x_{\sigma(n)}, z_n = y_{\varphi(n)}$ donde $\sigma, \varphi : \mathbb{N} \rightarrow \mathbb{N}$ son aplicaciones estrictamente crecientes. Definiendo $\psi =\sigma \circ \varphi : \mathbb{N} \rightarrow \mathbb{N}$, se tiene que $\psi$ es estrictamente creciente y $z_n = y_{\varphi(n)} = x_{\sigma(\varphi(n))} = x_{\psi(n)}$.
+	
+	\quad Ya sabemos lo siguiente: 
+	
+	\subsection{Proposición}
+	
+	\begin{enumerate}[label=\roman*]
+		\item Sea $\varphi : \mathbb{N} \rightarrow \mathbb{N}$ una aplicación tal que $\varphi(n) < \varphi(n+1)$ para todo $n \in \mathbb{N}$. Se verifica entonces que $\varphi(n) \geq n$ para todo $n \in \mathbb{N}$.
+		\item Sea $A$ un conjunto infinito de números naturales. Entonces existe una biyección creciente de $\mathbb{N}$ sobre $A$.
+	\end{enumerate}
+
+	\subsection{Proposición}
+	Si $\lim\{x_n\} = x$, toda sucesión parcial de $\{x_n\}$ también converge a $x$. En particular, una sucesión convergente tiene como único valor de adherencia su límite.
+	
+	\textbf{Demostración. }Sea $\{x_n\} \rightarrow x$, y $\{x_{\sigma(n)}\}$ una sucesión parcial de $\{x_n\}$. Dado $\varepsilon > 0$, existe $m \in \mathbb{N}$ tal que para todo $n \geq m$ se verifica que $|x_n - x| < \varepsilon$. Puesto que $\sigma(n) \geq n$, para todo $n \geq m$ se tiene $|x_{\sigma(n)}-x| < \varepsilon$. Lo que prueba que $\{x_{\sigma(n)}\} \rightarrow x$.
+	
+	\subsection{Proposición}
+	
+	Sea $\{x_n\}$ una sucesión y $x$ un número real. Equivalen las siguiente afirmaciones:
+	\begin{enumerate}[label=\roman*]
+		\item $x$ es un valor de adherencia de $\{x_n\}$
+		\item Para todo intervalo abierto $I$ que contiene a $x$ se verifica que el conjunto de números naturales $\{n \in \mathbb{N}: x_n \in I\}$ es infinito.
+		\item Para todo $\varepsilon > 0$ el conjunto de números naturales $\{n \in \mathbb{N}: x - \varepsilon < x_n < x + \varepsilon\}$ es infinito.
+	\end{enumerate}
+
+	\textbf{Demostración. }Supongamos que hay una sucesión parcial, $\{x_{\sigma(n)}\}$, convergente a $x$. Dado un intervalo $I$ que contenga a $x$, sabemos que hay un número $m_0 \in \mathbb{N}$ tal que para todo $p \geq m_0$ se verifica que $x_{\sigma(p)} \in I$. Deducimos que 
+	$$\{n \in \mathbb{N} : x_n \in I\} \supseteq \{\sigma(p): p \geq m_0\}$$
+	y, por ser la aplicación $\sigma$ estrictamente creciente, y por tanto inyectiva, el conjunto $\{\sigma(p): p \geq m_0\}$ es infinito, luego también lo es el conjunto $\{n \in \mathbb{N} : x_n \in I\}$. Hemos probado así que \textit{i)} implica \textit{ii)}. Siendo evidente que \textit{ii)} implica \textit{iii)}, para acabar probaremos que \textit{iii)} implica \textit{i)}.
+	
+	Por hipótesis, para todo $k \in \mathbb{N}$ el conjunto 
+	$$A_k = \{n \in \mathbb{N}: x- 1/k < x_n < x+1/k\}$$
+	es infinito. Por tanto, cualesquiera sean los números naturales $k, p$, el conjunto 
+	$$B_{p, k} = \{n \in \mathbb{N}: n > p\}$$
+	no es vacío. Haciendo uso del principio de buena ordenación podemos definir $\varphi: \mathbb{N} \rightarrow \mathbb{N}$ por:
+	$$ \varphi(1) = \min(A_1)$$
+	$$\varphi(k+1) = \min(B_{\varphi(k), k+1}) \quad \text{para todo} \quad k \in \mathbb{N}.$$
+	
+	Con ello queda claro que $\varphi(k) < \varphi(k+1)$, y $\varphi(k) \in A_k$ para todo $k \in \mathbb{N}$. Por tanto $\{x_{\varphi(n)}\}$ es una sucesión parcial es $\{x_n\}$ y como $|x - x_{\varphi(n)}|< 1/n$ para todo $n \in \mathbb{N}$, deducimos que $\{x_{\varphi(n)}\}$ converge a $x$.
+	
+	\vspace{0.3 cm}
+	
+	\textbf{\Large{El teorema de Bolzano - Weierstrass}}
+	
+	\subsection{Lema}
+	Toda sucesión de números reales tiene una sucesión parcial monótona.
+	
+	\textbf{Demostración. }Sea $\{x_n\}$ una sucesión y definamos 
+	$$ A = \{n \in \mathbb{N}: x_n \geq x_p \quad \text{para todo} p > n\}.$$
+	Podemos visualizar el conjunto $A$ como sigue. Consideremos en el plano los segmentos de extremos $(n, x_n)$ y $(n+1, x_{n+1})$, $n = 1, 2, 3, \dots$. Resulta así una línea poligonal infinita y podemos imaginar que dicha línea es el perdil de una cordillera cuyas cumbres y valles son los puntos $(n, x_n)$. Imaginemos ahora que los rayos de luz del Sol, paralelos al eje de abscisas, iluminan dicha cordillera por el lado derecho (el Sol estaría, pues, situado en el infinito del eje de abscisas positivo). Pues bien, un número natural $n$ pertenece al conjunto $A$ si el punto $(n, x_n)$ está iluminado y no pertenece a $A$ si dicho punto está en sombra.
+	
+	Supongamos que $A$ es infinito, En tal caso sabemos que hay una aplicación $\sigma : \mathbb{N} \rightarrow \mathbb{N}$ estrictamente creciente con $\sigma(\mathbb{N}) = A$. Resulta ahora evidente que la sucesión parcial $\{x_{\sigma(n)}\}$ es decreciente pues todos los puntos $(\sigma(n), x_{\sigma(n)})$ están iluminados y, por tanto, ninguno de ellos puede hacerle sombra a uno anterior. De manera más formal, como para todo $n \in \mathbb{N}$ es $\sigma(n) \in A$, se verficia que $x_{\sigma(n)} \geq x_p$ para todo $p \geq \sigma(n)$. En particular, como $\sigma(n+1) > \sigma(n)$, se tiene que $x_{\sigma(n)} \geq x_{\sigma(n+1)}$.
+	
+	Si $A$ es finito podemos suponer, sin pérdida de generalidad, que $A = \emptyset$. En tal caso, para todo $n \in \mathbb{N}$ hay algún $p > n$ tal que $x_n < x_p$ (pues todo punto $(n, x_n)$ está en sombra). Podemos definir ahora una aplicación $\sigma : \mathbb{N} \rightarrow \mathbb{N}$ estrictamente creciente de la siguiente forma: 
+	$$ \sigma(1) = 1$$
+	$$\sigma(n+1) = \min\{p \in \mathbb{N} : \sigma(n) < p \; \text{y} \; x_{\sigma(n)} < x_p\} \; \text{para todo} \; n \in \mathbb{N}$$
+	
+	Resulta ahora evidente que la sucesión parcial $\{x_{\sigma(n)}\}$ es estrictamente creciente pues cada punto $(\sigma(n), x_{\sigma(n)})$ deja en sombra al anterior.
+	
+	\subsection{Teorema de Bolazno-Weierstrass)}
+	
+	Toda sucesión acotada de números reales tiene alguna sucesión parcial convergente. Equivalentemente, toda sucesión acotada de números
+	reales tiene al menos un valor de adherencia.
+
+	
+	\subsection{Proposición}
+	
+	Una sucesión acotada no convergente tiene al menos dos valores de adherencia.
+	
+	\textbf{Demostración. }Sea $\{x_n\}$ acotada y no convergente. Sea $z$ un valor de adherencia de $\{x_n\}$. Como $\{x_n\}$ no converge a $z$ tiene que haber un $\varepsilon > 0$ tal que el conjunto $A_\varepsilon = \{n \in \mathbb{N}: |x_n - z| \geq \varepsilon\}$ es infinito. Por la proposición 6.2, sabemos que hay una aplicación $\sigma : \mathbb{N} \rightarrow \mathbb{N}$ estrictamente creciente tal que $\sigma(\mathbb{N}) = A_\varepsilon$. Pongamos $y_n = x_{\sigma(n)}$. La sucesión $\{y_n\}$ está acotada y, por tanto tiene algún valor de adherencia $w = \lim\{y_\varphi(n)\}$. Sabemos por la proposición 6.1 que $w$ también es valor de adherencia de $\{x_n\}$. Como para todo $n \in \mathbb{N}$ es $|y_{\varphi(n)} - z | = |x_{\sigma(\varphi(n))} - z | \geq \varepsilon$, deducimos que $|w - z | \geq \varepsilon$ y por tanto $w \neq z$.
+	
+	\subsection{Corolario}
+	
+	Una sucesión acotada es convergente si y sólo si tiene un único valor de adherencia.
+	
+	\newpage
+	
+	\section{Teorema de complitud de $\mathbb{R}$. Límites superior e inferior.}
+	
+	\subsection{Definición}
+	
+	Se dice que una sucesión $\{x_n\}$ satisface la condición de Cauchy si para cada número positivo, $\varepsilon > 0$, existe un número natural $m_\varepsilon$, tal que para todos $p, q \in \mathbb{N}$ con $p \geq m_\varepsilon$ y $q \geq m_\varepsilon$ se verifica que $|x_p - x_q| < \varepsilon$.
+	
+	\subsection{Teorema de complitud de $\mathbb{R}$}
+	Una sucesión de números reales es convergente si, y solo si, verifica la condición de Cauchy.
+	
+	\textbf{Demostración. }Supongamos que $\{x_n\}$ verifica la condición de Cauchy. Probemos primero que $\{x_n\}$ está acotada. Tomando $\varepsilon = 1$, la condición de Cauchy implica que hay $m_0 \in \mathbb{N}$ tal que $|x_p - x_{m_0} | < 1$ para todo $p \geq m_0$. Como $|x_p| \leq |x_p - x_{m_0} | + |x_{m_0}$, deducimos que $|x_p| < 1+|x_{m_0}|$ para $p \geq m_0$. En consecuencia si definimos $M = \max\{|x_1|, |x_2|, \dots, |x_{m_0}|\}$, cuya existencia está garantizada por ser un conjunto finito, obtenemos que $|x_n| \leq M$ para todo $ n\in \mathbb{N}$. Hemos probado así que $\{x_n\}$ está acotada.
+	
+	El teorema de Bolzano-Weierstrass nos dice que $\{x_n\}$ tiene una succesión parcial convergente $\{x_{\sigma(n)}\} \rightarrow x$. Probaremos que $\{x_n\} \rightarrow x$. Dado $\varepsilon > 0$, por la condición de Cauchy, existe $m_1 \in \mathbb{N}$ tal que para todos $p, q \geq m_1$ se verifica que $ |x_p - x_q| < \varepsilon/2$. También existe $m_2 \in \mathbb{N}$ tal que para todo $n \geq m_2$ se verifica que $|x_{\sigma(n)} - x| < \varepsilon/2$. Sea $m = \max\{m_1, m_2\}$. Para todo $n \geq m$ se verifica que:
+	$$|x_n - x| \leq |x_n - x_{\sigma(n)}|+ |x_{\sigma(n)} - x| < \dfrac{\varepsilon}{2} + \dfrac{\varepsilon}{2} = \varepsilon.$$
+	Esto prueba que $\{x_n\}$ converge a $x$.
+	
+	Recíprocamente, si $\{x_n\}$ es convergente y $\{x_n\} \rightarrow x$, dado $\varepsilon > 0$, hay un número $m_\varepsilon \in \mathbb{N}$ tal que para todo número natural $n \geq m_\varepsilon$ se tiene que $|x_n - x| < \varepsilon/2$. Deducimos que si $p, q$ son números naturales mayores o iguales que $m_\varepsilon$, entonces 
+	$$|x_p -x_q| \leq |x_p - x| + |x - x_q| < \dfrac{\varepsilon}{2} + \dfrac{\varepsilon}{2} = \varepsilon.$$
+	Por tanto, la sucesión $\{x_n\}$ verifica la condición de Cauchy.
+	
+	\vspace{0.3 cm}
+	
+	\textbf{\Large{Límites superior e inferior}}
+	
+	Sea $\{x_n\}$ una sucesión acotada y para cada $n \in \mathbb{N}$ definamos 
+	$$A_n = \{x_p : p \geq n\}.$$
+	Como $A_n \subseteq A_1$ y, por hipótesis, $A_1$ es un conjunto acotado, $A_n$ también está acotado. Definamos $$\alpha_n = \inf(A_n), \qquad \beta_n = \sup(A_n)$$
+	Como $A_{n+1} \subseteq A_n$ se tiene que $\alpha_n \leq \alpha{n+1}, \beta_{n+1} \leq \beta_n$. Por tanto, la sucesión $\{\alpha_n\}$ es creciente y $\{\beta_n\}$ es decreciente. Además, $\alpha_1 \leq \alpha_n \leq \beta_n \leq \beta_1$, para todo $n \in \mathbb{N}$, y concluimos que ambas sucesiones son convergentes. El número $\alpha = \lim\{\alpha_n\}$ se llama límite inferior de la sucesión $\{x_n\}$, y se representa por $\lim \inf \{x_n\}$ y también $\underline{\lim}\{x_n\}$. El número $\beta = \lim\{\beta_n\}$ se llama límite superior de la sucesión $\{x_n\}$, y se representa por $\lim \sup \{x_n\}$ y también $\overline{\lim}\{x_n\}$. Nótese que $\alpha \leq \beta$ y además $\alpha$ y $\beta$ vienen dados por:
+	$$\alpha = \lim\{\alpha_n\} = \sup\{\alpha_n : n \in \mathbb{N}\}, \qquad \beta = \lim\{\beta_n\} = \inf\{\beta_n : n \in \mathbb{N}\}$$
+	
+	\subsection{Teorema}
+	Una sucesión acotada es convergente si, y sólo si, su límite superior y su límite inferior son iguales, en cuyo caso ambos coinciden con el límite de la sucesión.
+	
+	\textbf{Demostración. }Sea $\{x_n\}$ acotada, $\alpha = \lim \inf\{x_n\}, \beta = \lim \sup\{x_n\}$. Supongamos que $\{x_n\}$ es convergente con $\lim\{x_n\} = x$. Dado $\varepsilon > 0$, existe $m_0 \in \mathbb{N}$ tal que para todo $p \geq m_0$ es $x - \varepsilon/2 < x_p < x + \varepsilon/2$. Por tanto, $x-\varepsilon/2$ es un minorante de $A_{m_0} = \{x_p : p \geq m_0\}$ y, en consecuencia, $x-\varepsilon/2 \leq \alpha_{m_0}$. También, por análogas razones, $\beta_{m_0} \leq x + \varepsilon/2$. Como además $\alpha_{m_0} \leq \alpha \leq \beta \leq \beta_{m_0}$, resulta que 
+	\begin{equation}
+		x - \varepsilon/2 \leq \alpha_{m_0} \leq \alpha \leq \beta \leq \beta_{m_0} \leq x + \varepsilon/2
+	\end{equation}
+
+	De donde se sigue que $\beta - \alpha \leq \varepsilon$. Hemos probado que para todo $\varepsilon > 0$ es $\beta \leq \alpha + \varepsilon$ lo que, como ya sabemos, implica que $\beta \leq \alpha$ y, en consecuencia, $\alpha = \beta$. Deducimos ahora de las desigualdades (3) que, para todo $\varepsilon > 0$, $x - \varepsilon/2 \leq \alpha = \beta \leq x + \varepsilon/2$ y, por tanto, $x \leq \alpha = \beta \leq x$, o sea, $x = \alpha = \beta$.
+	
+	Recíprocamente, si $\alpha = \beta$, como para todo $n \in \mathbb{N}$ se verifica que $\alpha_n \leq x_n \leq \beta_n$, podemos aplicar el principio de las sucesiones encajadas y deducimos que $\{x_n\}$ es convergente y $\lim\{x_n\} = \alpha = \beta$.
+	
+	\subsection{Definición}
+	Sea $\{x_n\}$ una sucesión de números reales.
+	\begin{enumerate}[label = \roman*)]
+		\item Si $\{x_n\}$ no está mayorada definimos $\lim \sup \{x_n\} = + \infty$.
+		\item Si $\{x_n\}$ no está minorada definimos $\lim \inf \{x_n\} = - \infty$.
+		\item Si $\{x_n\}$ está mayorada, $\beta_n = \sup\{x_p : p \geq n\}$, y $ \{\beta_n\} \rightarrow \beta \in \mathbb{R} \cup \{- \infty\}$, definimos $\lim \sup \{x_n\} = \beta$.
+		\item Si $\{x_n\}$ está minorada, $\alpha_n = \inf\{x_p : p \geq n\}$, y $\{\alpha_n\} \rightarrow \alpha \in \mathbb{R} \cup \{+ \infty\}$, definimos $\lim \inf\{x_n\} = \alpha$.
+	\end{enumerate}
+	Para todo $x \in \mathbb{R}$ se conviene que $- \infty < x < + \infty$.
+	
+	\subsection{Corolario}
+	Sea $\{x_n\}$ una sucesión cualquiera de números positivos. Se verifica que:
+	$$ \underline\lim\left\{\dfrac{x_{n+1}}{x_n}\right\} \leq \underline\lim{\sqrt[n]{x_n}} \leq \overline\lim\{\sqrt[n]{x_n}\} \leq \overline\lim\left\{\dfrac{x_{n+1}}{x_n}\right\}$$
+	
+	\newpage
+	
+	\section{Series de números reales. Conceptos básicos. Series armónicas. El número $e$}
+	
+	\subsection{Definición}
+	
+	Dada una sucesión $\{a_n\}$, podemos formar a partir de ella otra sucesión, $\{A_n\}$, cuyos términos se obtienen sumando consecutivamente los términos de ${a_n}$, es decir:
+	$$A_1 = a_1, A_2 = a_1 + a_2, A_3 = a_1 + a_2 + a_3, \dots, A_n = a_1 + a_2 + \cdots + a_n, \dots$$
+	o $A_1 = a_1$, y para todo $n \in \mathbb{N}, A_{n+1} = A_n + a_{n+1}$. La sucesión $\{A_n\}$ así definida se llama serie de término general $a_n$ o serie definida por la sucesión $\{a_n\}$, y la representaremos por $\displaystyle \sum_{n \geq 1} a_n$ o, más sencillamente $\sum a_n$. El número $A_n = \displaystyle \sum_{k = 1}^n a_k$ se llama suma parcial de orden $n$ de la serie $\sum a_n$. 
+	
+	Si una serie $\sum a_n$ es convergente se usa el símbolo $\displaystyle \sum_{n = 1} ^ \infty a_n$ para representar el límite de la serie que suele llamarse suma de la serie. Naturalmente, $\displaystyle \sum_{n = 1} ^\infty a_n$ es el número definido por:
+	$$ \sum_{n = 1}^\infty = \lim\{A_n\} = \lim_{n \rightarrow \infty} \sum_{k = 1} ^n a_k.$$
+	
+	La igualdad $\displaystyle\sum_{n = 1} ^\infty a_n = S$ quiere decir que para todo $\varepsilon > 0$, hay un $m_\varepsilon \in \mathbb{N}$ tal que para todo $n \geq m_\varepsilon$ se verifica que $\displaystyle \left|\sum_{k = 1} ^n a_k - S \right| < \varepsilon$.
+	
+	\subsection{Ejemplo (Serie armónica)}
+	
+	La serie de término general $1/n$, es decir, la sucesión $\{H_n\}$ donde $H_n = \sum_{k = 1}^n \dfrac{1}{k}$, que simbólicamente representamos por $\sum_{n \geq 1} \dfrac{1}{n}$, se llama serie armónica. Se verifica que la serie armónica diverge positivamente:
+	$$ \sum_{n = 1}^\infty \dfrac{1}{n} = \lim_{n \rightarrow \infty}
+	\{1 + 1/2 + 1/3 + \cdots + 1/n\} = + \infty.$$
+	En efecto, tomando logaritmos en las conocidas desigualdades: 
+	$$\left(1 + \dfrac{1}{k}\right) ^k < e < \left(1 + \dfrac{1}{k}\right) ^{k+1}$$ 
+	deducimos
+	$$ \dfrac{1}{k+1} < \log\left(1 + \dfrac{1}{k}\right) < \dfrac{1}{k}$$
+	que podemos escribir en la forma:
+	$$\dfrac{1}{k+1} < \log(k+1) - \log(k) < \dfrac{1}{k}.$$
+	
+	Dado $n \in \mathbb{N}$, sumamos las desigualdades anteriores para $ k = 1, 2, \dots, n$ y obtenemos 
+	$$H_{n+1} - 1 < \log(n+1) < H_n$$
+	
+	La desigualdad $H_n > \log(n+1)$ implica que la serie armónica es positivamente divergente. de las desigualdades anteriores también se deduce que para todo $n \in \mathbb{N}$ es:
+	$$1 < \dfrac{H_n}{\log(n+1)} < \dfrac{H_{n+1}}{\log(n+1)} < 1 + \dfrac{1}{\log n}$$
+	y, por el principio de las sucesiones encajadas, concluimos que $\{H_n / \log n\} \rightarrow 1$. Es decir, las sucesiones $\{H_n\}$ y $\{\log(n)\}$ son asintóticamente equivalentes.
+	
+	\subsection{Ejemplo (Serie armónica alternada)}
+	
+	Se llama así a la serie de término general $\dfrac{(-1)^{n+1}}{n}$, es decir, la serie $\displaystyle \sum_{n \geq 1} \dfrac{(-1)^{n+1}}{n}$. Se verifica que la serie armónica alternada es convergente y su suma es igual a $\log 2$.
+	$$\sum_{n = 1} ^\infty \dfrac{(-1) ^{n+1}}{n} = \log 2.$$
+	
+	Para probarlo consideremos la sucesión $\{x_n\}$ dada por $x_n = H_n - \log n$. Teniendo en cuenta las desigualdades anteriores, obtenemos:
+	$$x_n - x_{n+1} = \log (n+1) - \log n - \dfrac{1}{n+1} = \log\left(1 + \dfrac{1}{n}\right) - \dfrac{1}{n+1} > 0.$$
+	Luego $\{x_n\}$ es estrictamente decreciente. Además, por lo dicho anteriormente, $x_n > H_n - \log (n+1) > 0$. Concluimos que $\{x_n\}$ es convergente.
+	
+	Pongamos $A_n = 1 - \dfrac{1}{2} + \dfrac{1}{3} - \dfrac{1}{4} + \cdots + \dfrac{(-1)^{n+1}}{n}$. Tenemos que:
+	
+	\begin{equation*}
+		\begin{split}
+			A_{2n}  & = 1 - \dfrac{1}{2} + \dfrac{1}{3} - \dfrac{1}{4} + \dfrac{1}{5} - \dfrac{1}{6} + \cdots + \dfrac{1}{2n-1} - \dfrac{1}{2n} \\
+			& = \left(1 + \dfrac{1}{3} + \dfrac{1}{5} + \cdots + \dfrac{1}{2n-1}\right) - \left(\dfrac{1}{2} + \dfrac{1}{4} + \dfrac{1}{6} + \cdots + \dfrac{1}{2n}\right) \\
+			& = \left(1 + \dfrac{1}{3} + \dfrac{1}{5} + \cdots + \dfrac{1}{2n-1}\right) - \dfrac{1}{2}H_n = H_{2n} - \dfrac{1}{2} H_n - \dfrac{1}{2} H_n = H_{2n} - H_n \\
+			& = x_{2n} + \log (2n) - x_n + \log (n) = x_{2n} - x_n + \log 2
+		\end{split}
+	\end{equation*}
+	
+	Como $\{x_{2n}\}$ es una sucesión parcial de la sucesión convergente $\{x_n\}$ tenemos que $\{x_{2n} - x_n\} \rightarrow 0$, y por tanto, $\lim\{A_{2n}\} = \log 2$. Como $A_{2n-1} = A_{2n} + \dfrac{1}{2n}$, deducimos que también $\lim\{A_{2n-1}\} = \log 2$. Concluimos que $\lim\{A_n\} = \log 2$.
+	
+	
+	\subsection{Proposición}
+	Sean $\{a_n\}$ y $\{b_n\}$ dos sucesiones y supongamos que hay un número $q \in \mathbb{N}$ tal que para $n \geq q + 1$ es $a_n = b_n$. Entonces se verifica que las series $\{a_1 + a_2 + \cdots + a_n\}$ y $\{b_1 + b_2 + \cdots + b_n\}$ o bien convergen ambas o no converge ninguna, y en el primer caso se verifica que:
+	$$\sum_{n = 1}^\infty a_n - \sum_{j = 1}^{q} a_j = \sum_{n = 1}^{\infty}b_n - \sum_{j = 1}^{q}b_j.$$
+	
+	\textbf{Demostración. }Pongamos $A_n = a_1 + a_2 + \cdots + a_n, \; B_n = b_1 + b_2 + \cdots + b_n, \; \alpha = \sum_{j = 1}^{q} a_j, \; \beta = \sum_{j = 1} ^{q} b_j$. Las afirmaciones hechas se deducen todas de que para todo $n \geq q + 1$ se verifica la igualdad:
+	$$ \sum_{k = q+1} ^n a_k = A_n - \alpha = \sum_{k = q+1}^n b_k = B_n - \beta$$
+	Observa que los número $\alpha$ y $\beta$ son constantes fijas. De la igualdad $A_n + \alpha = B_n + \beta$, válida para todo $n \geq q +1$, deducimos que las series $\sum a_n = \{A_n\}$ y $\sum b_n = \{B_n\}$ ambas convergen o ninguna converge. Cuando hay convergencia tenemos que:
+	$$ \lim_{n \rightarrow \infty} \{A_n - \alpha\} = \lim_{n \rightarrow \infty} \{A_n\} - \alpha = \lim_{n \rightarrow \infty}\{B_n - \beta\} = \lim_{n \rightarrow \infty}\{B_n\} -\beta.$$
+	Lo que prueba la igualdad del enunciado.
+	
+	\subsection{Proposición (Condición necesaria para la convergencia de una serie)}
+	
+	Para que la serie $\sum a_n$ sea convergente es necesario que $\lim\{a_n\} = 0$.
+	
+	\textbf{Demostración. }Si la serie $\sum a_n$ es convergente, entonces $\lim\{A_n\} = \lim\{A_{n-1}\} = S$ es un número real. Como para todo $n \in \mathbb{N}$ con $n \geq 2$ tenemos que $a_n = A_n - A_{n-1}$, deducimos que $\lim\{a_n\} = \lim\{A_n\} - \lim\{A_{n-1}\} = S-S = 0$.
+	
+	\subsection{Proposición (Criterio básico de convergencia)}
+	
+	Una serie de términos positivos $\displaystyle\sum_{n \geq 1} a_n$ es convergente si, y solo si, está mayorada, es decir, existe un número $M > 0$ tal que para todo $n \in \mathbb{N}$ se verifica que $\displaystyle\sum_{k = 1} ^n a_k \leq M$, en cuyo caso su suma viene dada por: 
+	$$ \sum_{n = 1} ^ \infty a_n = \sup \left\{\sum_{k = 1}^n a_k : n \in \mathbb{N}\right\}.$$
+	
+	Una serie de términos positivos que no está mayorada es (positivamente) divergente.
+	
+	\subsection{Proposición}
+	La serie $\displaystyle\sum_{n \geq 0} \dfrac{1}{n!}$ es convergente y su suma es el número $e$. Además, el número $e$ es irracional.
+	
+	\textbf{Demostración. }Pongamos $T_n = \left(1 + \dfrac{1}{n}\right) ^n$ y $\displaystyle S_n = \sum_{k = 0} ^n \dfrac{1}{k!}$. Tenemos que:
+	\begin{equation*}
+		\begin{split}
+			T_n & = \sum_{k = 0} ^n {n \choose k} \dfrac{1}{n^k} = 1 + \sum_{k = 1}^n \dfrac{n(n-1)(n-2)\cdots(n-k+1)}{k!} \dfrac{1}{n^k} \\
+			& = 1 + \sum_{k = 1} ^n \dfrac{1}{k!} \left(1 - \dfrac{1}{n}\right) \left(1 - \dfrac{2}{n}\right) \cdots \left(1 - \dfrac{k-1}{n}\right) \leq S_n
+		\end{split}
+	\end{equation*}
+
+	Hemos probado que para todo $n \in \mathbb{N}$ es $T_n \leq S_n$.
+	
+	Ahora, dado $m \in \mathbb{N}$ para todo $n \geq m$ se tiene que:
+	$$ T_n \geq 1 + \sum_{k = 1} ^m \dfrac{1}{k!} \left(1 - \dfrac{1}{n}\right) \left(1 - \dfrac{2}{n}\right) \cdots \left(1 - \dfrac{k-1}{n}\right)$$
+	Sabemos que $\lim\{T_n\} = e$, por lo que tomando límites:
+	$$e = \lim_{n \rightarrow \infty}\{T_n\} \geq 1 + \sum_{k = 1}^m \dfrac{1}{k!} \lim_{n \rightarrow \infty} \left(1 - \dfrac{1}{n}\right) \left(1 - \dfrac{2}{n}\right) \cdots \left(1 - \dfrac{k-1}{n}\right) = 1 + \sum_{k = 1} ^m \dfrac{1}{k!} = S_m$$
+	La desigualdad obtenida $e \geq S_m$ es válida para todo $m \in \mathbb{N}$. Esto implica que la sucesión $\{S_n\}$ es convergente y $e \geq S = \lim\{S_n\}$. Pero también tomando límites en la desigualdad $T_n \leq S_n$, es $e \leq S$. Por tanto:
+	$$ e = S = \sum_{n = 0} ^ \infty \dfrac{1}{n!}$$
+	De esta igualdad se deduce fácilmente que el número $e$ es irracional. En efecto, para todo $n \in \mathbb{N}$ tenemos que:
+	$$ 0 < e - \sum_{k = 0} ^n \dfrac{1}{k!} = \sum_{k = n+1}^\infty \dfrac{1}{k!} = \dfrac{1}{n!} \sum_{k = 1}^\infty \dfrac{1}{(n+1)(n+2)\cdots (n+k)} < \dfrac{1}{n!} \sum_{k = 1} ^\infty \left(\dfrac{1}{n+1}\right) ^k = \dfrac{1}{n!} \dfrac{1}{n}$$
+	Si $e$ fuera racional, $e = \dfrac{p}{q}$, con $p, q \in \mathbb{N}$, multiplicando por $q!$ la desigualdad: 
+	$$ 0 < e - \sum_{k = 0} ^q \dfrac{1}{k!} < \dfrac{1}{q!}\dfrac{1}{q}$$
+	se tiene que:
+	$$0 < (q-1)!p-q! \sum_{k = 0} ^q \dfrac{1}{k!} < \dfrac{1}{q} \leq 1.$$
+	Pero el número $\displaystyle(q-1)!p-q! \sum_{k = 0} ^q \dfrac{1}{k!}$ es un número entero, y por tanto es imposible que sea mayor que $0$ y menor que $1$. Esta contradicción muestra que $e$ es irracional.
+	
+	\newpage
+	
+	\section{ Convergencia de series de términos positivos. Criterios de comparación. Series de Riemann y series de Bertrand}
+	
+	\subsection{Proposición (Criterio básico de comparación)}
+	
+	Sean $\displaystyle\sum_{n \geq 1}a_n$ y $\displaystyle\sum_{n \geq 1}b_n$ dos series de términos positivos. Supongamos que hay un número $k \in \mathbb{N}$ tal que $a_n \leq b_n$ para todo $n > k$. Entonces se verifica que si la serie $\displaystyle\sum_{n \geq 1}b_n$ es convergente, también $\displaystyle\sum_{n \geq 1}a_n$ es convergente o, equivalentemente, si la serie $\displaystyle\sum_{n \geq 1}a_n$ es divergente también $\displaystyle\sum_{n \geq 1}b_n$ es divergente.
+	
+	\textbf{Demostración. }Pongamos $A_n = a_1 + a_2 + \cdots + a_n$, $ ~B_n = b_1 + b_2 + \cdots + b_n$. Las hipótesis hechas implican que para todo $n > k$ es $A_n \leq B_n + A_k$. Deducimos que si $\{B_n\}$ está mayorada, también lo está $\{A_n\}$.
+	
+	\subsection{Proposición (Criterio límite de comparación)}
+	
+	Sean $\displaystyle\sum_{n \geq 1}a_n$ y $\displaystyle\sum_{n \geq 1}b_n$ dos series de términos positivos, y supongamos que $$\left\{\dfrac{a_n}{b_n}\right\} \rightarrow L \in \mathbb{R}_0 ^+ \cup \{+ \infty\}.$$
+	
+	\begin{enumerate}[label = \alph*)]
+		\item Si $L = + \infty$ y $\displaystyle\sum_{n \geq 1}b_n$ es divergente también $\displaystyle\sum_{n \geq 1}a_n$ es divergente.
+		\item Si $L = 0$ y $\displaystyle\sum_{n \geq 1}b_n$ es convergente también $\displaystyle\sum_{n \geq 1}a_n$ es convergente.
+		\item Si $L \in \mathbb{R}^+$ las series $\displaystyle\sum_{n \geq 1}a_n$ y $\displaystyle\sum_{n \geq 1}b_n$ son ambos convergentes o ambas divergentes.
+	\end{enumerate}
+
+	En particular, si dos sucesiones de número positivos $\{a_n\}$ y $\{b_n\}$ son asintóticamente equivalentes, las respectivas serie, $\sum a_n$ y $\sum b_n$, ambas convergen o ambas divergen.
+	
+	\textbf{Demostración. }Supongamos que $L \in \mathbb{R}^+$. Sea $0 < \alpha < L < \beta$. Todos los términos de la sucesión $\{a_n / b_n\}$ a partir de uno en adelante, están en el intervalo $]\alpha, \beta[$, es decir, existe $k \in \mathbb{N}$ tal que para todo $n \geq k$ es $\alpha < a_n / b_n < \beta$, y, por tanto, $\alpha b_n < a_n < \beta b_n$. Concluimos, por el criterio de comparación, que la convergencia de una de las series implica la convergencia de la otra. Queda así probado el punto \textit{c)} del enunciado. Los puntos \textit{a)} y \textit{b)} se prueban de manera parecida.
+	
+	\subsection{Proposición (Criterio de condensación de Cauchy)}
+	sea $\{a_n\}$ una sucesión decreciente de números positivos. Se verifica que las series $\{A_n\}$ y $\{B_n\}_{n \in \mathbb{N_0}}$, donde 
+	$$A_n = a_1 + a_2 + \cdots + a_n, \quad B_n = a_1 + 2a_2 + 4a_4 + 2^n a_{2^n}$$
+	ambas convergen o ambas divergen.
+	
+	\textbf{Demostración.} Tenemos que 
+	\begin{equation*}
+		\begin{split}
+			A_n & \leq a_1 + (a_2 + a_3) + (a_4 + a_5 + a_6 + a_7) + \cdots + (a_{2^n} + a_{2^n + 1} + \cdots + a_{2^{n+1} -1}) \\
+			& \leq a_1 + 2a_2 + 4a_4 + \cdots + 2^n a_{2^n} = B_n
+		\end{split}	
+	\end{equation*}
+	
+	Por otra parte,
+	\begin{equation*}
+		\begin{split}
+			\dfrac{1}{2} B_n & = \dfrac{1}{2} a_1 + a_2 + 2a_4 + 4 a_8 + \cdots + 2^{n-1}a_{2^n} \\
+			& \leq a_1 + a_2 + (a_3 + a_4) + (a_5 + a_6 + a_7 + a_8) + \cdots + (a_{2^{n-1} + 1} + \cdots + a_{2^n}) \\
+			& = A_{2^n}
+		\end{split}
+	\end{equation*}
+	
+	Las desigualdades $A_n \leq B_n$ y $B_n \leq 2A_{2^n}$ implicad, en virtud del criterio básico de convergencia, que las series $\displaystyle\sum_{n \geq 1}a_n = \{A_n\}$ y $\displaystyle\sum_{n \geq 0} 2^n a_{2^n} = \{B_n\}$ ambas convergen o ambas divergen.
+	
+	\subsection{Proposición (Series de Riemann)}
+	
+	Dado un número real $\alpha$, la serie $\displaystyle \sum_{n \geq 1} \dfrac{1}{n^\alpha}$ se llama serie de Riemann de exponente $\alpha$. Dicha serie es convergente si, y solo si, $\alpha > 1$.
+	
+	\textbf{Demostración. }Si $\alpha \leq 0$, entonces la sucesión $\{1/n^\alpha\}$ no converge a cero y, por tanto, la serie $\sum_{n \geq 1} \dfrac{1}{n^\alpha}$ es divergente. Si $\alpha > 0$, aplicando el criterio de condensación $a_n = 1/n^\alpha$, obtenemos que
+	$$\sum_{n \geq 0} 2^n a_{2^n} = \sum_{n \geq 0}2^n \dfrac{1}{(2^n) ^\alpha} = \sum_{n \geq 0} (2^{1- \alpha})^n$$
+	es una serie geométrica de razón $2 ^{1-\alpha}$, por lo que será convergente si, y solo si, $2 ^{1-\alpha} < 1$, o, equivalentemente, $\alpha > 1$.
+	
+	\subsection{Proposición (Series de Bertrand)}
+	
+	La serie $\displaystyle \sum_{n \geq 2} \dfrac{1}{n^\alpha (\log n)^\beta}$ converge si $\alpha > 1$ cualquiera sea $\beta$, y también si $\alpha = 1$ y $\beta > 1$. En cualquier otro caso es divergente.
+	
+	\textbf{Demostración. }Sabemos que cualesquiera sean $\rho > 0$ y $\mu \in \mathbb{R}$ se verifica que:
+	$$ \lim_{n \rightarrow \infty} \dfrac{(\log n) ^\mu}{n^\rho} = 0.$$
+	Supongamos que $\alpha > 1$ y sea $\lambda$ un número verificando que $ 1 < \lambda < \alpha$. Podemos escribir:
+	$$n ^\lambda \dfrac{1}{n^\alpha (\log n) ^\beta} = \dfrac{(\log n) ^\mu}{n^\rho}$$
+	donde $\rho = \alpha - \lambda$ y $\mu = - \beta$. Deducimos así que 
+	$$ \lim_{n \rightarrow \infty} n^\lambda \dfrac{1}{n^\alpha (\log n) ^\beta} = 0.$$
+	Puesto que la serie $\sum \dfrac{1}{n^\lambda}$ es convergente, el criterio límite de comparación implica que la serie $\displaystyle\sum _{n \geq 2} \dfrac{1}{n^\alpha (\log n) ^\beta}$ es convergente.
+	
+	Si $\alpha < 1$ un razonamiento parecido muestra que la serie diverge cualquiera sea $\beta$.
+	
+	Sea ahora $\alpha = 1$. Entonces, si $\beta \leq 0$, tenemos que $\dfrac{1}{n (\log n) ^\beta} \geq \dfrac{1}{n}$ para todo $n \geq 3$, y el criterio de comparación implica que la serie es divergente. Sea, pues, $\beta > 0$. Podemos aplicar el criterio de condensación con $a_n = \dfrac{1}{n (\log n) ^\beta}$. Tenemos que:
+	$$\sum_{n \geq 2} 2^n a_{2^n} = \sum_{n \geq 2} 2^n \dfrac{1}{2^n (\log (2^n)) ^\beta} = \dfrac{1}{(\log 2) ^\beta} \sum_{n \geq 2} \dfrac{1}{n^\beta}$$
+	es una serie que converge si, y solo si, $\beta > 1$, y el criterio de condensación nos dice que lo mismo ocurre a la serie $\displaystyle\sum_{n \geq 2}\dfrac{1}{n (\log n) ^\beta}$.	
+	
+	\newpage
+	
+	\section{Criterios del cociente y de la raíz y de Raabe}
+	
+	\subsection{Proposición (Criterio del cociente o de D'Alambert)}
+	Supongamos que $a_n > 0$ para todo $n \in \mathbb{N}$.
+	
+	\begin{enumerate}[label = \alph*)]
+		\item Si $\lim \sup \left\{\dfrac{a_{n+1}}{a_n}\right\} = L < 1$ la serie $\displaystyle \sum _{n \geq 1} a_n$ es convergente.
+		\item Si $\lim \inf \left\{\dfrac{a_{n+1}}{a_n}\right\} = l > 1$ o si hay un número $k \in \mathbb{N}$ tal que para todo $n \geq k$ es $\dfrac{a_{n+1}}{a_n} \geq 1$, entonces $\{a_n\}$ no converge a cero y por tanto $\displaystyle \sum _{n \geq 1} a_n$ no converge.
+	\end{enumerate}
+
+	Cuando se verificca que 
+	$$ \lim \inf \left\{\dfrac{a_{n+1}}{a_n}\right\} \leq 1 \leq \lim \sup \left\{\dfrac{a_{n+1}}{a_n}\right\}$$
+	la serie puede ser convergente o divergente.
+	
+	En particular, si se verifica que $\lim \left\{\dfrac{a_{n+1}}{a_n}\right\} = L \in \mathbb{R}_0 ^+ \cup \{+ \infty\}$ entonces: 
+	\begin{enumerate}[label = \alph*]
+		\item Si $L < 1$ la serie $\sum_{n \geq 1} a_n$ converge.
+		\item Si $L > 1$ o si $L = + \infty$, la sucesión $\{a_n\}$ no converge a cero y por tanto la serie $\sum_{n \geq 1}a_n$ no es convergente.
+	\end{enumerate}
+
+	Cuando $L = 1$ la serie puede ser convergente o divergente.
+	
+	\textbf{Demostración. } 
+	\begin{enumerate}[label = \alph*)]
+		\item Sea $\lambda$ un número tal que $L < \lambda < 1$. la definición de límite superior de una sucesión:
+		$$L = \lim\{\beta_n\} = \inf\{\beta_n:n \in \mathbb{N}\} \quad \text{donde} \quad \beta_n = \sup\left\{\dfrac{a_{k+1}}{a_k}: k \geq n\right\}$$
+		implica que existe $n_0 \in \mathbb{N}$ tal que para todo $n \geq n_0$ se verifica que $L \leq \beta_n < \lambda$. Como en particular, $L \leq \beta_{n_0} < \lambda$, para todo $n \geq n_0$ se tiene que:
+		$$a_n = \dfrac{a_n}{a_{n-1}}\dfrac{a_{n-1}}{a_{n-2}} \cdots \dfrac{a_{n_0 + 1}}{a_{n_0}} a_{n_0} \leq \lambda^{n - n_0} a_{n_0} = \dfrac{a_{n_0}}{\lambda^{n_0}} \lambda ^n.$$
+		Como $0 < \lambda < 1$, la serie $\displaystyle \sum_{n \geq 1} \lambda^n$ es convergente. Deducimos, en virtud del criterio de comparación, que $\displaystyle \sum_{n \geq 1} a_n$ es convergente.
+		\item Supongamos que $l < + \infty$. Sea $\lambda$ un número tal que $ 1 < \lambda < l$. La definición de límite inferior de una sucesión:
+		$$l = \lim\{\alpha_n\} = \sup\{\alpha_n:n \in \mathbb{N}\} \quad \text{donde} \quad \alpha_n = \inf\left\{\dfrac{a_{k+1}}{a_k}: k \geq n\right\}$$
+	\end{enumerate}
+	implica que existe $n_0 \in \mathbb{N}$ tal que para todo $n \geq n_0$ se verifica que $\lambda < \alpha_n \leq l$. Obtenemos, al igual que antes, que para todo $n \geq n_0$ es $a_n \geq \dfrac{a_{n_0}}{\lambda^{n_0}} \lambda^n$. Como $\lambda > 1$ se sigue que la sucesión $\{a_n\}$ diverge positivamente y, con mayor razón, la serie $\displaystyle\sum_{n \geq 1} a_n$ diverge positivamente.
+	
+	Si hay un número $k \in \mathbb{N}$ tal que para todo $n \geq k$ es $\dfrac{a_{n+1}}{a_n} \geq 1$, entonces, la sucesión $\{a_n\}$ es creciente a partir del lugar $k$ y no puede ser convergente a cero por lo que la serie $\displaystyle \sum_{n \geq 1} a_n$es divergente.
+	
+	Finalmente, si $l = + \infty$, entonces $\left\{\dfrac{a_{n+1}}{a_n}\right\} \rightarrow + \infty$, y por lo tanto, la sucesión $\{a_n\}$ es eventualmente creciente y no puede ser convergente a cero por lo que la serie $\displaystyle \sum_{n \geq 1} a_n$ es divergente.
+	
+	\subsection{Proposición (Criterio de la raíz o dde Cauchy)}
+	Sea $\displaystyle \sum_{n \geq 1} a_n$ una serie de términos positivos y sea
+	$$\lim \sup \{\sqrt[n]{a_n}\} = L \in \mathbb{R}_0 ^+ \cup \{+ \infty\}.$$
+
+	\begin{enumerate}[label = \alph*)]
+		\item Si $L < 1$ la serie $\displaystyle \sum_{n \geq 1} a_n$ es convergente.
+		\item Si $L > 1$ o si $L = + \infty$ o si hay un número $k \in \mathbb{N}$ tal que para todo $n \geq k$ es $\sqrt[n]{a_n} \geq 1$, entonces $\{a_n\}$ no converge a cero y por tanto la serie $\displaystyle \sum_{n \geq 1} a_n$ es divergente.
+	\end{enumerate}
+
+	En el caso de que $\lim \sup\{\sqrt[nº]{a_n}\} = 1$ la serie puede ser convergente o divergente.
+	
+	En particular, si se verifica que $\lim\{\sqrt[n]{a_n}\} = L \in \mathbb{R}_0 ^+ \cup \{+ \infty\}$ entonces:
+	\begin{enumerate}[label = \alph*)]
+		\item Si $L < 1$ la serie $\displaystyle \sum_{n \geq 1} a_n$ converge.
+		\item Si $L > 1$ o si $L = + \infty$, entonces $\{a_n\}$ no converge a cero y por lo tanto la serie $\displaystyle \sum_{n \geq 1} a_n$ es divergente.
+	\end{enumerate}
+	En el caso de que $\lim\{\sqrt[n]{a_n}\} = 1$ la serie puede ser convergente o divergente.
+	
+	\textbf{Demostración. }
+	\begin{enumerate}[label = \alph*)]
+		\item Sea $\lambda$ un número tal que $L < \lambda < 1$. La definición de límite superior
+		$$L = \lim\{\beta_n\} = \inf\{\beta_n:n \in \mathbb{N}\} \quad \text{donde} \quad \beta_n = \sup\left\{\sqrt[k]{a_k}: k \geq n\right\}$$
+		implica que existe $n_0 \in \mathbb{N}$ tal que para todo $n \geq n_0$ es $L \leq \beta_n \leq \lambda$. En particular $\beta_{n_0} < \lambda$. Lo que implica que $\sqrt[n]{a_n} \leq \lambda$, es decir, $a_n \leq \lambda ^n$, para todo $n \geq n_0$. Puesto que $0 < \lambda < 1$, la serie $\displaystyle \sum_{n \geq 1} \lambda ^n $ es convergente, y, en virtud del criterio de comparación, se sigue que $\displaystyle \sum_{n \geq 1} a_n$ es convergente.
+		\item Sea $L \in \mathbb{R}^+$ con $L > 1$. Entonces para todo $n \in \mathbb{N}$ tenemos que $1 < L \leq \beta_n$, lo que implica que $1$ no es mayorante del conjunto $\{\sqrt[k]{a_k}:k \geq n\}$, es decir, hay algún $k \geq n$ tal que $1 < \sqrt[k]{a_k}$ y, por tanto, $1 \leq a_k$. Resulta así que para todo $n \in \mathbb{N}$ hay algún $k \geq n$ tal que $a_k > 1$. Por tanto, la sucesión $\{a_n\}$ no converge a cero y, en consecuencia, la serie $\displaystyle \sum_{n \geq 1} a_n$ es divergente.
+		
+		Finalmente, si $L = + \infty$, la sucesión $\{\sqrt[n]{a_n}\}$ no está mayorada y, con mayor razón, tampoco lo está $\{a_n\}$, por tanto, la sucesión $\{a_n\}$ no converge a cero y, en consecuencia, la serie $\displaystyle \sum_{n \geq 1}a_n$ es divergente.
+	\end{enumerate}
+	
+	\textbf{\Large{Comparación de los criterios del cociente y de la raíz}}
+	
+	Sabemos que:
+	$$\underline\lim\left\{\dfrac{a_{n+1}}{a_n}\right\} \leq \underline\lim{\sqrt[n]{a_n}} \leq \overline\lim\{\sqrt[n]{a_n}\} \leq \overline\lim\left\{\dfrac{a_{n+1}}{a_n}\right\}$$
+	Estas desigualdades implican que siempre que el criterio del cociente proporciona información	sobre la convergencia de una serie, el criterio de la raíz también proporciona dicha información. Pero puede ocurrir que el criterio del cociente no proporcione información y el de la raíz sí. Un
+	ejemplo de ello lo proporciona la siguiente serie. Sean $0 < a < b < 1$ y definamos $x_{2n} = a^{2n}$, $x_{2n-1} = b^{2n-1}$. La serie $\sum x_n$ es una serie de términos positivos claramente convergente porque $x_n \leq b^n$ y la serie $\sum b^n$ es convergente porque una serie geométrica de razón $0 < b < 1$. Como, evidentemente, $\lim \sup \sqrt[n]{x_n} = b < 1$, el criterio de la raíz nos dice que la serie $\sum x_n$ es convergente. Por otra parte, como:
+	$$\dfrac{x_{2n+1}}{x_{2n}} = \dfrac{b^{2n+1}}{a^{2n}} = b \left(\dfrac{b}{a}\right) ^{2n} \rightarrow + \infty, \quad \dfrac{x_{2n}}{x_{2n-1}} = \dfrac{a^{2n}}{b^{2n-1}} = b \left(\dfrac{a}{b}\right)^{2n} \rightarrow 0$$
+	deducimos que $\underline{\lim} \left\{\dfrac{x_{n+1}}{x_n}\right\} = 0$ y $\overline{\lim} \left\{\dfrac{x_{n+1}}{x_n}\right\} = + \infty$, por lo que el criterio del cociente no informa sobre la convergencia de la serie $\sum x_n$.
+	
+	Cuando $\dfrac{a_{n+1}}{a_n} \leq 1$ y $\lim \dfrac{a_{n+1}}{a_n} = 1$, también es $\lim\sqrt[n]{a_n} = 1$. En esta situación los criterios del cociente y de la raíz no proporcionan información suficiente $\displaystyle \sum_{n \geq 1} a_n$. Por ejemplo, para las series de Riemann, $a_n = 1/ n^\alpha$, se tiene que $\lim \dfrac{a_{n+1}}{a_n} = 1$ cualquiera sea $\alpha$.
+	
+	\subsection{Proposición (Criterio de Raabe)}
+	Supongamos que $a_n >0 0$ para todo $n \in \mathbb{N}$, y pongamos $R_n = n \left(1 - \dfrac{a_{n+1}}{a_n}\right)$. Supongamos que $\lim\{R_n\} = L \in \mathbb{R} \cup \{- \infty, + \infty\}$.
+	\begin{enumerate}[label = \roman*)]
+		\item Si $L > 1$ o $L = + \infty$, la serie $\displaystyle \sum_{n \geq 1} a_n$ es convergente.
+		\item Si $L < 1$ o $L = - \infty$ o si existe algún $k \in \mathbb{N}$ tal que $R_n \leq 1$ para todo $n \geq k$, entonces la serie $\displaystyle \sum_{n \geq 1} a_n$ es divergente.
+	\end{enumerate}	
+
+	\textbf{Demostración. }
+	\begin{enumerate}[label = \roman*)]
+		\item Las hipótesis hechas implican que existen $\alpha > 1$ y $ n_0 \in \mathbb{N}$ tales que para todo $k \geq n_0$ es $R_k \geq \alpha$. Sea $\delta = \alpha - 1 > 0$. Tenemos que:
+		$$R_k - 1 = (k-1) -k \dfrac{a_{k+1}}{a_k} \geq \delta \qquad (k \geq n_0),$$
+		por lo que
+		$$a_k \leq \dfrac{1}{\delta} \big((k-1)a_k - k a_{k+1}\big) \qquad (k \geq n_0).$$
+		Sumando estas desigualdades desde $k = n_0$ hasta $k = n > n_0$, obtenemos que:
+		$$ \sum_{k = n_0}^n a_k \leq \dfrac{1}{\delta} \big((n_0 -1)a_{n_0} - k a_{k+1}\big) \qquad (k \geq n_0).$$
+		Por el criterio básico de convergencia para series de términos positivos, deducimos que $\displaystyle \sum_{n \geq 1}a_n$ es convergente.
+		\item Si $R_n \leq 1$ para todo $n \geq k$, entonces $(n-1) a_n - n a_{n+1} \leq 0$ y resulta que la sucesión $\{na_{n+1}\}$ es creciente para $n \geq k$, luego $na_{n+1} \geq k a_{k+1}$, es decir, para todo $n \geq k$ es $a_{n+1} \geq k a_{k+1} \dfrac{1}{n}$ y, por el criterio de comparación, deducimos que $\displaystyle \sum_{n \geq 1}a_n$ es divergente.
+	\end{enumerate}
+	
+	\subsection{Proposición (Forma alternativa del criterio de Raabe)}
+	
+	Sea $a_n > 0$ para todo $n \in \mathbb{N}$ y supongamos que $\lim\dfrac{a_{n+1}}{a_n} = 1$. Pongamos $S_n = \left(\dfrac{a_n}{a_{n+1}}\right)^n$.
+	\begin{enumerate}[label = \roman*)]
+		\item Si $S_n \rightarrow e^L$ con $L > 1$ o si $S_n \rightarrow + \infty$, la serie $\displaystyle \sum_{n \geq 1}a_n$ es convergente.
+		\item Si $S_n \rightarrow e^L$ con $L < 1$ o si $S_n \rightarrow 0$, la serie $\displaystyle \sum_{n \geq 1}a_n$ es divergente.
+	\end{enumerate}
+
+
+	\newpage
+	
+	\section{Series absolutamente convergentes y series conmutativamente o incondicionalmente convergentes. Series alternadas. Criterio de Leibniz}
+	
+	Sea $\displaystyle \sum_{n \geq 1}a_n$ la serie definida por la sucesión $\{a_n\}$. Dada una biyección $\pi : \mathbb{N} \rightarrow \mathbb{N}$, definamos una sucesión $\{b_n\}$ por $b_n = a_{\pi(n)}$. En estas condiciones se dice que la serie $\displaystyle \sum_{n \geq 1}b_n$ se ha obtenido permutando términos en la serie $\displaystyle \sum_{n \geq 1}a_n$.
+	
+	Se dice que una serie $\displaystyle \sum_{n \geq 1}a_n$ es conmutativamente convergente si para toda biyección $\pi : \mathbb{N} \rightarrow \mathbb{N}$, se verifica que la serie definida por la sucesión $\{a_{\pi(n)}\}$, es decir la serie $\displaystyle \sum_{n \geq 1}a_{\pi(n)} = \{a_{\pi(1)} + a_{\pi(2)} + \cdots + a_{\pi(n)}\}$, es convergente.
+	
+	Una serie es conmutativamente convergente, cuando es convergente y también son convergentes todas las series que se obtienen de ella por reordenación de sus términos.
+	
+	Se dice que una serie $\displaystyle \sum_{n \geq 1}a_n$ es absolutamente convergente si la serie $\displaystyle \sum_{n \geq 1}|a_n|$ es convergente.
+	
+	Si una sucesión $\{a_n\}$ es tal que el conjunto  $\{n \in \mathbb{N}: a_n < 0\}$ es finito, es decir, existe $q \in \mathbb{N}$ tal que para $n \geq q$ es $a_n = |a_n| \geq 0$, entonces, si la serie $\displaystyle \sum_{n \geq 1}a_n$ es convergente también es absolutamente convergente, pues se tiene:
+	$$ \displaystyle \sum_{n \geq 1}a_n  ~ \text{converge} ~ \Leftrightarrow \displaystyle \sum_{n \geq q}a_n ~ \text{converge} ~ \Leftrightarrow \displaystyle \sum_{n \geq q}|a_n| ~ \text{converge} ~ \Leftrightarrow \displaystyle \sum_{n \geq 1}|a_n| ~ \text{converge}$$
+	
+	Un razonamiento análogo prueba que si el conjunto $\{n \in \mathbb{N}: a_n > 0\}$ es finito, entonces la convergencia de la serie equivale a su convergencia absoluta. Por tanto, para que una serie $\displaystyle \sum_{n \geq 1}a_n$ pueda ser convergente pero no ser absolutamente convergente, los conjuntos $\{n \in \mathbb{N}: a_n > 0\}$ y  $\{n \in \mathbb{N}: a_n < 0\}$ han de ser ambos infinitos.
+	
+	\subsection{Teorema}
+	Toda serie absolutamente convergente es conmutativamente convergente. Además, si la serie $\displaystyle \sum_{n \geq 1}a_n$ es absolutamente convergente, entonces para toda biyección $\pi : \mathbb{N} \rightarrow \mathbb{N}$ se verifica que: 
+	$$\displaystyle \sum_{n = 1}^\infty a_n = \displaystyle \sum_{n = 1} ^\infty a_{\pi(n)}$$
+	
+	\textbf{Demostración. }Pongamos $A_n = a_1 + a_2 + \cdots + a_n, \; B_n = |a_1| + |a_2| + \cdots + |a_n|$. Por hipótesis $\sum |a_n| = \{B_n\}$ es convergente. Probaremos en primer lugar que la serie $\sum a_n = \{A_n\}$ también es convergente. Dado $\varepsilon > 0$, la condición de Cauchy para $\{B_n\}$ nos dice que existe $n_0 \in \mathbb{N}$ tal que 
+	\begin{equation}
+		|B_q - B_p| = \sum_{k = p+1} ^q |a_k| < \dfrac{\varepsilon}{2}, \quad \text{para todos} ~ p, q \in \mathbb{N} ~ \text{tales que} ~ q > p \geq n_0.
+	\end{equation}
+	
+	Deducimos que para todos $p, q \in \mathbb{N}$ tales que $ q > p \geq n_0$ se verifica que
+	$$|A_q - A_p| = |a_{p+1} + a_{p+2} + \cdots + a_q| \leq \sum_{k = p+1}^q |a_k| < \dfrac{\varepsilon}{2} < \varepsilon.$$
+	
+	Lo que prueba que la serie $\sum a_n$ cumple la condición de Cauchy y, por tanto, es convergente.
+	
+	Pongamos $A = \lim\{A_n\}$ y sea $\pi : \mathbb{N} \rightarrow \mathbb{N}$ una biyección. Dado $\varepsilon >0$, sea $n_0 \in \mathbb{N}$ tal que se verifica (4) y además $|A_{n_0} - A| < \varepsilon/2$. Definamos
+	$$m_0 = \max\{j \in\mathbb{N}: \pi(j) \leq n_0\}, \quad F_m = \{\pi(k): 1 \leq k \leq m\}.$$
+	Para $m > m_0$, se verifica que $F_m \supsetneqq \{1, 2, \dots, n_0\}$. Por tanto, el conjunto $H_m = F_m \backslash \{1, 2, \dots, n_0\}$ no es vacío. Sea $p = \min(H_m), q = \max (H_m)$. Tenemos entonces que $q > p-1 \geq n_0$ y, por tanto:
+	\begin{equation*}
+		\begin{split}
+			\left| \sum_{j = 1}^m a_{\pi(j)}-A \right| & = \left| \sum_{k \in F_m} a_k - A \right| = \left| \sum_{k = 1}^{n_0} a_k + \sum_{k \in H_m} a_k - A \right| \\
+			& \leq \left|\sum_{k = 1} ^{n_0} a_k - A \right| + \sum_{k \in H_m} |a_k| < \dfrac{\varepsilon}{2} + \sum_{k = p} ^q |a_k| < \dfrac{\varepsilon}{2} + \dfrac{\varepsilon}{2} = \varepsilon.
+		\end{split}
+	\end{equation*}
+
+
+	Hemos probado así que $\displaystyle\sum_{n = 1}^\infty a_{\pi(n)} = A$.
+	
+	\subsection{Teorema}
+	
+	Sea $\displaystyle \sum_{n \geq 1} a_n$ una serie convergente pero no absolutamente convergente, y sea $\alpha \in \mathbb{R}$. Entonces existe una biyección $\pi : \mathbb{N} \rightarrow \mathbb{N}$ tal que la serie $\displaystyle \sum_{n \geq 1} a_{\pi(n)}$ es convergente y
+	$$ \sum_{n = 1} ^\infty a_{\pi(n)} = \alpha$$
+	
+	En consecuencia, la convergencia absoluta es equivalente a la convergencia conmutativa.
+	
+	\subsection{Proposición (Criterio de Lebniz para series alternadas)}
+	
+	Supongamos que la sucesión $\{a_n\}$ es decreciente y convergente a cero. Entonces la serie alternada $\displaystyle \sum_{n \geq 1} (-1)^{n+1}a_n$ es convergente. Además, si $S_n = \displaystyle \sum_{k = 1}^n (-1)^{k+1}a_k$ y $S = \displaystyle \sum_{n = 1}^\infty (-1)^{n+1}a_n$, entonces para todo $n \in \mathbb{N}$ se verifica que $|S - S_n| \leq a_{n+1}$.
+	
+	\textbf{Demostración. }Probaremos que la sucesión $\displaystyle \sum_{k = 1}^n (-1)^{k+1}a_k$ es convergente. Teniendo en cuenta que para todo $n \in \mathbb{N}$ es $a_n \geq a_{n+1} > 0$, deducimos las siguientes desigualdades:
+	$$S_{2n} \leq S_{2n} + a_{2n+1} - a_{2n+2} =S_{2n+2} = S_{2n+1} - a_{2n+2} \leq S_{2n+1} = S_{2n-1}-a_{2n} + a_{2n+1} \leq S_{2n-1}$$
+	Hemos obtenido que para todo $n \in \mathbb{N}$ es $S_{2n} \leq S_{2n+2} \leq S_{2n+1} \leq S_{2n-1}$. Por tanto, al sucesión $\{S_{2n}\}$ es creciente y $\{S_{2n-1}\}$ es decreciente. Además, ambas están acotadas porque $S_2 \leq S_{2n} \leq S_{2n-1} \leq S_1$. Deducimos que dichas sucesiones convergen, y como $S_{2n-1} - S_{2n} = a_{2n} \rightarrow 0$, concluimos que $\{S_n\}$ converge.
+	
+	Sea $S = \displaystyle \sum_{n = 1}^\infty (-1)^{n+1}a_n´= \lim\{S_n\}$. Puesto que 
+	$$S = \lim\{ S_{2n-1}\} = \inf \{S_{2n-1} : n \in \mathbb{N}\} = \lim \{S_{2n}\} = \sup \{S_{2n} : n \in \mathbb{N}\},$$
+	se verifica que $S_{2n} \leq S \leq S_{2n+1}$, de donde:
+	$$ 0 \leq S - S_{2n} \leq a_{2n+1}, \quad \text{y} \quad -a_{2n} \leq S - S_{2n-1} \leq 0.$$
+	En consecuencia, $|S- S_n| \leq a_{n+1}$ para todo $n \in \mathbb{N}$.
+	
+	\newpage
+	
+	\section{Funciones reales continuas. Propiedades básicas. Propiedades locales.}
+	
+	\subsection{Definición (Continuidad en un punto)}
+	Una función $f : A \rightarrow \mathbb{R}$ se dice que es continua en un punto $a \in A$ si, para cada número $\varepsilon > 0$, se puede encontrar un número $\delta > 0$ tal que para todo $x \in A$ con $|x-a| < \delta$ se verifica que $|f(x) - f(a)| < \varepsilon$.
+	
+	Lo anterior suele escribirse de la siguiente forma:
+	$$\forall \varepsilon \in \mathbb{R} ^+ ~ \exists \delta \in \mathbb{R} ^+ : \left. |x-a| < \delta \atop x \in A \right\} \implies |f(x) - f(a)| < \varepsilon$$
+	
+	\subsection{Definición}
+	Una función $f : A \rightarrow \mathbb{R}$ se dice que es continua por la izquierda (resp. por la derecha) en un punto $a \in A$ si, para cada número $\varepsilon > 0$, se puede encontrar un número $\delta > 0$ tal que para todo $x \in A$ con $a - \delta < x \leq a$ (resp. $a \leq x < a + \delta$) se verifica que $|f(x) - f(a)| < \varepsilon$.
+	
+	\subsection{Definición (Continuadad en un conjunto)}
+	Se dice que $f : A \rightarrow \mathbb{R}$ es continua en un conjunto $C \subset A$, si $f$ es continua en todo punto de $C$.
+	
+	\subsection{Proposición}
+	Sean $f : A \rightarrow \mathbb{R}$ y $a \in A$. Equivalen las siguientes afirmaciones: 
+	\begin{enumerate}[label = \alph*)]
+		\item $f$ es continua en $a$.
+		\item Para todo sucesión $\{x_n\}$ de puntos de $A$ con $\lim\{x_n\} = a$, se verifica que $\lim\{f(x_n)\} = f(a)$.
+	\end{enumerate}
+	
+	\textbf{Demostración. } \textit{a)} $ \implies$ \textit{b)}. Sea $\{x_n\}$ una sucesión de puntos de $A$ con $\lim\{x_n\} = a$. Tenemos que probar que $\lim\{f(x_n)\} = f(a)$. Dado $\varepsilon > 0$, por la continuidad de $f$ en $a$, existe $\delta > 0$ tal que para todo $x \in ]a - \delta, a + \delta [ \cap A$ se verifica que $|f(x) - f(a) | < \varepsilon$. Puesto que $\lim\{x_n\} = a$, existe $n_0 \in \mathbb{N}$ tal que para todo $n \geq n_0$ se verifica que $x_n \in ]a - \delta, a + \delta[$, como también $x_n \in A$, se sigue que $|f(x_n) - f(a)| < \varepsilon$. Hemos probado así que $\lim\{f(x_n)\} = f(a)$.
+	
+	Para probar el recíproco probaremos que si $f$ no es continua en $a$ entonces hay una sucesión $\{x_n\}$ de puntos de $A$ con $\lim\{x_n\} = a$ tal que $\{f(x_n)\}$ no converge a $f(a)$. Que $f$ no es continua en $a$ quiere decir que existe un $\varepsilon_0 > 0$ tal que para todo $\delta > 0$ se verifica que hay algún punto $x_\delta \in ]a- \delta, a + \delta[ \cap A$ tal que $|f(x_\delta) - f(a)| \geq \varepsilon_0$. Claramente $\{x_n\}$ es una sucesión de puntos de $A$ con $\lim\{x_n\} = a$ y la sucesión $\{f(x_n)\}$ no converge a $f(a)$.
+	
+	\subsection{Teorema}
+	Sean $f, g$ funciones reales definidas en $A$. Se verifica que:
+	\begin{enumerate}[label = \alph*)]
+		\item Las funciones $f + g$ y $fg$ son continuas en todo punto de $A$ en el que las dos funciones $f$ y $g$ sean continuas. En particular, las funciones suma y producto de funciones continuas son funciones continuas.
+		\item Si $g(x) \neq 0$ para todo $x \in A$, la función $\dfrac{1}{g}$ es continua en todo punto de $A$ en el que $g$ sea continua. En consecuencia, la función cociente de dos funciones continuas cuyo denominador no se anula nunca es una función continua.
+	\end{enumerate}
+	
+	\textbf{Demostración. }Supongamos que $f$ y $g$ son continuas en un punto $a \in A$. Para toda sucesión $\{x_n\}$ de puntos de $A$ con $\lim\{x_n\} = a$ se verificará que $\lim\{f(x_n)\} = f(a)$.
+	
+	Entonces, en virtud de un teorema anterior, tenemos que:
+	$$\lim\{(f+g)(x_n)\} = \lim\{f(x_n) + g(x_n)\} = \lim\{f(x_n)\} + \lim\{g(x_n)\} = f(a) + g(a) =n(f+g)(a)$$
+	$$\lim\{(fg)(x_n)\} = \lim\{f(x_n)g(x_n)\} = \lim\{f(x_n)\} \lim \{g(x_n)\} = f(a)g(a) = (fg)(a)$$
+	lo que prueba, por la proposición anterior, que las funciones $f +g$ y $fg$ son continuas en $a$.
+	
+	Si, además, suponemos que $g(x) \neq 0$ para todo $x \in A$, tenemos que:
+	$$\lim\left\{\dfrac{f}{g} (x_n)\right\} = \lim \left\{\dfrac{f(x_n)}{g(x_n)}\right\} = \dfrac{\lim\{f(x_n)\}}{\lim\{g(x_n)\}} = \dfrac{f(a)}{g(a)} = \dfrac{f}{g}(a)$$
+	lo que prueba, por la proposición anterior, que la función $f/g$ es continua en $a$.
+	
+	\subsection{Teorema (Continuidad de una función compuesta)}
+	Sean $f : A \rightarrow \mathbb{R}$ y $g : B \rightarrow \mathbb{R}$ funciones tales que $f(A) \subset B$. Supongamos que $f$ es continua en un punto $a \in A$ y que $g$ es continua en el punto $f(a)$. Entonces la función compuesta $g \circ f : A \rightarrow \mathbb{R}$ es continua en el punto $a$. En particular, si $g$ es continua en $f(A)$, entonces $g \circ f$ es continua en todo punto de $A$ en el que $f$ sea continua. Más en particular, la composición de funciones continuas es una función continua.
+	
+	\textbf{Demostración. }Como $f$ es continua en $a \in A$, para toda sucesión $\{x_n\}$ de puntos de $A$ con $\lim\{x_n\} = a$ se verificará que $\lim\{f(x_n)\} = f(a)$. Ahora, como $g$ es continua en $f(a)$, se verificará que $\lim\{g(f(x_n))\} = g(f(a))$, es decir, $\lim\{(g \circ f)(x_n)\} = (g \circ f) (a)$. Por la proposición 4 concluimos que $g \circ f$ es continua en $a$.
+	
+	\subsection{Definición}
+	Dados una función $f : A \rightarrow \mathbb{R}$ y un conjunto no vacío $C \subset A$, podemos definir una nueva función, llamada restricción de $f$ a $C$ que se representa por $f_{|C}$, que es la función definida en el conjunto $C$ que viene dada por $f_{|C}(x) = f(x)$ para todo $x \in C$.
+	
+	Dada una función $f: A \rightarrow \mathbb{R}$, se dice que una función $g: B \rightarrow \mathbb{R}$ es una extensión de $f$, si $B \supset A$ y $f$ es la restricción de $g$ al conjunto $A$, es decir $f(x) = g(x)$ para todo $x \in A$.
+	
+	\subsection{Proposición (Localización de la continuidad)}
+	Sean $f: A \rightarrow \mathbb{R}$, $a \in A$ e $I$ un intervalo abierto tal que $a \in I$. Supongamos que la restricción de $f$ a $I \cap A$ es continua en $a$. Entonces $f$ es continua en $a$.
+	
+	\textbf{Demostración. }Pongamos $g = f_{|I \cap A}$. Dado $\varepsilon > 0$, existe $\delta > 0$ tal que para todo $x \in ]a - \delta, a + \delta[ \cap (I \cap A)$ se verifica que $|f(x) - f(a)| = |g(x) - g(a)| < \varepsilon$. Como $I$ es un intervalo abierto y $a \in I$, existe un $r > 0$ tal que $]a - r, a + r[ \subset I$. Pongamos $\delta_1 = \min\{r, \delta\}$. Tenemos que $\delta_1 > 0$ y $]a - \delta_1, a + \delta_1[ = ]a - \delta, a + \delta[ \cap ]a-r, a+r [ \subset ]a-\delta, a+\delta[ \cap I$, por lo que $]a - \delta_1, a + \delta_1[ \cap A \subset ]a - \delta, a + \delta[ \cap (I \cap A)$, en consecuencia, para todo $x \in ]a-\delta_1, a + \delta_1[ \cap A$ se verifica que $|f(x) - f(a)| < \varepsilon$.
+	
+	\subsection{Proposición}
+	\begin{enumerate}[label = \alph*)]
+		\item Cualquier restricción de una función continua es también continua.
+		\item Cualquier extensión de una función continua en un intervalo abierto es también continua en dicho intervalo abierto
+		\item Una función $f$ es continua en un intervalo abierto $I$ si, y solo si, la restricción $f_{|I}$ es continua en $I$.
+	\end{enumerate}
+	
+	\subsection{Teorema (Conservación local del signo)}
+	Sea $f : A \rightarrow \mathbb{R}$ continua en un punto $a \in A$ con $f(a) \neq 0$. Entonces hay un número $r > 0$ tal que para todo $x \in A$ con $|x -a| < r$ se verifica que $f(x)f(a) > 0$. Es decir, $f(x) > 0$ si $f(a) > 0$, o $f(x) < 0$ si $f(a) < 0$, en todo punto $x \in ]a - r, a + r[ \cap A$.
+	
+	\textbf{Demostración. }Supondremos que $f(a) > 0$. Podemos entonces tomar $\varepsilon = f(a) / 2$ en la definición de continuidad para obtener, en virtud de la continuidad de $f$ en $a$, un $r > 0$ tal que para todo $x \in A$ con $|x - a| < r$ se verifica que $|f(x) - f(a)| < f(a) / 2$, lo que implica que $f(x) > f(a)/2 > 0$. El caso en que $f(a) < 0$ se reduce al anterior sin más que sustituir $f$ por $-f$.
+	
+	\newpage
+	
+	\section{Teorema de Bolzano y teorema del valor intermedio. Consecuencias}
+	
+	\subsection{Teorema (Teorema de los ceros de Bolzano)}
+	Toda función continua en un intervalo que toma valores positivos y negativos se anula en algún punto de dicho intervalo.
+	
+	\textbf{Demostración. }Es suficiente probar que si $f : [a, b] \rightarrow \mathbb{R}$ es continua y $f(a) < 0 < f(b)$, entoncs $f$ se anula en algún punto del intervalo $]a, b[$. Tenemos que buscar un punto $c \in ]a, b[$ tal que $f(c) = 0$. Consideremos el siguiente conjunto:
+	$$E = \{x \in [a, b] : f(t) < 0 \; \text{para todo} \; t \in [a, x]\}$$
+	Por su definición, tenemos que $E \subset [a, b]$ y $a \in E$. La propiedad del supremo nos dice que hay un número real, $c$, que es el supremo de $E$. Es evidente que $a \leq c \leq b$. La propiedad de conservación local del signo implica que existe algún $\delta > 0$ tal que $a + \delta < b - \delta$ y $f$ es negativa en todos los puntos del intervalo $[a, a + \delta]$ y positiva en todos los puntos del intervalo $[b - \delta, b]$. Esto implica que $a < c < b$.
+	
+	Veamos que $[a, c[ \subset E$. Sea $a < x_0 < c$. Como $x_0 < c$ y $c$ es el mínimo mayorante de $E$, tiene que existir algún punto $z_0 \in E$ tal que $x_0 < z_0 \leq c$. Por tanto, si $t \in [a, x_0]$ también $t \in [a, z_0]$, y como $z_0 \in E$, será $f(t) < 0$, luego $x_0 \in E$. Nótese que hemos probado también que $f(x) < 0$ para todo $x \in [a, c[$.
+	
+	Finalmente, probaremos que $f(c) = 0$. Como a la izquierda de $c$ la función $f$ toma valores negativos y $f$ es continua, deducimos, por la conservación local del signo, que no puede ser $f(c) > 0$, y, por tanto, $f(c) \leq 0$. Pero tampoco puede ser $f(c) < 0$, pues entonces, por la conservación local del signo, habría un intervalo de la forma $]c - \rho, c + \rho[ \subset [a, b]$ tal que $f(t) < 0$ para todo $t \in ]c - \rho, c + \rho[$ lo que implica que en $E$ hay punto mayores que $c$ lo que es contradictorio. Concluimos así que $f(c) = 0$.
+	
+	\subsection{Teorema (Teorema del valor intermedio)}
+	La imagen de un intervalo por una función continua es un intervalo.
+	
+	\textbf{Demostración. }Supongamos que $I$ es un intervalo y $f: I \rightarrow \mathbb{R}$ es una función continua en $I$. Queremos probar que la imagen de $f$, esto es, el conjunto $J = f(I)$ es un intervalo. Teniendo en cuenta la definición de intervalo, deberemos probar que si dos números están en $J$, todos los números comprendidos entre ellos también se quedan dentro de $J$. Sean pues, $u, v$ elementos de $J$ con $u < v$. Debe haber elementos $\alpha, \beta$ en $I$ tales que $f(\alpha) = u, f(\beta) = v$. Como $f$ es una función, debe ser $\alpha \neq \beta$. Podemos suponer que $\alpha < \beta$. Sea $z \in ]u, v[$, esto es, $u < x < v$. Definamos la función $h: I \rightarrow \mathbb{R}$ dada por $h(x) = z - f(x)$ para todo $x \in I$. Como $f$ es continua, $h$ es continua en $I$. Tenemos que $h (\alpha) = z - f(\alpha) = z - u > 0$ y $h(\beta) = z - f(\beta) = z - v < 0$. Como $I$ es un intervalo, tenemos que $[\alpha, \beta] \subset I$. Podemos, pues, aplicar el teorema antes demostrado a la función $h$ en el intervalo $[\alpha, \beta]$ y obtenemos que tiene que haber algún punto $\lambda \in ]\alpha, \beta[$ tal que $h(\lambda) = z - f(\lambda) = 0$. Hemos probado así que $f(\lambda) = z$. Como $\lambda \in [\alpha, \beta] \subset I$, concluimos que $z \in J = f(I)$. Como esto no es cierto cualquiera sea el punto $z \in ]u, v[$, concluimos que $[u, v] \subset J$ y, en consecuencia, $J$ es un intervalo.
+	
+	Recíprocamente, si suponemos que la imagen de un intervalo por una función continua es un intervalo, y $f: I \rightarrow \mathbb{R}$ es una función continua en un intervalo $I$ que toma valores positivos y negativos, entonces $J = f(I)$ es un intervalo en el que hay números negativos y positivos, luego debe contener al $0$, es decir, $f$ tiene que anularse en algún punto de $I$.
+	
+	\subsection{Corolario (Existencia de raíces)}
+	Dados $a > 0$ y $k \in \mathbb{N}$ hay un único número $c > 0$ tal que $c^k = a$.
+	
+	\textbf{Demostración. }La función $f: \mathbb{R}_0 ^+ \rightarrow \mathbb{R}$ dada por $f(x) = x^k - a$, es continua, $f(0) = -a < 0$ y $f(1+a) = (1+a)^k -a > 0$. Deducimos que hay algún número $c > 0$ tal que $f(c) = 0$. Dicho número es único porque la función $f$ es estrictamente creciente.
+	
+	\subsection{Corolario (Ceros de polinomios de grado impar)}
+	Toda función polinómica de grado impar se anula en algún punto.
+	
+	\textbf{Demostración. }Sea
+	$$P(x) = c_0 + c_1x + c_2x^2 + \cdots + c_{n-1}x^{n-1} + c_n x^n$$
+	una función polinómica de grado impar $n \geq 3$. Nuestro objetivo es probar que $P(x)$ toma valores positivos y negativos. Podemos suponer que $c_n > 0$. Supongamos en lo que sigue que $|x| \geq 1$. Dividiendo por $x^n$ tenemos que 
+	$$\dfrac{P(x)}{x^n} = \dfrac{c_0}{x^n} + \dfrac{c_1}{x^{n-1}} + \cdots + \dfrac{c_{n-1}}{x} + c_n$$
+	Para $0 \leq k \leq n-1$, tenemos, por ser $|x| \geq 1$ y $n - k \geq 2$, que:
+	$$\dfrac{|c_k|}{|x|^{n-k}} \leq \dfrac{|c_k|}{|x|}.$$
+	Por otra parte 
+	$$\dfrac{|c_k|}{|x|} \leq \dfrac{c_n}{2n} \Longleftrightarrow |x| \geq \dfrac{|c_k|}{c_n}2n$$
+	Definamos 
+	$$M = \max\left\{\dfrac{|c_k|}{c_n}2n : k = 0, 1, 2, \dots, n-1\right\}, \quad K = \max\{M, 1\}$$
+	Para $|x| \geq K$ y para $k = 0, 1, 2, \dots, n-1$, tenemos que:
+	$$\dfrac{c_k}{x^{n-k}} \geq - \dfrac{|c_k|}{|x|^{n-k}} \geq - \dfrac{|c_k|}{|x|} \geq - \dfrac{c_n}{2n}$$
+	Deducimos que para $|x| \geq K$ es:
+	$$\dfrac{P(x)}{x^n} \geq -n\dfrac{c_n}{2n} + c_n = \dfrac{c_n}{2} > 0$$
+	Ahora si $x < -K$, se tiene por ser $n$ impar que $x^n < 0$, y la desigualdad anterior implica que $P(x) < 0$. Análogamente, si $x > K$ debe ser $P(x) > 0$.
+	
+	Hemos probado que $P(x)$ toma valores positivos y negativos. Como es una función continua y está definida en un intervalo, $\mathbb{R}$, concluimos que debe anularse en algún punto.
+	
+	\newpage
+	
+	\section{Continuidad y monotonía}
+	
+	\subsection{Teorema}
+	Una función monótona cuya imagen es un intervalo es continua.
+	
+	\textbf{Demostración. }Sea $f: A \rightarrow \mathbb{R}$ una función creciente en un conjunto $A$ cuya imagen $J = f(A)$ es un intervalo. Queremos probar que $f$ es continua. Sea $a \in A$ y supongamos que los conjuntos
+	$$A_a ^- = \{x \in A : x < a\}, \qquad A_a^+ =\{x \in A: x > a\}$$
+	no son vacíos. Para demostrar que $f$ es continua en $a$, probaremos que
+	$$ \sup f(A_a^-) = \sup\{f(x):x \in A, x < a\} = f(a) = \inf\{f(x) : x \in A, x > a\} = \inf f(A_a^+)$$
+	Probemos que $f(a) = \sup f(A_a^-)$. Pongamos $\alpha = \sup f(A_a^-)$. Para todo $x \in A_a^-$ tenemos que $x < a$ y, como $f$ es creciente, $f(x) \leq f(a)$. Luego $f(a)$ es un mayorante del conjunto $f(A_a^-)$ y, en consecuencia, debe ser $\alpha \leq f(a)$. Veamos que no puede ocurrir que $\alpha < f(a)$. Para ello supondremos que $\alpha < f(a)$ y llegaremos a una contradicción. Tomemos un elementos cualquiera $z \in ]\alpha, f(a)[$. Sea $u \in A_a^-$. Entonces $f(u) \leq \alpha < z < f(a)$. Como $f(u)$ y $f(a)$ están en $J = f(A)$ y $J$ es, por hipótesis, un intervalo, deducimos que $z \in J$, esto es, $z = f(s)$ para algún $s \in A$. No puede ser $s = a$ y, como $f$ es creciente y $z < f(a)$, debe verificarse que $s < a$, esto es, $s \in A_a^-$ en cuyo caso debe ser $f(s) \leq \alpha$, es decir, $z \leq \alpha$ lo cual es claramente contradictorio pues $\alpha < z$.
+	
+	Análogamente se prueba que $f(a) = \beta = \inf f(A_a^+)$.
+	
+	Sea ahora $\varepsilon > 0$. Tiene que haber elementos $u \in A_a^-$ y $v \in A_a^+$ tales que $\alpha - \varepsilon < f(u) $ y $f(v) < \beta + \varepsilon$, es decir
+	$$f(a) - \varepsilon < f(u) \leq f(v) < f(a) + \varepsilon.$$
+	Definamos $\delta = \min\{a - u, v -a\} > 0$. Entonces para todo $x \in A$ verificando $|x - a| < \delta$ se tiene que $u < x < v$ y, por tanto, $f(u) \leq f(x) \leq f(v)$ lo que implica que $f(a) - \varepsilon < f(x) < f(a) + \varepsilon$, esto es, $|f(x) - f(a)| < \varepsilon$.
+	
+	Los casos en que alguno de los conjuntos $A_a^-$ o $A_a^+$ sea vacío se deducen de lo anterior.
+	
+	\subsection{Corolario}
+	Una función monótona definida en un intervalo es continua si, y solo si, su imagen es un intervalo.
+	
+	\subsection{Corolario}
+	La función inversa de una función estrictamente monótona definida en un intervalo es continua.
+	
+	
+	\textbf{Demostración. }Sea $f : I \rightarrow \mathbb{R}$ una función estrictamente monótona definida en un intervalo $I$. Como $f$ es inyectiva en $I$, su inversa, $f^{-1}$, está definida en el conjunto imagen $J = f(I)$ y, claramente, $f^{-1}(J) = I$. Como la inversa de una función estrictamente monótona $f$ es también estrictamente monótona e $I$ es, por hipótesis, un intervalo, el teorema anterior, aplicado a $f^{-1}$, nos dice que $f^{-1}$ es continua en $J$.
+	
+	\subsection{Teorema}
+	Toda función inyectiva y continua en un intervalo es estrictamente monótona.
+	
+	\textbf{Demostración. }Sea $f: I \rightarrow \mathbb{R}$ continuna e inyectiva en el intervalo $I$. Sean $a_0 < b_0$ dos puntos de $I$. Como $f$ es inyectiva debe ser $f(a_0) \neq f(b_0)$. Por tanto, o bien $f(b_0) - f(a_0) > 0$, o bien $f(b_0) - f(a_0) < 0$. Supongamos que es $f(b_0) - f(a_0) > 0$ y demostremos que $f$ es estrictamente creciente en $I$. Para ello sean $a_1 < b_1$ puntos de $I$. Pongamos
+	$$ \left. x(t) = (1-t)a_0 + ta_1 \atop y(t) = (1-t)b_0 + tb_1 \right\} \qquad  \text{para} \; 0 \leq t \leq 1$$
+	Tenemos que $x(0) = a_0, x(1) = a_1, y(0) = b_0, y(1) = b_1$. Además, poniendo $\alpha = \min\{a_0, a_1\}$ y $\beta = \max\{a_0, a_1\}$, se tiene que 
+	$$\alpha = (1-t)\alpha + t\alpha \leq x(t) \leq (1-t)\beta + t\beta = \beta$$
+	Como $I$ es un intervalo y $\alpha, \beta \in I$, se verifica que $[\alpha, \beta] \subset I$, por lo que $x(t) \in I$. Análogamente, se tiene que $y(t) \in I$. Además, como $a_0 < b_0$ y $a_1 < b_1$, se verifica que $x(t) < y(t)$ para $0 \leq t \leq 1$. Consideremos la función:
+	$$g(t) = f(y(t)) - f(x(t)) \qquad 0 \leq t \leq 1$$
+	La función $g$ es continua en $[0, 1]$ por ser composición y diferencia de funciones continuas. Como $f$ es inyectiva y $x(t) < y(t)$, se tiene que $g(t) \neq 0$ para todo $t \in [0, 1]$. El teorema de Bolzano implica que $g$ debe tener signo constante en $[0, 1]$ y, como $g(0) > 0$, concluimos que $g(t) > 0$ para todo $t \in [0, 1]$. Por tanto $g(1) = f(b_1) - f(a_1) > 0$. Hemos probado así que $f$ es estrictamente creciente.
+	
+	Análogamente, si se supone que es $f(b_0) - f(a_0) < 0$ se demuestra que $f$ es estrictamente decreciente en $I$.
+	
+	\subsection{Corolario}
+	La función inversa de una función inyectiva y continua en un intervalo es continua.
+	
+	\newpage
+	
+	\section{Continuidad en intervalos cerrados y acotados. Teorema de Weierstrass. Consecuencias}
+	
+	\subsection{Definición}
+	Sea $f : B \rightarrow \mathbb{R}$. Se dice que $f$ está mayorada (resp. minorada) en $B$, si el conjunto $f(B)$ está mayorado (resp. minorado). Se dice que $f$ está acotada en $B$ si el conjunto $f(B)$ está acotado. Se dice que $f$ alcanza en $B$ un máximo (resp. un mínimo) absoluto si el conjunto $f(B)$ tiene máximo (resp. mínimo), es decir, existe algún punto $v \in B$ (resp. $u \in B$) tal que $ f(x) \leq f(v)$ (resp. $f(u) \leq f(x)$) para todo $x \in B$.
+	
+	\subsection{Teorema (Teorema de Weirtstrass)}
+	Toda función continua en un intervalo cerrado y acotado alcanza en dicho intervalo un máximo y un mínimo absolutos.
+	
+	\textbf{Demostración. }Sea $f : [a, b] \rightarrow \mathbb{R}$ continua en $[a, b]$. Veamos que $f$ tiene que estar acotada en $[a, b]$. En efecto, si $f$ no estuviera acotada en $[a, b]$, para cada $n \in \mathbb{N}$ existiría un $x_n \in [a, b]$ tal que $|f(x_n)| \geq n$. Como la sucesión $\{x_n\}$ está acotada, por el teorema de Bolzano - Weierstrass tiene alguna sucesión parcial convergente $\{x_{\sigma(n)}\} \rightarrow x$. Como para todo $n \in \mathbb{N}$ es $a \leq x_{\sigma(n)} \leq b$, deducimos que $a \leq x \leq b$. Como $f$ es continua y $\{x_{\sigma(n)}\} \rightarrow x$, la sucesión $\{f(x_{\sigma(n)})\}$ debe ser convergente a $f(x)$, pero dicha sucesión no converge porque para todo $n \in \mathbb{N}$ es $|f(x_{\sigma(n)})| \geq \sigma(n) \geq n$ y, por tanto, dicha sucesión no está acotada. Esta contradicción prueba que si $f$ es continua en $[a, b]$ entonces está acotada en $[a, b]$.
+	
+	Pongamos $J = f([a, n])$. Sabemos que $J$ es un intervalo y acabamos de probar que está acotado. Sea $\beta = \sup(J)$. Para cada $n \in \mathbb{N}$ sea $y_n \in J$ tal que $\beta - 1/n < y_n \leq \beta$. Claramente $\{y_n\} \rightarrow \beta$. Sea $v_n \in [a, b]$ tal que $f(v_n) = y_n$. Como $\{v_n\}$ es una sucesión acotada tiene alguna parcial convergente $\{v_{\varphi(n)}\} \rightarrow v$. Tenemos, al igual que antes, que $v \in [a, b]$. Por la continuidad de $f$ deberá ser $\{f(v_{\varphi(n)})\} \rightarrow f(v)$. Puesto que $\{f(v_{\varphi(n)})\} = \{y_{\varphi(n)}\}$, deducimos que $\{f(v_{\varphi(n)})\} \rightarrow \beta$. Por la unicidad del límite, debe ser $f(v) = \beta$. Hemos probado así que $\beta \in J$, es decir, $J$ tiene máximo. Claro está, para todo $x \in [a, b]$ se verifica que $f(x) \leq f(v) = \beta$.
+	
+	Análogamente se prueba que $\alpha = \inf(J)$ pertenece a $J$, es decir que hay algún $u \in [a, b]$ tal que $f(u) = \alpha$. Claro está, para todo $x \in [a, b]$ se verifica que $\alpha = f(u) \leq f(x)$.
+	
+	\subsection{Corolario}
+	Toda función continua en un intervalo cerrado y acotado está acotada en dicho intervalo
+	
+	\subsection{Proposición}
+	Una función polinómica de grado par cuyo coeficiente líder es positivo alcanza un mínimo absoluto en $\mathbb{R}$ y si el coeficiente líder es negativo alcanzar un máximo absoluto en $\mathbb{R}$.
+	
+	\textbf{Demostración. }Sea
+	$$P(x) = c_0 + c_1x + c_2x^2 + \cdots + c_{n-1} x^{n-1} + c_n x^n$$
+	una función polinómica de grado par $n \geq 2$. Podemos suponer que $c_n > 0$ y probaremos que $P$ alcanza un mínimo absoluto en $\mathbb{R}$. Probaremos que hay un número $K \geq 1$ tal que para $|x| \geq K$ es:
+	$$\dfrac{P(x)}{x^n} \geq \dfrac{c_n}{2} > 0$$
+	Pongamos en lo que sigue $\alpha = \dfrac{c_n}{2}$. Como $n$ es par, se tiene que $x^n > 0$ para todo $x \neq 0$. Además, como $K \geq 1$, para $|x| \geq K$ es $|x|^n \geq |x|$ por tanto:
+	$$P(x) \geq \alpha x^n = \alpha |x|^n \geq \alpha |x| \qquad (|x| \geq K)$$
+	Haciendo ahora $M = \max\{K, |P(0)| / \alpha\}$, tenemos que para $|x| \geq M$ es 
+	$$P(x) \geq \alpha |x| \geq \alpha M$$
+	Podemos asegurar ahora que $\alpha M \geq |P(0)|$. En el intervalo $[-M, M]$ la función $P(x)$ alcanza, en virtud del teorema de Weierstrass, un mínimo absoluto en algún punto $c \in [-M, M]$. Si ahora $x$ es un número real podemos considerar dos posibilidades:
+
+	\begin{itemize}
+		\item $x \in [-M, M]$ en cuyo caso será $P(x) \geq P(c)$.
+		\item $x \notin [-M, M]$, esto es $|x| > M$, en cuyo caso $P(x) \geq \alpha M \geq |P(0)| \geq P(0) \geq P(c)$.
+	\end{itemize}
+	
+	En cualquier caso resulta que $P(x) \geq P(c)$, lo que prueba que $P$ alcanza en $c$ un mínimo absoluto en $\mathbb{R}$.
+	
+	\newpage
+	
+	\section{Límite de una función en un punto. Caracterización por sucesiones. Límites y discontinuidades de las funciones monótonas}
+	
+	\subsection{Definición (Límite de una función en un punto)}
+	
+	Se dice que $f$ tiene límite en el punto $a$ si existe un número $L \in \mathbb{R}$ tal que se verifica lo siguiente:
+	$$ \forall \varepsilon \in \mathbb{R}^+ \quad \exists \delta \in \mathbb{R}^+ : \left. 0 < |x-a| < \delta \atop x \in I \right\} \Longleftrightarrow |f(x) - L| < \varepsilon$$
+	Dicho número se llama límite de $f$ en $a$ y escribimos $\displaystyle \lim_{x \rightarrow a} f(x) = L$.
+	
+	\subsection{Proposición}
+	Sea $f$ una función y sean $a, L \in \mathbb{R} \cup \{-\infty, + \infty\}$. Equivalen las afirmaciones:
+	\begin{enumerate}[label = \roman*)]
+		\item $\displaystyle \lim_{x \rightarrow a} f(x) = L$.
+		\item Para toda sucesión $\{x_n\}$ de puntos en el dominio de definición de $f$, tal que $x_n \neq a$ para todo $N \in \mathbb{N}$ y $\{x_n\} \rightarrow L$, se verifica que $\{f(x_n)\} \rightarrow L$.
+	\end{enumerate}
+	
+	\subsection{Definición (Clasificación de las discontinuidades)}
+	Sea $f: I \rightarrow \mathbb{R}$ una función definida en un intervalo y sea $a \in I$.
+	
+	\begin{itemize}
+		\item Si $f$ tiene límite en $a$ y $\displaystyle \lim_{x \rightarrow a} f(x) \neq f(a)$, se dice que $f$ tiene en el punto $a$ una discontinuidad evitable.
+		\item Si los dos límites laterales de $f$ en $a$ existen y son distintos:
+		$$ \lim_{x \rightarrow a^-} \neq \lim_{x \rightarrow a^+} f(x)$$
+		se dice que $f$ tiene en el punto $a$ una discontinuidad de salto.
+		\item Si alguno de los límites laterales no existe se dice que $f$ tiene en el punto $a$ una discontinuidad esencial.
+	\end{itemize}
+
+	\subsection{Teorema (Límites de una función monótona)}
+	Sea $f$ una función creciente definida en un intervalo $I$.
+	
+	\begin{enumerate}[label = \roman*)]
+		\item Para todo punto $a \in I$ que no sea un extremo de $I$ se verifica que:
+		$$ \lim_{x \rightarrow a^-}f(x) = \sup \{f(x):x \in I, x < a\}, \qquad \lim_{x \rightarrow a^+} f(x) = \inf \{f(x) : x \in I, x > a\}$$
+		\item Si $a \in \mathbb{R} \cup \{- \infty\}$ es el extremo izquierdo de $I$, entonces:
+		\begin{enumerate}[label = \alph*)]
+			\item Si $f$ está minorada en $I$ es $\displaystyle \lim_{x \rightarrow a} f(x) = \inf \{f(x) : x \in I \backslash \{a\}\}$.
+			\item Si $f$ no está minorada en $I$ es $\displaystyle \lim_{x \rightarrow a} f(x) = - \infty$.
+		\end{enumerate}
+		\item Si $a \in \mathbb{R} \cup \{+ \infty\}$ es el extremo derecho de $I$, entonces:
+	
+		\begin{enumerate}[label = \alph*)]
+			\item Si $f$ está mayorada en $I$ es $\displaystyle \lim_{x \rightarrow a} f(x) = \sup \{f(x) : x \in I \backslash \{a\}\}$.
+			\item Si $f$ no está mayorada en $I$ es $\displaystyle \lim_{x \rightarrow a} f(x) = + \infty$.
+		\end{enumerate}
+	\end{enumerate}
+	
+	\textbf{Demostración. }Supongamos que $a \in I$ no es el extremo izquierdo de $I$, es decir que el conjunto $\{x \in I : x < a\}$ no es vacío. Entonces, el conjunto $B = \{f(x):x \in I, x < a\}$ tampoco es vacío y, por ser $f$ creciente, el número $f(a)$ es un mayorante de $B$. Sea $\alpha = \sup \{f(x): x \in I, x < a\}$. Dado $\varepsilon > 0$, el número $\alpha - \varepsilon$ no puede ser mayorante de $B$, es decir, tiene que haber algún punto $x_0 \in I$, $x_0 < a$ tal que $\alpha - \varepsilon < f(x_0)$. Sea $\delta = a - x_0 > 0$. Entonces para $a - \delta < x < a$, esto es, para $x_0 < x < a$, se verifica que $\alpha - \varepsilon < f(x_0) \leq f(x) \leq \alpha$, lo que claramente implica que $\alpha - \varepsilon < f(x) < \alpha + \varepsilon$, es decir, $|f(x) - \alpha| < \varepsilon$. Hemos probado así que $\displaystyle \lim_{x \rightarrow a^-} f(x) = \sup \{f(x):x \in I, x < a\}$.
+	
+	Los demás casos se prueban de forman muy parecida y quedan como ejercicios. Igualmente, queda como ejercicio considerar el caso en que la función es decreciente.
+	
+	\subsection{Teorema (Discontinuidades de las funciones monótonas)}
+	Sea $f$ una función monótona en un intervalo. Entonces:
+	\begin{enumerate}[label = \roman*)]
+		\item En los puntos del intervalo que no son extremos del mismo, $f$ solamente puede tener discontinuidades de salto.
+		\item Si el intervalo tiene máximo o mínimo, $f$ puede tener en dichos puntos discontinuidades evitables.
+		\item El conjunto de las discontinuidades de $f$ es numerable.
+	\end{enumerate}
+	
+\end{document}
