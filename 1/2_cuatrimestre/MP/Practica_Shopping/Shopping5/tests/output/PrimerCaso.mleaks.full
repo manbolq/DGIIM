@@ -1,0 +1,216 @@
+MEMORY LEAK REPORT BY Valgrind 
+
+sáb 12 jun 2021 00:18:57 CEST
+
+
+==70865== Memcheck, a memory error detector
+==70865== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==70865== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==70865== Command: ./dist/Debug/GNU-Linux/shopping5 -input ./data/PrimerCaso.dataset -events 20 -K 100 -type cart
+==70865== 
+==70865== Conditional jump or move depends on uninitialised value(s)
+==70865==    at 0x4C0B1F8: __printf_fp_l (printf_fp.c:387)
+==70865==    by 0x4C26639: __vfprintf_internal (vfprintf-internal.c:1687)
+==70865==    by 0x4C3B119: __vsnprintf_internal (vsnprintf.c:114)
+==70865==    by 0x4955BEF: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x4987265: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x499595D: std::ostream& std::ostream::_M_insert<double>(double) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x116FA3: PageRank(Matrix const&, int, double, int) (main.cpp:209)
+==70865==    by 0x117373: computePageRank(Matrix&, int, double, int) (main.cpp:254)
+==70865==    by 0x118FD3: shopping5(int, char**) (main.cpp:534)
+==70865==    by 0x11782D: main (main.cpp:307)
+==70865== 
+==70865== Conditional jump or move depends on uninitialised value(s)
+==70865==    at 0x4C0B212: __printf_fp_l (printf_fp.c:387)
+==70865==    by 0x4C26639: __vfprintf_internal (vfprintf-internal.c:1687)
+==70865==    by 0x4C3B119: __vsnprintf_internal (vsnprintf.c:114)
+==70865==    by 0x4955BEF: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x4987265: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x499595D: std::ostream& std::ostream::_M_insert<double>(double) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x116FA3: PageRank(Matrix const&, int, double, int) (main.cpp:209)
+==70865==    by 0x117373: computePageRank(Matrix&, int, double, int) (main.cpp:254)
+==70865==    by 0x118FD3: shopping5(int, char**) (main.cpp:534)
+==70865==    by 0x11782D: main (main.cpp:307)
+==70865== 
+==70865== Conditional jump or move depends on uninitialised value(s)
+==70865==    at 0x4C06CB4: __mpn_extract_double (dbl2mpn.c:56)
+==70865==    by 0x4C0B50E: __printf_fp_l (printf_fp.c:387)
+==70865==    by 0x4C26639: __vfprintf_internal (vfprintf-internal.c:1687)
+==70865==    by 0x4C3B119: __vsnprintf_internal (vsnprintf.c:114)
+==70865==    by 0x4955BEF: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x4987265: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x499595D: std::ostream& std::ostream::_M_insert<double>(double) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x116FA3: PageRank(Matrix const&, int, double, int) (main.cpp:209)
+==70865==    by 0x117373: computePageRank(Matrix&, int, double, int) (main.cpp:254)
+==70865==    by 0x118FD3: shopping5(int, char**) (main.cpp:534)
+==70865==    by 0x11782D: main (main.cpp:307)
+==70865== 
+==70865== Conditional jump or move depends on uninitialised value(s)
+==70865==    at 0x4C06CB9: __mpn_extract_double (dbl2mpn.c:60)
+==70865==    by 0x4C0B50E: __printf_fp_l (printf_fp.c:387)
+==70865==    by 0x4C26639: __vfprintf_internal (vfprintf-internal.c:1687)
+==70865==    by 0x4C3B119: __vsnprintf_internal (vsnprintf.c:114)
+==70865==    by 0x4955BEF: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x4987265: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x499595D: std::ostream& std::ostream::_M_insert<double>(double) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x116FA3: PageRank(Matrix const&, int, double, int) (main.cpp:209)
+==70865==    by 0x117373: computePageRank(Matrix&, int, double, int) (main.cpp:254)
+==70865==    by 0x118FD3: shopping5(int, char**) (main.cpp:534)
+==70865==    by 0x11782D: main (main.cpp:307)
+==70865== 
+==70865== Conditional jump or move depends on uninitialised value(s)
+==70865==    at 0x4C0BF70: __printf_fp_l (printf_fp.c:969)
+==70865==    by 0x4C26639: __vfprintf_internal (vfprintf-internal.c:1687)
+==70865==    by 0x4C3B119: __vsnprintf_internal (vsnprintf.c:114)
+==70865==    by 0x4955BEF: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x4987265: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x499595D: std::ostream& std::ostream::_M_insert<double>(double) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x116FA3: PageRank(Matrix const&, int, double, int) (main.cpp:209)
+==70865==    by 0x117373: computePageRank(Matrix&, int, double, int) (main.cpp:254)
+==70865==    by 0x118FD3: shopping5(int, char**) (main.cpp:534)
+==70865==    by 0x11782D: main (main.cpp:307)
+==70865== 
+==70865== Conditional jump or move depends on uninitialised value(s)
+==70865==    at 0x4C0BFA9: __printf_fp_l (printf_fp.c:972)
+==70865==    by 0x4C26639: __vfprintf_internal (vfprintf-internal.c:1687)
+==70865==    by 0x4C3B119: __vsnprintf_internal (vsnprintf.c:114)
+==70865==    by 0x4955BEF: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x4987265: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x499595D: std::ostream& std::ostream::_M_insert<double>(double) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x116FA3: PageRank(Matrix const&, int, double, int) (main.cpp:209)
+==70865==    by 0x117373: computePageRank(Matrix&, int, double, int) (main.cpp:254)
+==70865==    by 0x118FD3: shopping5(int, char**) (main.cpp:534)
+==70865==    by 0x11782D: main (main.cpp:307)
+==70865== 
+==70865== Conditional jump or move depends on uninitialised value(s)
+==70865==    at 0x4C0BFE4: __printf_fp_l (printf_fp.c:982)
+==70865==    by 0x4C26639: __vfprintf_internal (vfprintf-internal.c:1687)
+==70865==    by 0x4C3B119: __vsnprintf_internal (vsnprintf.c:114)
+==70865==    by 0x4955BEF: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x4987265: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x499595D: std::ostream& std::ostream::_M_insert<double>(double) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x116FA3: PageRank(Matrix const&, int, double, int) (main.cpp:209)
+==70865==    by 0x117373: computePageRank(Matrix&, int, double, int) (main.cpp:254)
+==70865==    by 0x118FD3: shopping5(int, char**) (main.cpp:534)
+==70865==    by 0x11782D: main (main.cpp:307)
+==70865== 
+==70865== Conditional jump or move depends on uninitialised value(s)
+==70865==    at 0x4C0C01A: round_away (rounding-mode.h:52)
+==70865==    by 0x4C0C01A: __printf_fp_l (printf_fp.c:989)
+==70865==    by 0x4C26639: __vfprintf_internal (vfprintf-internal.c:1687)
+==70865==    by 0x4C3B119: __vsnprintf_internal (vsnprintf.c:114)
+==70865==    by 0x4955BEF: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x4987265: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x499595D: std::ostream& std::ostream::_M_insert<double>(double) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x116FA3: PageRank(Matrix const&, int, double, int) (main.cpp:209)
+==70865==    by 0x117373: computePageRank(Matrix&, int, double, int) (main.cpp:254)
+==70865==    by 0x118FD3: shopping5(int, char**) (main.cpp:534)
+==70865==    by 0x11782D: main (main.cpp:307)
+==70865== 
+==70865== Conditional jump or move depends on uninitialised value(s)
+==70865==    at 0x4C0C051: __printf_fp_l (printf_fp.c:1088)
+==70865==    by 0x4C26639: __vfprintf_internal (vfprintf-internal.c:1687)
+==70865==    by 0x4C3B119: __vsnprintf_internal (vsnprintf.c:114)
+==70865==    by 0x4955BEF: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x4987265: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x499595D: std::ostream& std::ostream::_M_insert<double>(double) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x116FA3: PageRank(Matrix const&, int, double, int) (main.cpp:209)
+==70865==    by 0x117373: computePageRank(Matrix&, int, double, int) (main.cpp:254)
+==70865==    by 0x118FD3: shopping5(int, char**) (main.cpp:534)
+==70865==    by 0x11782D: main (main.cpp:307)
+==70865== 
+==70865== Conditional jump or move depends on uninitialised value(s)
+==70865==    at 0x4C0C284: __printf_fp_l (printf_fp.c:1157)
+==70865==    by 0x4C26639: __vfprintf_internal (vfprintf-internal.c:1687)
+==70865==    by 0x4C3B119: __vsnprintf_internal (vsnprintf.c:114)
+==70865==    by 0x4955BEF: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x4987265: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x499595D: std::ostream& std::ostream::_M_insert<double>(double) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==70865==    by 0x116FA3: PageRank(Matrix const&, int, double, int) (main.cpp:209)
+==70865==    by 0x117373: computePageRank(Matrix&, int, double, int) (main.cpp:254)
+==70865==    by 0x118FD3: shopping5(int, char**) (main.cpp:534)
+==70865==    by 0x11782D: main (main.cpp:307)
+==70865== 
+
+[recommendations(Top recommendations)] 6 haruyama( 0.1667) ingarden( 0.1667) markell( 0.1667) nitrimax( 0.1667) roubloff( 0.1667) veraclara( 0.1667) 
+==70865== 
+==70865== HEAP SUMMARY:
+==70865==     in use at exit: 968 bytes in 20 blocks
+==70865==   total heap usage: 895 allocs, 875 frees, 234,079 bytes allocated
+==70865== 
+==70865== 40 bytes in 1 blocks are definitely lost in loss record 1 of 12
+==70865==    at 0x483C583: operator new[](unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==70865==    by 0x115573: Matrix::operator*(Matrix const&) const (Matrix.cpp:383)
+==70865==    by 0x116D15: PageRank(Matrix const&, int, double, int) (main.cpp:193)
+==70865==    by 0x117373: computePageRank(Matrix&, int, double, int) (main.cpp:254)
+==70865==    by 0x118FD3: shopping5(int, char**) (main.cpp:534)
+==70865==    by 0x11782D: main (main.cpp:307)
+==70865== 
+==70865== 56 (8 direct, 48 indirect) bytes in 1 blocks are definitely lost in loss record 5 of 12
+==70865==    at 0x483C583: operator new[](unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==70865==    by 0x113AA2: allocate(unsigned long, unsigned long) (Matrix.cpp:41)
+==70865==    by 0x1140AB: Matrix::Matrix(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, unsigned long, double) (Matrix.cpp:118)
+==70865==    by 0x116BDC: PageRank(Matrix const&, int, double, int) (main.cpp:176)
+==70865==    by 0x117373: computePageRank(Matrix&, int, double, int) (main.cpp:254)
+==70865==    by 0x118FD3: shopping5(int, char**) (main.cpp:534)
+==70865==    by 0x11782D: main (main.cpp:307)
+==70865== 
+==70865== 56 (8 direct, 48 indirect) bytes in 1 blocks are definitely lost in loss record 6 of 12
+==70865==    at 0x483C583: operator new[](unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==70865==    by 0x113AA2: allocate(unsigned long, unsigned long) (Matrix.cpp:41)
+==70865==    by 0x113F51: Matrix::Matrix(Matrix const&) (Matrix.cpp:106)
+==70865==    by 0x116C79: PageRank(Matrix const&, int, double, int) (main.cpp:188)
+==70865==    by 0x117373: computePageRank(Matrix&, int, double, int) (main.cpp:254)
+==70865==    by 0x118FD3: shopping5(int, char**) (main.cpp:534)
+==70865==    by 0x11782D: main (main.cpp:307)
+==70865== 
+==70865== 56 (8 direct, 48 indirect) bytes in 1 blocks are definitely lost in loss record 7 of 12
+==70865==    at 0x483C583: operator new[](unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==70865==    by 0x113AA2: allocate(unsigned long, unsigned long) (Matrix.cpp:41)
+==70865==    by 0x114B08: Matrix::operator=(Matrix const&) (Matrix.cpp:268)
+==70865==    by 0x116D2E: PageRank(Matrix const&, int, double, int) (main.cpp:193)
+==70865==    by 0x117373: computePageRank(Matrix&, int, double, int) (main.cpp:254)
+==70865==    by 0x118FD3: shopping5(int, char**) (main.cpp:534)
+==70865==    by 0x11782D: main (main.cpp:307)
+==70865== 
+==70865== 80 bytes in 1 blocks are definitely lost in loss record 8 of 12
+==70865==    at 0x483C583: operator new[](unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==70865==    by 0x116C0A: PageRank(Matrix const&, int, double, int) (main.cpp:179)
+==70865==    by 0x117373: computePageRank(Matrix&, int, double, int) (main.cpp:254)
+==70865==    by 0x118FD3: shopping5(int, char**) (main.cpp:534)
+==70865==    by 0x11782D: main (main.cpp:307)
+==70865== 
+==70865== 200 bytes in 1 blocks are definitely lost in loss record 9 of 12
+==70865==    at 0x483C583: operator new[](unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==70865==    by 0x116AAC: PageRank(Matrix const&, int, double, int) (main.cpp:171)
+==70865==    by 0x117373: computePageRank(Matrix&, int, double, int) (main.cpp:254)
+==70865==    by 0x118FD3: shopping5(int, char**) (main.cpp:534)
+==70865==    by 0x11782D: main (main.cpp:307)
+==70865== 
+==70865== 200 bytes in 1 blocks are definitely lost in loss record 10 of 12
+==70865==    at 0x483C583: operator new[](unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==70865==    by 0x115666: Matrix::operator*(Matrix const&) const (Matrix.cpp:387)
+==70865==    by 0x116D15: PageRank(Matrix const&, int, double, int) (main.cpp:193)
+==70865==    by 0x117373: computePageRank(Matrix&, int, double, int) (main.cpp:254)
+==70865==    by 0x118FD3: shopping5(int, char**) (main.cpp:534)
+==70865==    by 0x11782D: main (main.cpp:307)
+==70865== 
+==70865== 280 (40 direct, 240 indirect) bytes in 5 blocks are definitely lost in loss record 12 of 12
+==70865==    at 0x483C583: operator new[](unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==70865==    by 0x113AA2: allocate(unsigned long, unsigned long) (Matrix.cpp:41)
+==70865==    by 0x114B08: Matrix::operator=(Matrix const&) (Matrix.cpp:268)
+==70865==    by 0x116D8B: PageRank(Matrix const&, int, double, int) (main.cpp:197)
+==70865==    by 0x117373: computePageRank(Matrix&, int, double, int) (main.cpp:254)
+==70865==    by 0x118FD3: shopping5(int, char**) (main.cpp:534)
+==70865==    by 0x11782D: main (main.cpp:307)
+==70865== 
+==70865== LEAK SUMMARY:
+==70865==    definitely lost: 584 bytes in 12 blocks
+==70865==    indirectly lost: 384 bytes in 8 blocks
+==70865==      possibly lost: 0 bytes in 0 blocks
+==70865==    still reachable: 0 bytes in 0 blocks
+==70865==         suppressed: 0 bytes in 0 blocks
+==70865== 
+==70865== Use --track-origins=yes to see where uninitialised values come from
+==70865== For lists of detected and suppressed errors, rerun with: -s
+==70865== ERROR SUMMARY: 143 errors from 18 contexts (suppressed: 0 from 0)
