@@ -1,0 +1,11 @@
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/SO/practicas/SO-P-Todos_MaterialModulo2/cmake-build-debug/CMakeFiles/productorFIFO.dir
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/SO/practicas/SO-P-Todos_MaterialModulo2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/SO/practicas/SO-P-Todos_MaterialModulo2/cmake-build-debug/CMakeFiles/consumidorFIFO.dir
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/SO/practicas/SO-P-Todos_MaterialModulo2/cmake-build-debug/CMakeFiles/ejercicio3.dir
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/SO/practicas/SO-P-Todos_MaterialModulo2/cmake-build-debug/CMakeFiles/programa3.dir
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/SO/practicas/SO-P-Todos_MaterialModulo2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/SO/practicas/SO-P-Todos_MaterialModulo2/cmake-build-debug/CMakeFiles/ejercicio7.dir
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/SO/practicas/SO-P-Todos_MaterialModulo2/cmake-build-debug/CMakeFiles/tarea7.dir
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/SO/practicas/SO-P-Todos_MaterialModulo2/cmake-build-debug/CMakeFiles/recorrer.dir
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/SO/practicas/SO-P-Todos_MaterialModulo2/cmake-build-debug/CMakeFiles/examen1.dir
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/SO/practicas/SO-P-Todos_MaterialModulo2/cmake-build-debug/CMakeFiles/buscar.dir

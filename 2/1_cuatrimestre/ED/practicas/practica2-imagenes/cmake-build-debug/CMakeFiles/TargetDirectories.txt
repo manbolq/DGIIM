@@ -1,0 +1,7 @@
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica2-imagenes/cmake-build-debug/CMakeFiles/doc_doxygen.dir
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica2-imagenes/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica2-imagenes/cmake-build-debug/CMakeFiles/image.dir
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica2-imagenes/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica2-imagenes/cmake-build-debug/CMakeFiles/icono.dir
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica2-imagenes/cmake-build-debug/CMakeFiles/negativo.dir
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica2-imagenes/cmake-build-debug/CMakeFiles/contraste.dir

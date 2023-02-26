@@ -1,0 +1,7 @@
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica3-colas_y_pilas/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica3-colas_y_pilas/cmake-build-debug/CMakeFiles/doc_doxygen.dir
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica3-colas_y_pilas/cmake-build-debug/CMakeFiles/maxstack.dir
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica3-colas_y_pilas/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica3-colas_y_pilas/cmake-build-debug/CMakeFiles/pila_max.dir
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica3-colas_y_pilas/cmake-build-debug/CMakeFiles/maxqueue.dir
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica3-colas_y_pilas/cmake-build-debug/CMakeFiles/cola_max.dir

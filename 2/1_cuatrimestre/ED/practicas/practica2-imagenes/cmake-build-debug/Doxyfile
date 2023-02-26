@@ -1,0 +1,5 @@
+PROJECT_NAME           = "Práctica 1. Imágenes"
+OUTPUT_DIRECTORY       = /home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica2-imagenes/cmake-build-debug/doc_doxygen/
+INPUT                  = /home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica2-imagenes/estudiante/include /home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica2-imagenes/estudiante/src /home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica2-imagenes/estudiante/doc
+GENERATE_LATEX         = NO
+IMAGE_PATH             = /home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica2-imagenes/estudiante/doc

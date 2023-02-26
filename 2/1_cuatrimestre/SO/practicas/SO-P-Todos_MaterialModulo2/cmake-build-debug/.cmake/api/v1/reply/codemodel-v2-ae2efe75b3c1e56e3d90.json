@@ -1,0 +1,132 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "SO_P_Todos_MaterialModulo2",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "buscar::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-buscar-Debug-322d519be4891808b2d0.json",
+					"name" : "buscar",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "consumidorFIFO::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-consumidorFIFO-Debug-9436f0662060fd8ee106.json",
+					"name" : "consumidorFIFO",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ejercicio3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ejercicio3-Debug-1cfc5d5aaf1d2c133227.json",
+					"name" : "ejercicio3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ejercicio7::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ejercicio7-Debug-b9300bca5a5ab74c9613.json",
+					"name" : "ejercicio7",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "examen1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-examen1-Debug-2452172a01e2af0f586c.json",
+					"name" : "examen1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "productorFIFO::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-productorFIFO-Debug-cc62104bd12dda34fc5e.json",
+					"name" : "productorFIFO",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "programa3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-programa3-Debug-c2158ce6168e4083b8a2.json",
+					"name" : "programa3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "recorrer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-recorrer-Debug-50508a45d61f9bf2f144.json",
+					"name" : "recorrer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tarea7::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tarea7-Debug-273d7bc75a476ecc9033.json",
+					"name" : "tarea7",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/SO/practicas/SO-P-Todos_MaterialModulo2/cmake-build-debug",
+		"source" : "/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/SO/practicas/SO-P-Todos_MaterialModulo2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

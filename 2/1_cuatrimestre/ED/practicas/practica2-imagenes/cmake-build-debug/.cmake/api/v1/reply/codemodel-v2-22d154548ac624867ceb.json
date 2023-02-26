@@ -1,0 +1,96 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "practica2",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "contraste::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-contraste-Debug-cac8479c06f100551e86.json",
+					"name" : "contraste",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "doc_doxygen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-doc_doxygen-Debug-bfb70feb103b17401f19.json",
+					"name" : "doc_doxygen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "icono::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-icono-Debug-738aecee8a661a5c3f27.json",
+					"name" : "icono",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "image::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-image-Debug-a428e1693758446a0b59.json",
+					"name" : "image",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "negativo::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-negativo-Debug-5590ebac8adde963e6a4.json",
+					"name" : "negativo",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica2-imagenes/cmake-build-debug",
+		"source" : "/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica2-imagenes"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

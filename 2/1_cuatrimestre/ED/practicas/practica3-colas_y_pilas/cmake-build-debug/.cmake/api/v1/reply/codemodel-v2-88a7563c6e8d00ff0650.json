@@ -1,0 +1,96 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "p03_pilas_colas",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "cola_max::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cola_max-Debug-dcc37e7053fcf0017554.json",
+					"name" : "cola_max",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "doc_doxygen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-doc_doxygen-Debug-f48eee391dfb7e498caa.json",
+					"name" : "doc_doxygen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "maxqueue::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-maxqueue-Debug-f9928eb4fa8582e3e9ae.json",
+					"name" : "maxqueue",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "maxstack::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-maxstack-Debug-4491553387cffe8bbd2b.json",
+					"name" : "maxstack",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "pila_max::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-pila_max-Debug-9d2d4900369c26a3f6db.json",
+					"name" : "pila_max",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica3-colas_y_pilas/cmake-build-debug",
+		"source" : "/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica3-colas_y_pilas"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

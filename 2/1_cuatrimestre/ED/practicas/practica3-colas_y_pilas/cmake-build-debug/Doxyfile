@@ -1,0 +1,6 @@
+PROJECT_NAME           = "Práctica 3. Pilas y Colas"
+OUTPUT_DIRECTORY       = /home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica3-colas_y_pilas/cmake-build-debug/doc_doxygen/
+INPUT                  = /home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica3-colas_y_pilas/estudiante/include /home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica3-colas_y_pilas/estudiante/src /home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica3-colas_y_pilas/estudiante/doc
+GENERATE_LATEX         = NO
+IMAGE_PATH             = /home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica3-colas_y_pilas/estudiante/doc
+EXTRACT_PRIVATE	       = NO

@@ -1,0 +1,5 @@
+/snap/clion/178/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/178/bin/ninja/linux/ninja -G Ninja /home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica6-arbol_letras
+Doxygen build started
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica6-arbol_letras/cmake-build-debug

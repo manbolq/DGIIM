@@ -1,0 +1,6 @@
+PROJECT_NAME           = "Práctica 4. Juego de las Letras - Solver"
+OUTPUT_DIRECTORY       = /home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica5-solver/cmake-build-debug/doc_doxygen/
+INPUT                  = /home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica5-solver/estudiante/include /home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica5-solver/estudiante/src /home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica5-solver/estudiante/doc
+GENERATE_LATEX         = NO
+IMAGE_PATH             = /home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica5-solver/estudiante/doc
+EXTRACT_PRIVATE	       = NO

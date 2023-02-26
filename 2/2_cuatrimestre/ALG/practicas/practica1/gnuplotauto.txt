@@ -1,0 +1,54 @@
+a0 = 1
+a1 = 1
+
+f(x) = a0 * x * log(x) + a1
+fit f(x) 'quicksort.dat' u 1:2 via a0, a1
+stats "quicksort.dat" u 2:(f($1)) name "F"
+varf = F_correlation * F_correlation
+title_f = sprintf('Laura R^2=%4.4f',varf)
+set term png size 1280,720
+set output "quicksort"
+
+a4 = 1
+a5 = 1
+
+g(x) = a4 * x + a5
+fit g(x) 'quicksort.dat' u 1:3 via a4, a5
+stats "quicksort.dat" u 3:(g($1)) name "G"
+varg = G_correlation * G_correlation
+title_g = sprintf('Joaquin R^2=%4.4f',varg)
+set term png size 1280,720
+set output "quicksort"
+
+a8 = 1
+a9 = 1
+
+h(x) = a8 * x * log(x) + a9
+fit h(x) 'quicksort.dat' u 1:4 via a8, a9
+stats "quicksort.dat" u 4:(h($1)) name "H"
+varh = H_correlation * H_correlation
+title_h = sprintf('Alvaro R^2=%4.4f',varh)
+set term png size 1280,720
+set output "quicksort"
+
+a12 = 1
+a13 = 1
+
+
+i(x) = a12 * x * log(x) + a13
+fit i(x) 'quicksort.dat' u 1:5 via a12, a13
+stats "quicksort.dat" u 5:(i($1)) name "I"
+vari = I_correlation * I_correlation
+title_i = sprintf('Cristobal R^2=%4.4f',vari)
+set term png size 1280,720
+set output "quicksort"
+
+set title "quicksort"
+set xlabel "Numero de discos"
+set ylabel "Tiempo (seg)"
+set style line 1 linewidth 2 linecolor rgb "red"
+set style line 2 linewidth 2 linecolor rgb "green"
+set style line 3 linewidth 2 linecolor rgb "blue"
+set style line 4 linewidth 2 linecolor rgb "yellow"
+
+plot f(x) with lines linestyle 1 t title_f, 'quicksort.dat' u 1:2 w p pt 7 ps 1.5 lc rgb "red", g(x) with lines linestyle 2 t title_g, 'quicksort.dat' u 1:3 w p pt 7 ps 1.5 lc rgb "green", h(x) with lines linestyle 3 t title_h, 'quicksort.dat' u 1:4 w p pt 7 ps 1.5 lc rgb "blue", i(x) with lines linestyle 4 t title_i, 'quicksort.dat' u 1:5 w p pt 7 ps 1.5 lc rgb "yellow"

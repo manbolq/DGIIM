@@ -1,0 +1,39 @@
+a0 = 1
+a1 = 1
+a2 = 1
+f(x) = a0 * x**2 + a1 * x + a2
+fit f(x) 'datos.dat' u 1:2 via a0, a1, a2
+stats "datos.dat" u 2:(f($1)) name "F"
+varf = F_correlation * F_correlation
+title_f = sprintf('Cuadratica R^2=%4.4f',varf)
+set term png size 1280,720
+set output "seleccion_ajustes"
+
+a3 = 1
+a4 = 1
+g(x) = a3 * x * log(x) + a4
+fit g(x) 'datos.dat' u 1:2 via a3, a4, a5
+stats "datos.dat" u 2:(g($1)) name "G"
+varg = G_correlation * G_correlation
+title_g = sprintf('nlog(n) R^2=%4.4f',varg)
+set term png size 1280,720
+set output "seleccion_ajustes"
+
+a5 = 1
+a6 = 1
+h(x) = a6 * x + a7
+fit h(x) 'datos.dat' u 1:2 via a6, a7, a8
+stats "datos.dat" u 2:(h($1)) name "H"
+varh = H_correlation * H_correlation
+title_h = sprintf('Lineal R^2=%4.4f',varh)
+set term png size 1280,720
+set output "seleccion_ajustes"
+set title "Seleccion ajustes"
+set xlabel "nVector"
+set ylabel "Tiempo (s)"
+set style line 1 linewidth 2 linecolor rgb "red"
+set style line 2 linewidth 2 linecolor rgb "green"
+set style line 3 linewidth 2 linecolor rgb "blue"
+plot f(x) with lines linestyle 1 t title_f, 'datos.dat' u 1:2 w p pt 7 ps 1.5 lc rgb "red", g(x) with lines linestyle 2 t title_g, 'datos.dat' u 1:3 w p pt 7 ps 1.5 lc rgb "green", h(x) with lines linestyle 3 t title_h, 'datos.dat' u 1:4 w p pt 7 ps 1.5 lc rgb "blue"
+
+

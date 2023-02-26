@@ -1,0 +1,6 @@
+PROJECT_NAME           = "Práctica 6. Juego de las Letras - Árbol para Diccionario"
+OUTPUT_DIRECTORY       = /home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica6-arbol_letras/cmake-build-debug/doc_doxygen/
+INPUT                  = /home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica6-arbol_letras/estudiante/include /home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica6-arbol_letras/estudiante/src /home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica6-arbol_letras/estudiante/doc
+GENERATE_LATEX         = NO
+IMAGE_PATH             = /home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica6-arbol_letras/estudiante/doc
+EXTRACT_PRIVATE	       = NO

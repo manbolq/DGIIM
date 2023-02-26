@@ -1,0 +1,9 @@
+# ninja log v5
+1	565	1640020121048968230	CMakeFiles/partida_letras.dir/estudiante/src/partida_letras.cpp.o	cb5d9c56ffee31ff
+0	255	0	CMakeFiles/doc_doxygen	ab4138ab716c9c06
+1	671	1639391394595999687	CMakeFiles/partida_letras.dir/estudiante/src/letters_bag.cpp.o	2e3545403d1d5480
+0	255	0	/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica5-solver/cmake-build-debug/CMakeFiles/doc_doxygen	ab4138ab716c9c06
+0	622	1639391394548001985	CMakeFiles/partida_letras.dir/estudiante/src/letters_set.cpp.o	1e977e22accaa286
+1	719	1639391394643997387	CMakeFiles/partida_letras.dir/estudiante/src/dictionary.cpp.o	6a46a89e6e6ff913
+774	874	1640020121356925540	partida_letras	ad4d38bc342f32e9
+1	774	1640020121256939400	CMakeFiles/partida_letras.dir/estudiante/src/solver.cpp.o	d137013086e69185

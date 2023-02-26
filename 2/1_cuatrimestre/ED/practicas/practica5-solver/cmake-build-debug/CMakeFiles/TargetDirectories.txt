@@ -1,0 +1,4 @@
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica5-solver/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica5-solver/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica5-solver/cmake-build-debug/CMakeFiles/doc_doxygen.dir
+/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica5-solver/cmake-build-debug/CMakeFiles/partida_letras.dir

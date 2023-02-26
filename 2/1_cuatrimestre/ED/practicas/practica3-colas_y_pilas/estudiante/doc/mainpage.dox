@@ -1,0 +1,105 @@
+/*! \mainpage Práctica 3. Pilas y colas
+
+# Introducción
+
+Los tipos de datos lineales se componen de una secuencia de elementos de un tipo de dato arbitrario, dispuestos en una
+dimensión. En esta práctica, usamos las estructuras conocidas como "pilas" y "colas", estructuras de datos muy
+relevantes. Las pilas son de tipo LIFO (last input firs output); es decir, es una colección en la que el último elemento
+en introducirse en la pila es el primero en salir también. Por otro lado, las colas son de tipo FIFO (first input first
+output); esto es, el primer elemento en introducirse en la cola, es el primero en salir de ella.
+
+A continuación, una breve explicación sobre pilas y colas:
+## Pilas
+
+En una pila solo podemos acceder a una posición (la primera), y entonces solo se puede insertar y extraer elementos de
+la pila si están en la primera posición. Así pues, podemos ver la pila como una torre vertical, en la que solo se puede
+construir arriba (insertar elementos) y destruir arriba (borrar elementos). Entonces, una estructura de tipo pila debe
+contar, al menos, con los siguientes métodos:
+
+- Insertar un elementos en la pila
+- Consultar el elementos en la parte superior de la pila
+- Extrar el elemento de la parte superior de la pila
+- Consultar el tamaño de la pila
+- Consultar si la pila está vacía
+.
+
+Para más información sobre este TDA, consultar la página web:https://www.cplusplus.com/reference/stack/stack/.
+
+
+## Colas
+
+En una cola, solo se puede consultar o extraer el elemento en la primera posición de la cola (el frente de la cola), y
+sólo se pueden insertar elementos en el final de la cola. Podemos identificar la cola, como su propio nombre indica, con
+una cola de un supermercado; el cajero solo interactúa (consultar, extraer) con la persona que está al frente de la
+cola, y las personas se colocando (insertando) al final de la cola. Tenemos así, que una estructura de tipo cola debe
+contar, al menos, con los siguientes métodos:
+
+- Insertar un elemento en la cola
+- Consultar el elemento en el frente de la cola
+- Extraer el elemento en el frente de la cola
+- Consultar el tamaño de la cola
+- Consultar si la cola está vacía
+.
+
+Para más información sobre este TDA, consultar la página web: https://www.cplusplus.com/reference/queue/queue/.
+
+
+# Ejecutables
+
+En esta práctica, se trabaja con dos TDAs que implementan una cola y una pila, implementadas cada una de ellas con una
+estructura interna de pila y cola, respectivamente. Estas estructuras deben de ser capaces de almacenar, en cada
+posición, dos números enteros: el primer número es un número cualquiera, y el segundo es el mayor número que hay en la
+estructura en cada momento.
+
+Para trabajar con cada TDA, tenemos dos ejecutables distintos: cola_max.cpp y pila_max.cpp. Se explican más
+detalladamente a continuación:
+
+## cola_max
+
+En este ejecutable, se trabaja con el TDA MaxQueue, que implementa una cola, con una estructura interna de una pila.
+
+Este programa itera sobre los argumentos de entrada que acompañar a la ejecución (que deben ser números enteros y puntos
+('.')), haciendo lo siguiente: si el argumento es un número, lo inserta en la cola (con la gestión del máximo), y si es
+un punto, extrae de la cola un elemento. Así pues, la entrada
+> ./build/cola_max 1 2 . 3 4 . . .
+generará la siguiente salida:
+> 1,2
+>
+> 2,4
+>
+> 3,4
+>
+> 4,4
+
+A continuación, una captura de pantalla de la terminal en la que se ha ejecutado este programa con esos mismos
+parámetros:
+
+![Ejecución del ejecutable cola_max.cpp](./cola_max.png)
+
+
+## pila_max
+
+En este ejecutable, se trabaja con el TDA MaxStack, que implementa una pila, con una estructura interna de una cola.
+
+Este programa itera sobre los argumentos de entrada que acompañan a la ejecución (números enteros y puntos), y hace lo
+siguiente: si el argumento es un número, lo inserta en la pila, y si es punto, extrae de la pila un elemento. De esta
+forma, la entrada
+
+> ./build/pila_max 1 2 . 3 4 . . .
+
+generará la siguiente salida:
+
+> 2,2
+>
+> 4,4
+>
+> 3,3
+>
+> 1,1
+
+A continuación, una captura de pantalla de la terminal en la que se ha ejecutado este programa con esos mismos
+parámetros:
+
+![Ejecición del ejecutable pila_max.cpp](./pila_max.png)
+
+*/

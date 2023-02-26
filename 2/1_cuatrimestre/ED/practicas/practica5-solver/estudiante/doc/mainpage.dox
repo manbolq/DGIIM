@@ -1,0 +1,103 @@
+/*! \mainpage Práctica 5. Solver - Juego de las Letras
+
+# Introducción
+
+En la práctica anterior, hicimos una serie de TDAs que nos serían útiles para poder jugar al juego de las letras. En
+esta práctica, vamos a "jugar" al juego. Para ello, usaremos los tipos de datos de la práctica anterior, y además,
+trabajaremos con un *solver*. Un *solver* es un sistema que resuelve un problema de manera automática. En nuestro caso,
+debe ser capaz de dar la/s mejor/es solución/es dado un diccionario, un conjunto de letras, un modo de juego, y un
+número de letras con las que vamos a jugar.
+
+# Tipos de datos a usar
+
+Recordemos los TDAs con los que trabajamos en la práctica anterior.
+
+## LettersSet
+
+Esta estructura de datos nos va a permitir almacenar la información de un conjunto de letras. En concreto, necesitaremos
+saber:
+
+- Las letras que tenemos
+- El número total de repeticiones de cada letra
+- La puntuación de cada letra
+.
+
+Para ello, vamos a usar una estructura de tipo *map*, usando como claves cada una de las letras, y como valor de clave, un
+struct que contenga la información necesaria para cada letra.
+
+## Template Bag
+
+Creamos un contenedor que permitirá almacenar un número indeterminado de elementos, de tal forma que nos permite extraer
+cómodamente elementos de forma aleatoria, sin reemplazarlos. Este template es necesario para el siguiente TDA.
+
+## LettersBag
+
+Esta estructura de datos nos va a permitir crear una bolsa de letras, de las que se extraen las letras que vamos a usar
+para el juego. Debe ser capaz de interpretar la información contenida en un LettersSet, y crear una bolsa que tenga
+tantas letras como haya en el LettersSet.
+
+Además, se deben poder extraer letras aleatoriamente de la bolsa, sin reemplazamiento. La template class que comentamos
+anteriormente es idónea para este TDA.
+
+## Dictionary
+
+Este TDA nos permitirá mantener en nuestro programa un conjunto de palabras. Necesitaremos una estructura que nos
+almacenar un número indeterminado de strings (las palabras del diccionario), sin necesidad de almacenar otro tipo de
+información. Además, nos interesará que nuestro conjunto tenga dos propiedades:
+
+- Los elementos deben estar ordenados por orden alfabético (como en un diccionario convencional)
+- Los elementos no se deben repetir.
+.
+
+Así pues, la estructura de datos *set* es la adecuada para ello, ya que cumple las condiciones que hemos impuesto
+anteriormente.
+
+## Solver
+
+Por último, y finalmente, explicaremos la clase *Solver*, que es la que vamos a usar para esta práctica. Esta clase va
+a utilizar las estructuras de datos que hemos creado en la práctica anteior, para ofrecer soluciones al juego de las
+letras. Haremos uso del TDA Dictionary (para poder tener un conjunto de palabras aceptadas por el juego), el TDA
+LettersSet (para saber cuántas letras de cada tipo tenemos, así como su puntuación), y el TDA LettersBag (para tener el
+conjunto de letras con el que jugamos).
+
+Tiene que poder ofrecer la mejor solución para cualquier partida, y para cualquier modo de juego (por puntos, o por
+longitud). Esta solución puede no ser única, así que debe devolver un vector con todas las soluciones posibles.
+
+# Ejecutables
+
+En esta práctica trabajaremos con solo un ejecutable, que pondrá a prueba la validez del Solver. Se describe más
+detalladamente a continuación:
+
+
+## partida_letras.cpp
+
+Este programa recibe una serie de argumentos:
+
+- Ruta al archivo que contiene las letras y su puntuación
+- Ruta al archivo que contiene el diccionario
+- Modo de juego (L = longitud, P = puntuación)
+- Cantidad de letras para la partida.
+.
+
+Dicho programa se encargará de construir el LettersSet para la partida, el Dictionary, el Solver, y la LettersBag
+necesarios para poder jugar. Después, extraerá las letras con las que se jugará la partida y usará ell Solver para
+buscar las soluciones.
+
+Imprime por pantalla tanto las letras que se usan en la partida, como las mejores soluciones que se pueden obtener con
+dichas letras y la puntuación de esas soluciones (la misma para todas).
+
+A continuación una captura de pantalla de la terminal en la que se ha ejecutado este programa con estos parámetros:
+
+> ./build/partida_letras data/letras.txt data/diccionario.txt L 9
+
+![Ejecución del ejecutable partida_letras.cpp por longitud](./solverL.png)
+
+Ahora, otra captura de pantalla de la terminal en la que se ha ejecutado este programa con estos parámetros:
+
+> ./build/partida_letras data/letras.txt data/diccionario.txt P 9
+
+![Ejecución del ejecutable partida_letras.cpp por puntos](./solverP.png)
+
+
+
+*/

@@ -1,0 +1,8 @@
+L8  C no se pueden dar permisos mas restrictivos a metodos redefinidos
+L13 C hija no tiene acceso a privado por lo que super no tiene sentido
+L26 C no se puede xd
+L51 C se estan asignando privilegios mas debiles
+L67 C Tipo dinamico tiene que ser descendiente o igual que el tipo estatico
+L75 C Hija no implementa Examen
+L79 E No se puede castear a clases que no tienen ningun parentesco
+L90 C Metodo no es publico en padre

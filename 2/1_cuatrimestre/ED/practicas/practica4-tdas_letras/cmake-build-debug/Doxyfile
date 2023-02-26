@@ -1,0 +1,6 @@
+PROJECT_NAME           = "Práctica 4. Contenedores no lineales - Juego de las Letras"
+OUTPUT_DIRECTORY       = /home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica4-tdas_letras/cmake-build-debug/doc_doxygen/
+INPUT                  = /home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica4-tdas_letras/estudiante/include /home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica4-tdas_letras/estudiante/src /home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica4-tdas_letras/estudiante/doc
+GENERATE_LATEX         = NO
+IMAGE_PATH             = /home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica4-tdas_letras/estudiante/doc
+EXTRACT_PRIVATE	       = NO

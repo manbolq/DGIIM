@@ -1,0 +1,23 @@
+# ninja log v5
+1	553	1638807547803009865	CMakeFiles/bolsa.dir/estudiante/src/palabras_longitud.cpp.o	631a06ac0341f13b
+1	591	1638807926575150419	CMakeFiles/cantidad_letras.dir/estudiante/src/cantidad_letras.cpp.o	8ce63423222a43d2
+1	369	1638807671400203008	CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.o	481d545cf224cc19
+1	480	1638807671512204444	CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.o	df524ef816ec83d1
+0	221	0	CMakeFiles/doc_doxygen	9488839a0bebac92
+0	675	1638806558968203755	CMakeFiles/cantidad_letras.dir/estudiante/src/dictionary.cpp.o	2d94e6072dfbb6bb
+1	516	1638807933895226896	CMakeFiles/bolsa.dir/estudiante/src/cantidad_letras.cpp.o	3160f0e0ec51bb1f
+1	661	1638808718942034673	CMakeFiles/bolsa_letras.dir/estudiante/src/letters_set.cpp.o	39695719a6d2bbbd
+1	550	1638808718830033820	CMakeFiles/bolsa_letras.dir/estudiante/src/letters_bag.cpp.o	cc96d84ed7bd7aca
+0	98	1638812118117526301	build.ninja	7c4dd4bb5990aab5
+1	557	1638807906738941253	CMakeFiles/conjunto_letras.dir/estudiante/src/conjunto_letras.cpp.o	a79503c3c6d7556f
+629	731	1638807906918943165	conjunto_letras	b07dc560dba590c5
+0	221	0	/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica4-tdas_letras/cmake-build-debug/CMakeFiles/doc_doxygen	9488839a0bebac92
+480	550	1638807671584205367	palabras_longitud	168baadf68a97bd4
+403	471	1638808728554107786	bolsa_letras	d015a58d345ddd93
+1	629	1638807906814942060	CMakeFiles/conjunto_letras.dir/estudiante/src/letters_set.cpp.o	3b81a96bae131c12
+1	458	1638807933835226270	CMakeFiles/bolsa.dir/estudiante/src/conjunto_letras.cpp.o	3ec481be566bcb1c
+591	706	1638807926687151592	cantidad_letras	d900cf6abb4d416e
+0	459	1638808085452733395	CMakeFiles/bolsa.dir/estudiante/src/bolsa.cpp.o	aa6fffe4e08b9317
+1	584	1638807926567150335	CMakeFiles/cantidad_letras.dir/estudiante/src/letters_set.cpp.o	c82acca92a54dab2
+399	530	1638572549771014755	bolsa	5caf562a01ce7825
+0	402	1638808728486107268	CMakeFiles/bolsa_letras.dir/estudiante/src/bolsa_letras.cpp.o	531ca4f3b046d15b

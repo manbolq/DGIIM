@@ -1,0 +1,87 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "p06_letras_arbol",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "cantidad_letras::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cantidad_letras-Debug-ceecc655827c80ec56e5.json",
+					"name" : "cantidad_letras",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "diccionario::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-diccionario-Debug-8108d78e2643d4c93a8c.json",
+					"name" : "diccionario",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "doc_doxygen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-doc_doxygen-Debug-bfb70feb103b17401f19.json",
+					"name" : "doc_doxygen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "partida_letras::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-partida_letras-Debug-2f859c096ccd34201b43.json",
+					"name" : "partida_letras",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica6-arbol_letras/cmake-build-debug",
+		"source" : "/home/manbolq/Escritorio/DGIIM/2º/1ºcuatrimestre/ED/practicas/practica6-arbol_letras"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

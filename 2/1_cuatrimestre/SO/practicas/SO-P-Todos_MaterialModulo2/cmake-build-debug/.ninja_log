@@ -1,0 +1,7 @@
+# ninja log v5
+31	47	1639902551950459754	recorrer	71383faa69ca5dca
+31	48	1639904975308515840	ejercicio3	b5425cbba15ae8af
+32	48	1639824364757305615	ejercicio7	2a21b6449476430c
+0	31	1639904975292516605	CMakeFiles/ejercicio3.dir/Sesion2/ejercicio3.c.o	4e1b48adfdd592d
+0	31	1639902551934459357	CMakeFiles/recorrer.dir/recorrer.c.o	1a2e5e64b5b52b32
+0	32	1639824364741305538	CMakeFiles/ejercicio7.dir/Sesion3/ejercicio7.c.o	4919d479dc3642a1
