@@ -2,3 +2,4 @@
 *.gz
 *.mp4
 PAT.txt
+./*.pdf
